@@ -1,6 +1,8 @@
 \documentclass[11pt, a4paper, british]{article}
 
 \input{Preamble.tex}
+\addbibresource{references.bib}
+
 
 \newcommand{\PaperTitle}{CBA Global Markets Research}
 \newcommand{\AuthorName}{Zac Kienzle}
@@ -20,7 +22,7 @@
 \hypersetup{
     hidelinks,
     hypertexnames=false,
-    pageanchor=false,
+    pageanchor=true,
     pdftitle={\PaperTitle},
     pdfauthor={\AuthorName},
     pdfsubject={Quantitative Finance Research},
@@ -60,11 +62,226 @@
 
 \pagenumbering{arabic}
 
-\section{Interest Rate Derivatives}
+\section{Case Brief}
+
+\subsection{Problem Statement}
+You and your colleagues work in the Commonwealth Bank of Australia's Global Markets team. Your role is to help clients to navigate their financial market risks. Your client, Prime Property Trust, is concerned with the potential impact that movements in financial markets may have on their operations. The Treasury team at Prime Property Trust are particularly concerned about interest rate market movements and how it may impact their ability to meet budgeted cost obligations over the next year. The Treasury team wants to know:
+
+\begin{enumerate}
+    \item Your view on inflation and the RBA cash rate and; how this will affect Australian interest rates.
+    \item The impact of variable interest rates to their business operations and cash flows; and
+    \item Financial market instruments that may be appropriate to manage these risks.
+\end{enumerate}
+
+\subsection{Background}
+Prime Property Trust is an Australian Real Estate Investment Trust (REIT) that manages and invests in a diverse range of property types, including office buildings and retail centres. Prime Property Trust primarily funds its assets with floating rate debt. Prime Property Trust has just announced two new assets to be added to the portfolio:
+
+\begin{enumerate}
+    \item Price Corporate Tower (PCT) | | Facility tenor: 3 years | Size of facility: \$100m | Interest rate: 3-month BBSY+1.20\%
+    \item Sterling Square (SS) | Facility tenor: 5 years | Size of facility: \$200m | Interest rate: 3-month BBSY+1.50\%
+\end{enumerate}
+
+Prime Corporate Tower (PCT) will generate immediate returns and be fully operational from Day 1. Sterling Square (SS) will commence construction Day 1 and be fully operational from FY27 onwards. Assume the PCT facility is refinanced at the end of the 3-year tenor. 
+
+The interest rate on the loan facilities are above and calculated at the beginning of each quarter. Additionally, Prime Property Trust must maintain an Interest Coverage Ratio (ICR) greater than 1.75x at all times or risk breaching the terms of the loan and have its funding withdrawn. Prime Property Trust's cost base and projected revenue for the upcoming financial year is provided on the following page.
 
 \newpage
 
-\subsection{Black-Scholes Derivation}
+\subsubsection{Cost Base and Projected Revenue}
+
+\begin{tcolorbox}[
+    enhanced,
+    breakable,
+    title={Prime Property Trust - Income Statement},
+    colback=cream,
+    colframe=headercolor,
+    coltitle=white,
+    fonttitle=\bfseries,
+    boxed title style={
+        sharp corners=north,
+        rounded corners=south,
+        colframe=headercolor,
+        colback=headercolor,
+    },
+    arc=3mm,
+    boxrule=0.5mm,
+    before skip=10pt,
+    after skip=10pt,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt,
+]
+\centering
+\textbf{All figures in 000's}
+\vspace{5pt}
+\footnotesize % Apply smaller font size to the table content
+\setlength{\tabcolsep}{2pt} % Reduced column spacing to help fit
+\begin{tabular}{l *{10}{r}} % Left aligned for Item, 10 right-aligned for years
+\toprule
+\textbf{Item} & \textbf{FY24} & \textbf{FY25} & \textbf{FY26} & \textbf{FY27} & \textbf{FY28} & \textbf{FY29} & \textbf{FY30} & \textbf{FY31} & \textbf{FY32} & \textbf{FY33} \\
+\midrule
+\textbf{Rental Income} &  &  &  &  &  &  &  &  &  &  \\
+Retail Rent & 5,850 & 7,116 & 7,289 & 20,057 & 18,542 & 17,126 & 14,496 & 13,046 & 14,095 & 14,971 \\
+Office Rent & 3,978 & 2,901 & 2,469 & 5,821 & 7,564 & 9,265 & 12,137 & 14,083 & 14,768 & 13,852 \\
+Total Rental Income & 9,828 & 10,017 & 9,758 & 25,878 & 26,106 & 26,391 & 26,633 & 27,129 & 28,863 & 28,823 \\
+\midrule
+Less Vacancy Factor & - & - & - & - & - & - & - & - & - & - \\
+Less Repairs \& Maintenance & 1,047 & 1,078 & 1,176 & 1,232 & 1,309 & 1,424 & 1,518 & 1,607 & 1,760 & 1,925 \\
+Less Management Fee & 349 & 527 & 579 & 411 & 436 & 361 & 394 & 536 & 587 & 642 \\
+Less Outgoings Paid & - & - & - & - & - & - & - & - & - & - \\
+\midrule[\heavyrulewidth]
+\textbf{Net Rentals (EBITDA)} & \textbf{8,432} & \textbf{8,412} & \textbf{8,003} & \textbf{24,235} & \textbf{24,361} & \textbf{24,606} & \textbf{24,721} & \textbf{24,986} & \textbf{26,516} & \textbf{26,256} \\
+\midrule
+\textbf{Base Case} &  &  &  &  &  &  &  &  &  &  \\
+BBSY (\%) & 3.70\% & 3.75\% & 3.49\% & 3.36\% & 3.40\% & 3.49\% & 3.59\% & 3.71\% & 3.82\% & 3.92\% \\
+\bottomrule
+\end{tabular}
+\vspace{5pt}
+\footnotesize \textit{(Source: Prime Property Trust Income Statement; Assume ICR = EBITDA / Interest Expense)}
+\end{tcolorbox}
+
+\newpage
+\section{Rates Outlook}
+
+\subsection{Equilibrium and Dynamic Relationships}
+
+\subsection{Macroeconomics}
+
+\newpage
+
+\section{Hedging Objectives}
+
+Maintenance of the debt covenants 
+
+\newpage
+
+\section{Interest Rate Derivatives Valuation}
+
+
+\newpage
+
+\section{Hedging Deliberations}
+
+% Quantitative analysis in terms of considerations such as the
+% o size or number of contracts to enter into (possibly progressively),
+% o position (short or long) and contract maturities,
+% o timing and tenor in the market (when and how to enter and exit),
+% o initial and ongoing cashflows and costs (premiums, margins, etc),
+% o expected outcomes or payoffs under different market conditions,
+% o risks and downside if markets didn’t evolve as forecast, of the mechanics each hedging
+% option Pershing considered, namely
+% not hedging,
+% partial or full portfolio liquidation into cash,
+% S\&P 500 index futures,
+% S\&P 500 index options, and
+% index CDS.
+% Analysis of the feasibility and suitability of each of Pershing’s hedging options for achieving their
+% hedging objectives.
+
+\newpage
+
+\subsection{Not Hedging}
+
+\subsubsection{Mechanics}
+
+\subsubsection{Size or Number of Contracts}
+
+\subsubsection{Position and Contract Maturities}
+
+\subsubsection{Timing and Tenor}
+
+\subsubsection{Initial and Ongoing Cashflows and Costs}
+
+\subsubsection{Expected Outcomes or Payoffs}
+
+\subsubsection{Risks and Downside}
+
+\subsubsection{Feasibility and Suitability}
+
+\newpage
+
+\subsection{Liquidation}
+
+\subsubsection{Mechanics}
+
+\subsubsection{Size or Number of Contracts}
+
+\subsubsection{Position and Contract Maturities}
+
+\subsubsection{Timing and Tenor}
+
+\subsubsection{Initial and Ongoing Cashflows and Costs}
+
+\subsubsection{Expected Outcomes or Payoffs}
+
+\subsubsection{Risks and Downside}
+
+\subsubsection{Feasibility and Suitability}
+
+\newpage
+
+\subsection{Forwards}
+
+\subsubsection{Mechanics}
+
+\subsubsection{Size or Number of Contracts}
+
+\subsubsection{Position and Contract Maturities}
+
+\subsubsection{Timing and Tenor}
+
+\subsubsection{Initial and Ongoing Cashflows and Costs}
+
+\subsubsection{Expected Outcomes or Payoffs}
+
+\subsubsection{Risks and Downside}
+
+\subsubsection{Feasibility and Suitability}
+
+\newpage
+
+\subsection{Futures}
+
+\subsubsection{Mechanics}
+
+\subsubsection{Size or Number of Contracts}
+
+\subsubsection{Position and Contract Maturities}
+
+\subsubsection{Timing and Tenor}
+
+\subsubsection{Initial and Ongoing Cashflows and Costs}
+
+\subsubsection{Expected Outcomes or Payoffs}
+
+\subsubsection{Risks and Downside}
+
+\subsubsection{Feasibility and Suitability}
+
+\newpage
+
+\subsection{Swaps}
+
+\subsubsection{Mechanics}
+
+\subsubsection{Size or Number of Contracts}
+
+\subsubsection{Position and Contract Maturities}
+
+\subsubsection{Timing and Tenor}
+
+\subsubsection{Initial and Ongoing Cashflows and Costs}
+
+\subsubsection{Expected Outcomes or Payoffs}
+
+\subsubsection{Risks and Downside}
+
+\subsubsection{Feasibility and Suitability}
+
+\newpage
+
+\section{Hedging Rationale}
 
 
 
