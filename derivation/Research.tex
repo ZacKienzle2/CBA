@@ -1,0 +1,71 @@
+\documentclass[11pt, a4paper, british]{article}
+
+\input{Preamble.tex}
+
+\newcommand{\PaperTitle}{CBA Global Markets Research}
+\newcommand{\AuthorName}{Zac Kienzle}
+\newcommand{\AuthorAffiliation}{Bay Farm Capital}
+\newcommand{\AuthorEmail}{zac.kienzle@gmail.com}
+\newcommand{\ShortTitle}{Hedging Considerations}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\sf \leftmark}}
+\fancyhead[R]{\nouppercase{\sf \ShortTitle}}
+\fancyfoot[C]{\sf \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14.5pt}
+
+\hypersetup{
+    hidelinks,
+    hypertexnames=false,
+    pageanchor=false,
+    pdftitle={\PaperTitle},
+    pdfauthor={\AuthorName},
+    pdfsubject={Quantitative Finance Research},
+    pdfkeywords={Market Making, Statistical Arbitrage, Pairs Trading},
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+    pdfpagemode=UseOutlines,
+    pdfstartview={FitH},
+    unicode=true
+}
+
+\title{\PaperTitle}
+\author{%
+    \AuthorName
+    \thanks{\AuthorAffiliation; Email: \href{mailto:\AuthorEmail}{\nolinkurl{\AuthorEmail}}}
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+    \noindent
+    This is a \LaTeX\ writeup of my progression through a preponderance of alternative hedging strategies
+\end{abstract}
+
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+
+\clearpage
+\tableofcontents
+\listoftables
+\listofalgorithms
+\thispagestyle{empty}
+\clearpage
+
+\pagenumbering{arabic}
+
+\section{Interest Rate Derivatives}
+
+\newpage
+
+\subsection{Black-Scholes Derivation}
+
+
+
+\end{document}

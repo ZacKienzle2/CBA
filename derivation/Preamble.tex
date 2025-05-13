@@ -1,0 +1,868 @@
+%packages
+\usepackage[margin=1in]{geometry}  
+\usepackage{setspace}
+\usepackage{wrapfig}
+\usepackage{mathrsfs}
+\usepackage{boxedminipage}
+\usepackage{pifont}
+\usepackage{euscript}
+\usepackage{boxedminipage}
+\usepackage{dcolumn}
+\usepackage{float}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{mparhack} % Fix \margref
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{dsfont}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{libertine}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{bbm}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{breqn}
+\usepackage{nicefrac}
+\usepackage{varwidth}
+\usepackage{amsmath} % Required for advanced math features
+\usepackage{amssymb} % Additional math symbols
+\usepackage{mathrsfs} % For \mathcal and \mathscr fonts
+\usepackage{tabularx}
+\usepackage{booktabs}      % For \toprule, \midrule, \bottomrule
+\usepackage{tabularx}      % For auto-sized columns (X)
+\usepackage{colortbl}      % Extra safety: ensures \rowcolor, etc., work
+\usepackage{array}         % Often helps with column types
+\usepackage{caption} 
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{threeparttable}
+\usepackage{titling}
+\usetikzlibrary{arrows.meta}
+
+\pgfplotsset{compat=1.18}
+\definecolor{ltgray}{HTML}{F2F2F2}
+\definecolor{mdgray}{HTML}{E3E3E3}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{applegreen}{rgb}{0.55, 0.41, 0.0}
+\definecolor{gray1}{rgb}{0.98, 0.98, 0.98}
+\definecolor{black}{rgb}{0, 0, 0}
+\definecolor{antique1}{rgb}{0.98, 0.92, 0.84}
+\definecolor{cream}{rgb}{1.0, 0.99, 0.82}
+\definecolor{darkpink}{rgb}{0.91, 0.33, 0.5}
+\definecolor{darkorchid}{rgb}{0.6, 0.2, 0.8}
+\definecolor{indigo}{rgb}{0.29, 0.0, 0.51}
+\definecolor{islamicgreen}{rgb}{0.0, 0.56, 0.0}
+\definecolor{vlgray}{gray}{0.9}
+\definecolor{lgray}{gray}{0.7}
+\definecolor{defncolor}{rgb}{0.76,0.96,0.95}
+\definecolor{examplecolor}{rgb}{0.76, 0.96, 0.76} % Light green background color
+\definecolor{headercolor}{rgb}{0.2,0.2,0.2} % Dark header color
+\definecolor{appcolor}{rgb}{0.95, 0.80, 0.78} 
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.5} % Dark blue color
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0} % Dark green color
+\definecolor{darkred}{rgb}{0.5, 0.0, 0.0} % Dark red color
+
+
+
+\newcommand{\myurl}[1]{{\textcolor{blue}{\url{#1}}}}
+\newcommand{\myhref}[2]{\textcolor{blue}{{\href{#1}{#2}}}}
+\newcommand{\preface}[1][Preface]{\chapter*{#1}\markboth{#1}{#1}}
+\newcommand{\code}[1]{{\normalfont\ttfamily\hyphenchar\font=-1 #1}}
+\newcommand{\pkg}[1]{{\fontseries{b}\selectfont #1}}
+\newcommand{\str}[1]{{{\tt \textquotesingle}}{\ttfamily#1}{\tt \textquotesingle}}
+
+%commands
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\X}{\textcolor{blue}{\mathbf{X}}} %model matrix
+\newcommand{\Y}{\textcolor{blue}{\mathbf{Y}}} %output matrix
+\newcommand{\indsim}{\stackrel{\mathrm{ind}}{\sim}}
+\newcommand{\simind}{\indsim}
+\newcommand{\simindt}{{\:{\sim}_{\mathrm{ind}}\:}}
+\newcommand{\tilda}{\mathem{\sim}}
+\newcommand{\blar}{\textcolor{black}>}
+\newcommand{\plar}{\textcolor{black}{>>}}
+\newcommand{\blpl}{\textcolor{black}+}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\st}{\: : \:} % such that
+\newcommand {\otoprule }{\midrule[\heavyrulewidth]}
+\newcommand{\Span}[1]{\mathrm{Span}\left\{ #1 \right\}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\dd}{\partial}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\Shan}{{\EuScript{H}}}
+\newcommand{\KL}{{\EuScript{D}}}
+\newcommand{\El}{{\EuScript{E}}}
+\newcommand{\MI}{\EuScript{M}} % mutual information
+\newcommand{\Lh}{\EuScript{L}} % likelihood
+\newcommand{\Fish}{\EuScript{I}}
+\newcommand{\Sc}{\EuScript{S}} % score function
+\newcommand{\bigO}{\c O}
+\newcommand{\btau}{\vect{\tau}}
+\newcommand{\bphi}{\vect{\phi}}
+\newcommand{\bbeta}{\vect{\beta}}
+\newcommand{\bepsilon}{\vect{\epsilon}}
+\newcommand{\bomega}{\vect{\omega}}
+\newcommand{\bmu}{\vect{\mu}}
+\newcommand{\bsig}{\vect{\sigma}}
+\newcommand{\lito}{$o$}
+\renewcommand{\v}[1]{\boldsymbol{#1}}
+\newcommand{\bS}{\v{S}}
+\newcommand{\bL}{\v{L}}
+\newcommand{\bl}{\mbox{\boldmath $\ell$}}
+\newcommand{\bs}{\v{s}}
+\newcommand{\bQ}{\v{Q}}
+\newcommand{\bG}{\v{G}}
+\newcommand{\bg}{\v{g}}
+\newcommand{\bSigma}{\mbox{\boldmath $\Sigma$}}
+\newcommand{\bB}{\v{B}}
+\newcommand{\bz}{\v{z}}
+\newcommand{\bincof}[2]{{{#1} \choose {#2}}}
+
+
+\newcommand*\xbar[1]{%
+   \hbox{%
+     \vbox{%
+       \hrule height 0.8pt % The actual bar
+       \kern0.3ex%         % Distance between bar and symbol
+       \hbox{%
+         \kern+0em%      % Shortening on the left side
+         \ensuremath{#1}%
+         \kern-0.0em%      % Shortening on the right side
+       }%
+     }%
+   }%
+}
+
+\newcommand{\T}{{\top}}
+\newcommand{\gr}{\mbox{$\nabla$}}
+\newcommand{\bK}{\v{K}}
+\newcommand{\bX}{\v{X}}
+\newcommand{\bx}{\v{x}}
+\newcommand{\bk}{\v{k}}
+\newcommand{\bq}{\v{q}}
+\newcommand{\be}{\v{e}}
+\newcommand{\bF}{\v{F}}
+\newcommand{\br}{\v{r}}
+\newcommand{\by}{\v{y}}
+\newcommand{\bZ}{\v{Z}}
+\newcommand{\bu}{\v{u}}
+\newcommand{\bU}{\v{U}}
+\newcommand{\bY}{\v{Y}}
+\newcommand{\bP}{\v{P}}
+\newcommand{\bR}{\v{R}}
+\newcommand{\bV}{\v{V}}
+\newcommand{\bW}{\v{W}}
+\newcommand{\bT}{\v{T}}
+\newcommand{\bt}{\v{t}}
+
+\newcommand{\dotsim}{\stackrel{\centerdot}{\sim}}
+\renewcommand{\le}{\leq}
+\renewcommand{\ge}{\geq}
+\renewcommand{\tilde}{\widetilde}
+\newcommand{\bnu}{\vect{\nu}}
+\newcommand{\btheta}{\vect{\theta}}
+\newcommand{\blambda}{\vect{\lambda}}
+\newcommand{\balpha}{\vect{\alpha}}
+\newcommand{\halmos}{\vspace{3mm} \hfill \mbox{$\Box$}}
+
+\newcommand{\bE}{\v{E}}
+\newcommand{\ba}{\v{a}}
+\newcommand{\bh}{\v{h}}
+\newcommand{\bfb}{\v{b}}
+\newcommand{\bA}{\v{A}}
+\newcommand{\bM}{\v{M}}
+\newcommand{\bN}{\v{N}}
+\newcommand{\bc}{\v{c}}
+\newcommand{\bbf}{\v{f}}
+\newcommand{\bd}{\v{d}}
+\newcommand{\bD}{\v{D}}
+\newcommand{\bw}{\v{w}}
+
+\newcommand{\Var}{\mathbb{V}\mathrm{ar}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\var}{\Var}
+
+\newcommand{\Cov}{\mathbb{C}\mathrm{ov}}
+\newcommand{\cov}{\Cov}
+
+\newcommand{\Supp}{\mathrm{Supp}}
+\newcommand{\matlab}{\mathrm{M}\mathrm{{\scriptstyle ATLAB}}}
+
+
+\newcommand{\bp}{\v{p}}
+\newcommand{\bC}{\v{C}}
+\newcommand{\bii}{\v{i}}
+\newcommand{\bjj}{\v{j}}
+\newcommand{\bII}{\v{I}}
+\newcommand{\bv}{\v{v}}
+
+\renewcommand{\epsilon}{\varepsilon}
+% \renewcommand{\rho}{\varrho}
+\renewcommand{\log}{\ln}
+\renewcommand{\hat}{\widehat}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+\newcommand{\argmax}{\mathop{\rm argmax}}
+\newcommand{\argmin}{\mathop{\rm argmin}}
+
+\newcommand{\iid}{\text{iid }}
+
+%distributions
+% Bernoulli distribution
+\newcommand{\Ber}{{\sf Ber}}
+\newcommand{\ber}{\Ber}
+
+% Erlang distribution
+\newcommand{\Erl}{{\sf Erl}}
+\newcommand{\erl}{\Erl}
+
+% Binomial distribution
+\newcommand{\Bin}{{\sf Bin}}
+\newcommand{\bin}{\Bin}
+
+% Cauchy distribution
+\newcommand{\Cauchy}{{\sf Cauchy}}
+\newcommand{\cauchy}{\Cauchy}
+
+% Negative binomial distribution
+\newcommand{\NegBin}{{\sf NegBin}}
+\newcommand{\negbin}{\NegBin}
+\newcommand{\negBin}{\NegBin}
+\newcommand{\Negbin}{\NegBin}
+\newcommand{\nbin}{\NegBin}
+\newcommand{\Nbin}{\NegBin}
+\newcommand{\NBin}{\NegBin}
+
+% Multinomial distribution
+\newcommand{\Mnom}{{\sf Mnom}}
+\newcommand{\mnom}{\Mnom}
+
+% Geometric distribution
+\newcommand{\Geo}{{\sf Geom}}
+\newcommand{\geo}{\Geo}
+\newcommand{\Geom}{\Geo}
+\newcommand{\geom}{\Geo}
+\newcommand{\G}{\Geo}
+\newcommand{\NE}{{\sf NE}}
+
+% Hypergeometric distribution
+\newcommand{\Hyp}{{\sf Hyp}}
+
+% Poisson distribution
+\newcommand{\Poi}{{\sf Poi}}
+\newcommand{\poi}{\Poi}
+\newcommand{\Po}{\Poi}
+\newcommand{\po}{\Poi}
+
+% Uniform distribution (continuous)
+%\newcommand{\U}{{\sf Unif}}
+\newcommand{\U}{\EuScript{U}}
+% Exponential distribution
+\newcommand{\Ex}{{\sf Exp}}
+\newcommand{\ex}{\Ex}
+
+% Normal / Gaussian distribution
+\newcommand{\Nor}{\EuScript{N}}
+\newcommand{\nor}{\Nor}
+
+% Pareto distribution
+\newcommand{\Pareto}{{\sf Pareto}}
+\newcommand{\pareto}{\Pareto}
+\newcommand{\ParetoI}{{\sf ParetoI}}
+
+% Negative hypergeometric distribution
+\newcommand{\NegHyp}{{\sf NegHyp}}
+
+% Phase-type distributions
+\newcommand{\DiscPhase}{{\sf DPH}}
+\newcommand{\ContPhase}{{\sf PH}}
+
+% F distribution
+\newcommand{\Fdist}{{\sf F}}
+
+% Extreme value distributions
+\newcommand{\EVI}{{\sf ExValueI}}
+\newcommand{\EVII}{{\sf ExValueII}}
+\newcommand{\EVIII}{{\sf ExValueIII}}
+\newcommand{\Gumbel}{{\sf Gumbel}}
+\newcommand{\Frechet}{\text{\sf Fr\'{e}chet}}
+\newcommand{\gumbel}{\Gumbel}
+\newcommand{\frechet}{\Frechet}
+
+% Inverse Gaussian distribution
+\newcommand{\IGauss}{{\Wald}}
+\newcommand{\InvGauss}{\Wald}
+\newcommand{\Wald}{{\sf Wald}}
+
+% Logistic distribution
+\newcommand{\Logistic}{{\sf Logistic}}
+\newcommand{\logistic}{\Logistic}
+
+% Lognormal distribution
+\newcommand{\LogN}{{\sf LogN}}
+
+% Rayleigh distribution
+\newcommand{\Ray}{{\sf Rayleigh}}
+
+% Levy \alpha stable distribution
+\newcommand{\Stable}{{\sf Stable}}
+
+% Student's t distribution
+\newcommand{\Student}{{\sf t}}
+\newcommand{\student}{\Student}
+
+% von Mises distribution
+\newcommand{\vonMises}{{\sf vonMises}}
+
+% Dirichlet distribution
+\newcommand{\Dirichlet}{{\sf Dirichlet}}
+\newcommand{\dirichlet}{\Dirichlet}
+\newcommand{\Dir}{\Dirichlet}
+\newcommand{\dir}{\Dirichlet}
+
+% Gamma distribution
+\newcommand{\Gam}{{\sf Gamma}}
+\newcommand{\gam}{\Gam}
+
+% Inverse Gamma
+\newcommand{\invgam}{{\sf InvGamma}}
+% Beta distribution
+\newcommand{\Bet}{{\sf Beta}}
+\newcommand{\bet}{\Bet}
+
+% Weibull distribution
+\newcommand{\Weib}{{\sf Weib}}
+\newcommand{\weib}{\Weib}
+
+% Discrete uniform distribution
+\newcommand{\DU}{{\sf DU}}
+
+% Shifted exponential distribution
+\newcommand{\SE}{{\sf SExp}}
+
+% Double exponential distribution
+%\newcommand{\DE}{{\sf DExp}}
+\newcommand{\DE}{{\sf Laplace}}
+\newcommand{\DExp}{\DE}
+\newcommand{\Laplace}{\DE}
+\newcommand{\laplace}{\DE}
+
+% Arcsine distribution
+\newcommand{\Arcsine}{{\sf Arcsine}}
+
+% Levy distribution
+\newcommand{\Levy}{\text{\sf L\'{e}vy}}
+
+% Generic distribution
+\newcommand{\Dist}{{\sf Dist}}
+
+% Wishart distribution
+\newcommand{\Wishart}{{\sf Wishart}}
+
+
+\newcommand{\Em}{{\mathbb E}}
+\newcommand{\Pm}{{\mathbb P}}  
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Rbar}{\overline{\mathbb R}}
+
+\newcommand{\B}{{\cal B}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cE}{{\cal E}}
+
+\newcommand{\F}{\mathbb F}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}
+
+\newcommand{\scA}{\mathscr{A}}
+\newcommand{\scB}{\mathscr{B}}
+\newcommand{\scC}{\mathscr{C}}
+\newcommand{\scD}{\mathscr{D}}
+\newcommand{\scF}{\mathscr{F}}
+\newcommand{\scG}{\mathscr{G}}
+\newcommand{\scH}{\mathscr{H}}
+\newcommand{\scI}{\mathscr{I}}
+\newcommand{\scJ}{\mathscr{J}}
+\newcommand{\scL}{\mathscr{L}}
+\newcommand{\scM}{\mathscr{M}}
+\newcommand{\scP}{\mathscr{P}}
+\newcommand{\scS}{\mathscr{S}}
+\newcommand{\scR}{\mathscr{R}}
+\newcommand{\scU}{\mathscr{U}}
+\newcommand{\scE}{\mathscr{E}}
+\newcommand{\scT}{\mathscr{T}}
+\newcommand{\scV}{\mathscr{V}}
+\newcommand{\scW}{\mathscr{W}}
+\newcommand{\scX}{\mathscr{X}}
+\newcommand{\scY}{\mathscr{Y}}
+\newcommand{\scZ}{\mathscr{Z}}
+
+\newcommand{\gvn}{\,|\,}
+
+\newcommand{\e}{\mathrm{e}}
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\vect}[1]{\boldsymbol #1}
+
+\newcommand{\convdistr}{\stackrel{d}{\longrightarrow}}
+\newcommand{\distrconv}{\convdistr}
+\newcommand{\distreq}{\stackrel{d}{=}}
+\newcommand{\eqdistr}{\distreq}
+
+\newcommand{\di}{\mathrm{d}}
+\newcommand{\tr}{\mathrm{tr}}
+
+\newcommand{\utterance}[1]{\begin{list}{}%
+{\leftmargin\parindent\rightmargin0pt\listparindent0pt\parsep1ex%
+\labelwidth0pt\labelsep0pt}\item[]\small\sf$\maltese$~#1 \end{list}}
+
+\newcommand{\cF}{{{\cal F}}}
+\newcommand{\cG}{{{\cal G}}}
+\newcommand{\cH}{{\cal H}}
+
+\newcommand{\Prob}{\Pm}
+
+\newcommand{\cas}{{\stackrel{\mathrm{a.s.}}{\longrightarrow}\: }}
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\rar}{\rightarrow}
+\newcommand{\Rar}{\Rightarrow}
+\newcommand{\dar}{\downarrow}
+
+\newcommand{\chg}{\marginpar{*}}
+
+\newcommand{\Ito}{It\^{o}}
+
+\def\eps{\varepsilon}
+
+\newcommand{\matX}{{\cal X}}
+
+\newcommand{\I}{\mathds{1}}
+\newcommand{\ii}{\mathrm{i}}
+
+\newcommand{\appr}{\mbox{\footnotesize appr.}}
+\newcommand{\approxsim}{\stackrel{\mathrm{approx.}}{\sim}}
+
+\newcommand{\iidsim}{\stackrel{\mathrm{iid}}{\sim}}
+\newcommand{\simiid}{\iidsim}
+\newcommand{\simiidt}{{\:{\sim}_{\mathrm{iid}}\:}}
+\newcommand{\diag}{\mathrm{diag}}
+
+\newcommand{\sech}{\mathrm{sech}}
+
+\newcommand{\chk}[1]{}
+\newcommand{\ver}{}
+
+\newcommand{\idef}{\stackrel{\mathrm{def}}{=}}
+%
+%% Correlation
+\newcommand{\Corr}{\mathrm{Corr}}
+\newcommand{\corr}{\Corr}
+
+\newcommand{\bm}{\v{m}}
+
+%% Space C^k
+\newcommand{\eC}{{\EuScript{C}}}
+%
+
+\RequirePackage{xcolor}
+\definecolor{beaubleu}{rgb}{0.26,0.31,0.61}
+\definecolor{beauvert}{rgb}{0.27,0.52,0.42}
+\definecolor{datacol}{rgb}{0.43, 0.21, 0.1}
+\definecolor{datacol}{rgb}{0.8, 0.33, 0.0}
+%\definecolor{packcol}{rgb}{0.2, 0.33, 0.13}
+\definecolor{packcol}{rgb}{0.09, 0.45, 0.27}
+\definecolor{methcol}{rgb}{0.16, 0.32, 0.75}
+%DK: See http://latexcolor.com/
+%
+\usepackage{cprotect}
+\RequirePackage[formats]{listings}\RequirePackage{textcomp}
+\RequirePackage[formats]{listings}\RequirePackage{textcomp}
+\newcommand{\file}[1]{\texttt{#1}}
+%\newcommand{\dataset}[1]{\textcolor{datacol}{\bf \texttt{#1}}}
+\newcommand{\dataset}[1]{\texttt{#1}}
+\newcommand{\datafr}[1]{\textcolor{datacol}{\bf \texttt{#1}}}
+\newcommand{\packagecap}[1]{\textcolor{packcol}{\bf \texttt{#1}}}% only in captions
+\newcommand{\package}[1]{\lstset{basicstyle=\bfseries\ttfamily\color{packcol}}\lstinline{#1}}
+\newcommand{\method}[1]{\lstset{basicstyle=\bfseries\ttfamily\color{methcol}}\lstinline{#1}}
+\newcommand{\atrr}[1]{\lstset{basicstyle=\bfseries\ttfamily\color{methcol}}\lstinline{#1}}
+\newcommand{\key}[1]{{\normalfont\texttt{\uppercase{#1}}}}
+\newcommand{\menu}[1]{\texttt{#1}}
+\newcommand{\menuentry}[1]{\texttt{#1}}
+
+\definecolor{outcol}{gray}{0.9}
+%\definecolor{incol}{rgb}{0.82, 0.94, 0.75}
+\definecolor{incol}{rgb}{0.80, 0.91, 0.98}
+
+\lstnewenvironment{Pin}{%
+  \lstset{backgroundcolor=\color{incol},
+  belowskip=0pt,
+  mathescape,
+  xleftmargin = 3pt,
+  xrightmargin = 3pt,
+  frame=single,
+  framerule=0pt,
+  basicstyle=\footnotesize\ttfamily,
+  columns=fixed}}{}
+  
+\lstnewenvironment{Pout}{%
+  \lstset{backgroundcolor=\color{outcol},
+  aboveskip= -2pt,  
+  xleftmargin = 4pt,
+  xrightmargin = 4pt,
+  frame=single,
+  upquote,
+  framerule=1pt,
+  basicstyle=\footnotesize\ttfamily,
+  columns=fixed}}{}
+
+
+%\newenvironment{Pin}
+%{\VerbatimEnvironment
+%\begin{Verbatim}[formatcom=\color{beaubleu},commandchars=\\\{\},fontfamily=courier,fontsize=\small,fontseries=b]}
+%{\end{Verbatim}}
+
+%% \newenvironment{Pout}
+%% {\vspace*{-0.5cm}
+%% \VerbatimEnvironment
+%% \begin{Verbatim}[formatcom=\color{beauvert},commandchars=\\\{\},fontfamily=courier,fontsize=\small,fontseries=b,fontshape=it]}
+%% {\end{Verbatim}}
+
+
+
+\newenvironment{Pcode}[1]{%
+  \tcblisting{breakable,listing only,colback=black!1!cream, colframe=red!5!black, colbacktitle=black, enhanced,
+ 		 attach boxed title to top
+    center={xshift=-3cm,yshift=-2mm},arc = 0mm,title={ {\ttfamily\large #1}},
+            	   listing options={frame=line,language=Python,
+basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{blue},  % the style that is used for the
+                                % line-numbers
+  xleftmargin=5pt,
+  aboveskip=0pt,
+columns=fixed,
+basewidth=6pt,
+  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
+                                  % will be numbered
+  numbersep=7pt,                  % how far the line-numbers are from
+                                % the code
+backgroundcolor=\color{cream},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  %frame=single,                   % adds a frame around the code
+  %frame=shadowbox,
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                     % sets default tabsize to 2 spaces
+  captionpos=b,                  % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  commentstyle=\color{islamicgreen},   % comment style
+  stringstyle=\color{red},      % string literal style
+ % escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...}
+  			 }
+    		}
+    	}
+{\endtcblisting}
+
+
+\newenvironment{PC}{%
+\tcblisting{breakable,listing only,colback=cream, enhanced, sharpish
+corners,  boxrule=1pt,after, listing options =
+   {language=Python,
+  basicstyle=\footnotesize\ttfamily,
+  numbers=none,
+  backgroundcolor=\color{cream},
+  xleftmargin=-10pt,
+  aboveskip=-4pt,
+  belowskip=-6pt,
+  columns=fixed,
+  basewidth=6pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  breaklines=true,
+  breakatwhitespace=false,
+  keywordstyle=\color{blue},
+  upquote,
+  commentstyle=\color{islamicgreen},
+  stringstyle=\color{red},
+  morekeywords={*,...},
+  frame=none  
+         }
+        }
+      }
+{\endtcblisting}
+
+\newenvironment{PC1}[2]{%
+\tcblisting{breakable,listing only,colback=cream, enhanced,
+ attach boxed title to top left ={yshift=-0.5mm}
+    ,title={\href{#1}{ \ttfamily #2}}, sharpish
+corners, boxrule=1pt,after, listing options =
+   {language=Python,
+  basicstyle=\footnotesize\ttfamily,        % the size of the fonts that are used for the code
+  numbers=none,                   % where to put the line-numbers
+%  numberstyle=\tiny\color{blue},  % the style that is used for the line-numbers
+  xleftmargin=-10pt,
+  aboveskip=-4pt,
+  belowskip=-6pt,
+  columns=fixed,
+  basewidth=6pt,                     %separation of letters
+%  stepnumber=1,                % the step between two line-numbers. If it's 1, each line will be numbered
+%  numbersep=7pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{cream},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  %frame=single,                   % adds a frame around the code
+  %frame=shadowbox,
+  %rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  tabsize=2,                     % sets default tabsize to 2 spaces
+ % captionpos=b,                  % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  %title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  upquote,     % very important to get right quote for cut/paste
+  commentstyle=\color{islamicgreen},   % comment style
+  stringstyle=\color{red},      % string literal style
+ % escapeinside={\%*}{*)},         % if you want to add a comment within your code
+  morekeywords={*,...}
+  			 }
+    		}
+    	}
+{\endtcblisting}
+
+
+\RequirePackage{xcolor}
+\definecolor{shadecolor}{rgb}{0.9,0.9,1}
+
+\definecolor{thmcolor}{rgb}{0.97,0.88,0.48}
+\definecolor{defncolor}{rgb}{0.76,0.96,0.95}
+\definecolor{beaubleu}{rgb}{0.26,0.31,0.61}
+\definecolor{darkerblue}{rgb}{0.2,0.2,0.4}
+\definecolor{beauvert}{rgb}{0.27,0.52,0.42}
+
+
+\def\redimensionne{0.76}
+
+\RequirePackage{framed}
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage{calc}
+
+%\newlength{\boxw}
+%\newlength{\boxh}
+%\newlength{\shadowsize}
+%% \newlength{\boxroundness}
+%% \newlength{\tmpa}
+%% \newsavebox{\shadowblockbox}
+%% \setlength{\shadowsize}{6pt}
+%% \setlength{\boxroundness}{5pt}
+\newcommand{\mathem}[1]{$\boldsymbol{#1}$}
+
+\newcommand{\sca}[1]{\lowercase{#1}}
+%\newcommand{\vect}[1]{\lowercase{\boldsymbol{#1}}}
+\newcommand{\mat}[1]{\isgreek{#1}\ifthenelse{\boolean{estgrec}}{\matgreektorm{#1}}{\boldsymbol{\mathcal{\uppercase{#1}}}}}
+
+
+
+%\tcbuselibrary{listings,skins,breakable,theorems}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\m}[1]{\mathbf{#1}}
+\renewcommand{\c}[1]{\mathcal{#1}}
+%\newcommand{\s}[1]{\mathscr{#1}}
+%\newcommand{\idef}{\stackrel{\mathrm{def}}{=}}
+%\newcommand{\simiid}{\stackrel{\mathrm{iid}}{\sim}}
+%\DeclareMathOperator*{\argmin}{argmin}
+%\DeclareMathOperator*{\argmax}{argmax}
+\newcommand{\cp}{\stackrel{\bb {P}}{\longrightarrow}}
+\newcommand{\cd}{\stackrel{\mathrm{d}}{\longrightarrow}}
+\newcommand{\cost}{L}
+%\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}
+
+%% \usepackage{algorithm}
+%% \usepackage{algorithmic}
+%% \algsetup{indent=2em}
+%% \graphicspath{{../figures/}}
+%% \usepackage{amsmath}
+%% \usepackage{amsfonts}
+%% \usepackage{amssymb}
+%% \usepackage{amsbsy}
+%% \usepackage{amsthm}
+%% \usepackage{mathrsfs}
+
+
+
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}} % TT: 20/02/18
+\newcommand{\loss}{\mathrm{Loss}}
+\usepackage{upquote}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,skins,breakable,theorems}
+
+\newtcbtheorem[auto counter, number within=section]{thm}{Theorem}
+{colback=thmcolor!100,colframe=black!35!black,fonttitle=\bfseries,before
+ skip=20pt plus 2pt, before
+ skip=20pt plus 2pt}{thm} %"thm" is also the prefix (here) for
+                          %referencing, see tcolorbox doc% It has two
+                          %arguments: the second is the label
+
+\newtcbtheorem[auto counter, number within=section]{defn}{Definition}
+{colback=defncolor,        % Background color for the content
+ colframe=headercolor,     % Frame color
+ coltitle=white,           % Title color
+ fonttitle=\bfseries,      % Title font styling
+ colbacktitle=headercolor, % Header background color
+ boxed title style={sharp corners=north, rounded corners=south},
+ boxrule=0.6mm,            % Slightly thicker frame for better contrast
+ before skip=12pt, after skip=12pt, % More consistent spacing
+ top=6pt, bottom=6pt, % Controls internal padding
+ left=8pt, right=8pt, % Better spacing within the box
+ breakable,                % Allows breaking across pages
+ enhanced,                 % Enables additional styling
+}{defn}
+
+\newtcbtheorem[auto counter, number within=section]{example}{Example}
+{colback=examplecolor,        % Background color for the content
+ colframe=headercolor,        % Frame color (same as defn)
+ coltitle=white,              % Title color
+ fonttitle=\bfseries,         % Title font styling
+ colbacktitle=headercolor,    % Header background color
+ boxed title style={sharp corners=north, rounded corners=south},
+ boxrule=0.6mm,               % Slightly thicker frame for better contrast
+ before skip=12pt, after skip=12pt, % More consistent spacing
+ top=6pt, bottom=6pt, % Controls internal padding
+ left=8pt, right=8pt, % Better spacing within the box
+ breakable,                 % Allows breaking across pages
+ enhanced,                  % Enables additional styling
+}{example}
+
+\newtcbtheorem[auto counter, number within=section]{app}{Application}
+{colback=appcolor,        % Red content background
+ colframe=headercolor,     % Black frame
+ coltitle=white,           % White title text
+ fonttitle=\bfseries,      % Bold title font
+ colbacktitle=headercolor, % Black header background
+ boxed title style={sharp corners=north, rounded corners=south},
+ boxrule=0.6mm,            % Frame thickness
+ before skip=12pt, after skip=12pt, % Spacing
+ top=6pt, bottom=6pt,      % Internal padding
+ left=8pt, right=8pt,      % Internal spacing
+ breakable,                % Page breaks
+ enhanced,                 % Extra styling
+}{app}
+
+% xattention box
+\newtcolorbox{xattention}{breakable, enhanced,
+  colback=gray!5, colframe=gray, drop shadow,
+  arc=5mm, sharp corners=uphill, % Adjusted corners as per your preference
+  boxed title style={boxsep=0pt, right=0pt, left=0pt, toptitle=0pt, colframe=white, colback=white},
+  overlay={
+    \node[anchor=west, xshift=-12mm, yshift=0cm] at (frame.west)
+    {\includegraphics[scale=4.0, keepaspectratio]{warning.png}}; % Use scale instead of width
+  },
+  boxsep=5pt, before skip=10pt, after skip=10pt
+}
+
+% xtip box
+\newtcolorbox{xtip}{breakable, enhanced,
+  colback=gray!5, colframe=gray, drop shadow,
+  arc=5mm, sharp corners=uphill, % Adjusted corners as per your preference
+  boxed title style={boxsep=0pt, right=0pt, left=0pt, toptitle=0pt, colframe=white, colback=white},
+  overlay={
+    \node[anchor=west, xshift=-14mm, yshift=0cm] at (frame.west)
+    {\includegraphics[scale=0.25, keepaspectratio]{idea.jpeg}}; % Use scale instead of width
+  },
+  boxsep=5pt, before skip=10pt, after skip=10pt
+}
+
+\newtcolorbox{requiredreading}[1]{ % #1 = title of the box
+  breakable,
+  enhanced,
+  title=#1,                           % Title text
+  colback=beauvert!5,                % Green background for the box body
+  colframe=headercolor,              % Same frame color as "defn" (dark gray)
+  colbacktitle=headercolor,          % Dark header bar
+  coltitle=white,                    % White text for the header
+  fonttitle=\bfseries,               % Boldface title
+  boxed title style={
+    sharp corners=north,  % Top corners sharp
+    rounded corners=south % Bottom corners rounded
+  },
+  boxrule=0.5mm,                     % Same thickness as "defn"
+  before skip=10pt, 
+  after skip=10pt, 
+  overlay={
+    \node[anchor=west, xshift=-12mm, yshift=0pt] at (frame.west)
+    {\includegraphics[scale=0.065]{book.png}}; 
+  }
+}
+
+\lstset{ 
+  language=Matlab,                 % the language of the code
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  numbers=left,                    % where to put the line-numbers
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  backgroundcolor=\color{white},   % choose the background color. You must add \usepackage{color}
+  showspaces=false,                % show spaces adding particular underscores
+  showstringspaces=false,          % underline spaces within strings
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  frame=single,                    % adds a frame around the code
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  captionpos=b,                    % sets the caption-position to bottom
+  breaklines=true,                 % sets automatic line breaking
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+  keywordstyle=\color{blue},       % keyword style
+  commentstyle=\color{mygreen},    % comment style
+  stringstyle=\color{mymauve},     % string literal style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  morekeywords={*,...}             % if you want to add more keywords to the set
+}
