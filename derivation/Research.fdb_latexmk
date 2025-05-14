@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber Research"] 1747107621 "Research.bcf" "Research.bbl" "Research" 1747109932
-  "Research.bcf" 1747109932 123216 d14d52d77427f121136a28807b2495eb "pdflatex"
+["biber Research"] 1747107621 "Research.bcf" "Research.bbl" "Research" 1747114013
+  "Research.bcf" 1747114012 123216 d14d52d77427f121136a28807b2495eb "pdflatex"
   (generated)
   "Research.bbl"
   "Research.blg"
-["pdflatex"] 1747109930 "/Users/zackienzle/CBA/derivation/Research.tex" "Research.pdf" "Research" 1747109932
-  "/Users/zackienzle/CBA/derivation/Research.tex" 1747109930 8970 c4acd7e4eefbf9db1972a7a7a0f3f3b6 ""
+["pdflatex"] 1747114011 "/Users/zackienzle/CBA/derivation/Research.tex" "Research.pdf" "Research" 1747114013
+  "/Users/zackienzle/CBA/derivation/Research.tex" 1747114009 9669 96c52ecacf8f3e35e442e07f7cc73f04 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -358,14 +358,14 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1673166148 2826432 4875d37a157a46c6b2a2554bd28444cb ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "Preamble.tex" 1747108361 28722 627e97747bedc59c736d19930fdd283d ""
-  "Research.aux" 1747109932 8807 1a55a98ee47cfa02aea9cebf022926e8 "pdflatex"
+  "Research.aux" 1747114012 9452 4f9eef1ba3b10e1a547b895cdd42e2cc "pdflatex"
   "Research.bbl" 1747107641 466 ee04f40f768daeed26442158e95aba61 "biber Research"
   "Research.loa" 0 -1 0 "pdflatex"
   "Research.lot" 0 -1 0 "pdflatex"
-  "Research.out" 1747109932 11576 0df1a15fa6cd442fd043a53b40ffa45b "pdflatex"
-  "Research.run.xml" 1747109932 2455 fe8de052c7c36d172d7abd3813e67e10 "pdflatex"
-  "Research.tex" 1747109930 8970 c4acd7e4eefbf9db1972a7a7a0f3f3b6 ""
-  "Research.toc" 1747109932 5182 68b3bb9def52d73b4be479aa534cd45b "pdflatex"
+  "Research.out" 1747114012 12331 4b33bae8e73db0548e064689575c0538 "pdflatex"
+  "Research.run.xml" 1747114012 2455 fe8de052c7c36d172d7abd3813e67e10 "pdflatex"
+  "Research.tex" 1747114009 9669 96c52ecacf8f3e35e442e07f7cc73f04 ""
+  "Research.toc" 1747114012 5551 1d49bd5ab20fd44628d8be3314967896 "pdflatex"
   (generated)
   "Research.aux"
   "Research.bcf"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.8)  13 MAY 2025 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.8)  13 MAY 2025 15:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1683,29 +1683,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 
  [3] [1
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] (./Research.aux)
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] (./Research.aux)
 Package rerunfilecheck Info: File `Research.out' has not changed.
-(rerunfilecheck)             Checksum: 0DF1A15FA6CD442FD043A53B40FFA45B;11576.
+(rerunfilecheck)             Checksum: 4B33BAE8E73DB0548E064689575C0538;12331.
 Package logreq Info: Writing requests to 'Research.run.xml'.
 \openout1 = `Research.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56728 strings out of 478268
- 1286464 string characters out of 5846348
- 2162035 words of memory out of 5000000
- 73791 multiletter control sequences out of 15000+600000
- 564760 words of font info for 169 fonts, out of 8000000 for 9000
+ 56746 strings out of 478268
+ 1286680 string characters out of 5846348
+ 2162047 words of memory out of 5000000
+ 73799 multiletter control sequences out of 15000+600000
+ 564843 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,12n,120p,1166b,5160s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss10.pfb>
-Output written on Research.pdf (15 pages, 231577 bytes).
+Output written on Research.pdf (19 pages, 234455 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 398 compressed objects within 4 object streams
- 81 named destinations out of 1000 (max. 500000)
- 53709 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 478 PDF objects out of 1000 (max. 8388607)
+ 432 compressed objects within 5 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 53741 words of extra memory for PDF output out of 61914 (max. 10000000)
 
