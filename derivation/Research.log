@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.8)  13 MAY 2025 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.8)  15 MAY 2025 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1427,42 +1427,42 @@ Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.2'
  (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ))
-Package hyperref Info: Option `hypertexnames' set `false' on input line 35.
-Package hyperref Info: Option `pageanchor' set `true' on input line 35.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 35.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 35.
-Package hyperref Info: Option `unicode' set `true' on input line 35.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 34.
+Package hyperref Info: Option `pageanchor' set `true' on input line 34.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 34.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 34.
+Package hyperref Info: Option `unicode' set `true' on input line 34.
 
 
 Package biblatex Warning: Load 'inputenc' before biblatex.
 
 \@quotelevel=\count533
 \@quotereset=\count534
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 44.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 44.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 43.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 43.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./Research.aux)
 \openout1 = `Research.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
 Package biblatex Info: ... file 'english-apa.lbx' found.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/biblatex-apa/english-apa.lbx
@@ -1493,8 +1493,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Research.bbl' found.
  (./Research.bbl)
-Package biblatex Info: Reference section=0 on input line 44.
-Package biblatex Info: Reference segment=0 on input line 44.
+Package biblatex Info: Reference section=0 on input line 43.
+Package biblatex Info: Reference segment=0 on input line 43.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1549,7 +1549,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 44.
+Package hyperref Info: Link coloring OFF on input line 43.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1559,9 +1559,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count541
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 43.
+LaTeX Info: Redefining \pageref on input line 43.
+LaTeX Info: Redefining \nameref on input line 43.
  (./Research.out) (./Research.out)
 \@outlinefile=\write8
 \openout8 = `Research.out'.
@@ -1571,22 +1571,22 @@ LaTeX Info: Redefining \nameref on input line 44.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 44.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 43.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Redefining \microtypecontext on input line 44.
-Package microtype Info: Applying patch `item' on input line 44.
-Package microtype Info: Applying patch `toc' on input line 44.
-Package microtype Info: Applying patch `eqnum' on input line 44.
-Package microtype Info: Applying patch `footnote' on input line 44.
+LaTeX Info: Redefining \microtypecontext on input line 43.
+Package microtype Info: Applying patch `item' on input line 43.
+Package microtype Info: Applying patch `toc' on input line 43.
+Package microtype Info: Applying patch `eqnum' on input line 43.
+Package microtype Info: Applying patch `footnote' on input line 43.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 44.
+LaTeX Info: Redefining \showhyphens on input line 43.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1598,60 +1598,60 @@ Package caption Info: listings package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count544
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 46.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 46.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 46.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 46.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 46.
+(Font)              <12> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 46.
+(Font)              <8> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 46.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 46.
+(Font)              <6> on input line 45.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 46.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 46.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 45.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 46.
+(Font)              <9> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 46.
+(Font)              <5> on input line 45.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 49.
+(Font)              <10> on input line 48.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 49.
+(Font)              <7> on input line 48.
  [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
@@ -1683,29 +1683,45 @@ Package microtype Info: Loading generic protrusion settings for font family
 
  [3] [1
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] (./Research.aux)
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11]
+</Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png, id=366, 714.08783pt x 377.7312pt>
+File: /Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png Graphic file (type png)
+<use /Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png>
+Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png  used on input line 231.
+(pdftex.def)             Requested size: 452.9679pt x 239.6088pt.
+ [12 </Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png>] [13] [14] [15] [16] [17] [18] [19] [20]
+Overfull \hbox (47.99031pt too wide) in paragraph at lines 358--358
+\T1/lmr/m/n/10.95 (-20) In-vest-ment and Fi-nanc-ing Poli-cies [_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-
+ []
+
+
+Overfull \hbox (84.86258pt too wide) in paragraph at lines 358--358
+[][]\T1/lmr/m/n/10.95 (-20) Stulz, R. M. (1996). Re-think-ing Risk Man-age-ment [_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1745-
+ []
+
+[21] (./Research.aux)
 Package rerunfilecheck Info: File `Research.out' has not changed.
-(rerunfilecheck)             Checksum: 4B33BAE8E73DB0548E064689575C0538;12331.
+(rerunfilecheck)             Checksum: 78831F3CC9F3E51D442C1FBE9AD7600C;10661.
 Package logreq Info: Writing requests to 'Research.run.xml'.
 \openout1 = `Research.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56746 strings out of 478268
- 1286680 string characters out of 5846348
- 2162047 words of memory out of 5000000
- 73799 multiletter control sequences out of 15000+600000
- 564843 words of font info for 170 fonts, out of 8000000 for 9000
+ 57145 strings out of 478268
+ 1294621 string characters out of 5846348
+ 2163705 words of memory out of 5000000
+ 74113 multiletter control sequences out of 15000+600000
+ 571806 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,12n,120p,1166b,5160s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,17n,120p,2037b,5160s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss10.pfb>
-Output written on Research.pdf (19 pages, 234455 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Research.pdf (24 pages, 1459457 bytes).
 PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
- 89 named destinations out of 1000 (max. 500000)
- 53741 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 55738 words of extra memory for PDF output out of 61914 (max. 10000000)
 

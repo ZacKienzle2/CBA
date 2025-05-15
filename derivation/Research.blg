@@ -1,9 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'Research.blg'
-[50] biber-darwin:340> INFO - === Tue May 13, 2025, 13:40:41
-[65] Biber.pm:418> INFO - Reading 'Research.bcf'
-[139] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
-[150] bbl.pm:654> INFO - Writing 'Research.bbl' with encoding 'UTF-8'
-[150] bbl.pm:757> INFO - Output to Research.bbl
-[151] Biber.pm:130> WARN - The file 'Research.bcf' does not contain any citations!
-[151] Biber.pm:132> INFO - WARNINGS: 1
+[56] biber-darwin:340> INFO - === Thu May 15, 2025, 15:38:19
+[72] Biber.pm:418> INFO - Reading 'Research.bcf'
+[146] Biber.pm:972> INFO - Found 11 citekeys in bib section 0
+[158] Biber.pm:4383> INFO - Processing section 0
+[166] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[168] bibtex.pm:1713> INFO - LaTeX decoding ...
+[184] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[252] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[252] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[252] Biber.pm:4203> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[252] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[265] bbl.pm:654> INFO - Writing 'Research.bbl' with encoding 'UTF-8'
+[269] bbl.pm:757> INFO - Output to Research.bbl

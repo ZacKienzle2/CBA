@@ -3,7 +3,6 @@
 \input{Preamble.tex}
 \addbibresource{references.bib}
 
-
 \newcommand{\PaperTitle}{CBA Global Markets Research}
 \newcommand{\AuthorName}{Zac Kienzle}
 \newcommand{\AuthorAffiliation}{Bay Farm Capital}
@@ -65,7 +64,7 @@
 \section{Case Brief}
 
 \subsection{Problem Statement}
-You and your colleagues work in the Commonwealth Bank of Australia's Global Markets team. Your role is to help clients to navigate their financial market risks. Your client, Prime Property Trust, is concerned with the potential impact that movements in financial markets may have on their operations. The Treasury team at Prime Property Trust are particularly concerned about interest rate market movements and how it may impact their ability to meet budgeted cost obligations over the next year. The Treasury team wants to know:
+You and your colleagues work in the Commonwealth Bank of Australia's Global Markets team. Your role is to help clients to navigate their financial market risks. Your client, Prime Property Trust (PPT), is concerned with the potential impact that movements in financial markets may have on their operations. The Treasury team at Prime Property Trust are particularly concerned about interest rate market movements and how it may impact their ability to meet budgeted cost obligations over the next year. The Treasury team wants to know:
 
 \begin{enumerate}
     \item Your view on inflation and the RBA cash rate and; how this will affect Australian interest rates.
@@ -201,42 +200,62 @@ A Forward Rate Agreement (FRAs) is an over-the-counter (OTC) contract that locks
 \newpage
 
 \subsection{Not Hedging}
-
+The strategic decision to remain unhedged against interest rate risk implies that PPT consciously accepts the direct financial impact of fluctuations in the 3-month Bank Bill Swap Rate (BBSY). This rate is the floating reference for its newly acquired \$300 million in debt facilities. Such a strategy reflects a managerial assessment where the benefits of potentially favourable interest rate movements outweigh the costs or constraints associated with hedging instruments. This may also indicate that the firm's operational cash flows possess sufficient resilience to absorb interest rate volatility or that hedging instruments' costs are uneconomical (\cite{sr}).
 \subsubsection{Mechanics}
-
+The operational mechanics of a non-hedging strategy are characterised by their simplicity, wherein PPT elects to service their debt obligations at the prevailing market rates. Specifically, interest payments on the \$100m Prime Corporate Tower (PCT) facility will be at 3-month BBSY plus a 1.20\% margin, and on the \$200m Sterling Square (SS) facility at 3-month BBSY plus a 1.50\% margin. These interest obligations will reset quarterly, ensuring that the firm's interest expense profile remains directly correlated with short-term interest rate movements.
 \subsubsection{Size or Number of Contracts}
+Under a strategy of not hedging, PPT does not engage in any off-balance sheet derivative contracts to mitigate interest rate risk. Consequently, the size or number of hedging contracts is zero. The entire nominal value of the floating-rate debt, amounting to \$300 million, remains exposed to interest rate fluctuations.
 
 \subsubsection{Position and Contract Maturities}
-
+Contract maturities are inapplicable in this scenario, as no hedging instruments are utilised. The pertinent maturities are those of the underlying debt facilities: the \$100m PCT facility has a 3-year tenor and is subject to refinancing, while the \$200m SS facility has a 5-year tenor. Therefore, the unhedged interest rate position extends across these periods, with specific managerial concerns directed towards the upcoming 12-month budget cycle.
 \subsubsection{Timing and Tenor}
-
+The unhedged strategy is effectuated from the initial drawdown of the debt facilities. It persists for the duration of these loans or until management elects to implement a hedging program. The tenor of this unhedged exposure aligns with the respective tenors of the PCT and SS debt facilities. Each quarterly interest rate reset can be viewed as a discrete point at which the unhedged strategy is implicitly reaffirmed for the subsequent period based on the prevailing BBSY fixing.
 \subsubsection{Initial and Ongoing Cashflows and Costs}
+No direct initial costs are associated with \emph{not} entering into derivatives contracts to hedge exposures. The primary benefit of not hedging is avoiding upfront premium payments (for options) or potential transaction costs associated with entering other derivatives positions.  
+
+The ongoing cashflows and costs are the variable quarterly interest payments due on the floating rate debt (\$300 million), which is given by:
+\begin{equation}
+\begin{split}
+    \text{Interest Payment} ={}& \left(\text{Principal}_{PCT} \cdot (\text{BBSY}_{3m} + \text{Spread}_{PCT}) \right) /4 \\
+    & + \left(\text{Principal}_{SS} \cdot (\text{BBSY}_{3m} + \text{Spread}_{SS}) \right) /4
+\end{split}
+\end{equation}
+
+The "cost" inherent in this strategy is the economic uncertainty surrounding these payments, which will fluctuate directly with BBSY. Indirect costs may arise while no explicit fees are paid for hedge maintenance. These can include increased managerial resources devoted to monitoring market volatility and re-forecasting and potentially a higher cost of capital or reduced firm valuation if investors perceive the unhedged risk as excessive (\cite{ss}; \cite{sr}).
 
 \subsubsection{Expected Outcomes or Payoffs}
+The financial outcome of an unhedged strategy is contingent upon the realised path of future interest rates, juxtaposed with PPT's treasury team's expectations. Contextually, if prevailing market rates rise, PPT weathers escalating interest expenses, which reduce operating cash flows and pressure the ICR, directly eroding firm profitability. Conversely, if interest rates decline, PPT benefits from reduced interest payments, enhancing cash flows and improving the ICR. However, a notable characteristic is the market rate volatility regardless of net direction, wherein PPT's interest expenses become unpredictable, complicating financial planning, budgeting and potentially dividend policy. Such volatility can be particularly detrimental to REITs, which are often valued for stable and predictable income streams. The sensitivity of the annual interest expense and ICR to changes in BBSY is illustrated in Figure \ref{fig:UnhedgedParameterSensitivity}.
 
+\begin{figure}[h] % 'h'ere, 't'op, 'b'ottom, 'p'age of floats
+ \centering
+ \includegraphics[width=\textwidth]{/Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png} 
+ \caption{Sensitivity of Prime Property Trust's Annual Interest Expense and ICR to BBSY Changes under an Unhedged Strategy.}
+    \label{fig:UnhedgedParameterSensitivity}
+\end{figure}
+
+The payoff structure is linear concerning BBSY changes; each basis point movement in the 3-month BBSY directly alters the quarterly interest expense by \$7,500 on the combined \$300 million facilities.
 \subsubsection{Risks and Downside}
+The decision to forego hedging exposes PPT to several material risks amplified by the firm's financial structure and covenants. 
+
+Interest rate risk, the direct risk that increases in the 3-month BBSY, will lead to higher debt servicing costs, given that PPT's explicit communications about budgeted cost obligations constitute a primary risk factor.
+
+Maintaining an interest coverage ratio (ICR) greater than 1.75x is a significant constraint. Previously expounded upon, the pro-forma ICR is approximately $0.54 \text{x}$ (FY25 "Net Rentals (EBITDA)" of \$8,412k and the base case FY25 BBSY of 3.75\%), which is substantially below the covenant threshold. An unhedged strategy offers no protection against further BBSY increases, which would lower the ICR, almost certainly ensuring a breach. The consequences of such a breach can be severe, ranging from the imposition of stricter terms by lenders and demands for early repayment to, ultimately, insolvency (\cite{ss}; \cite{tw}). The high leverage implied by this low ICR makes the firm particularly vulnerable.
+
+Unhedged interest expenses introduce significant volatility into PPT's earnings and cash flow profile, wherein this unpredictability can complicate internal capital budgeting and strategic planning (\cite{fss}), lead to underinvestment if internally generated funds are unexpectedly diverted to higher debt servicing (\cite{ms}) or engender equity market penalisation, especially for REITs where investors often seek stable dividend yields (\cite{ons}).
+
+Firm value considerations.
 
 \subsubsection{Feasibility and Suitability}
+The operational feasibility of a non-hedging strategy is indisputable, as it represents the default state requiring no proactive financial market intervention or associated transaction costs. PPT can readily implement this strategy by simply servicing its debt obligations as they fall due, based on the prevailing floating market rates. However, the critical question pertains to the suitability of such an approach for PPT, given its specific financial structure, risk exposures, stated objectives, and the broader expectations for entities within the REIT sector (\cite{mw}).
 
-\newpage
+The decision not to hedge material financial risks can be suboptimal if such risks increase the probability of financial distress or lead to underinvestment in valuable projects (\cite{fss}; \cite{ss}). Moreover, the Treasury team's explicit concern regarding the impact of interest rate movements on their ability to meet budgeted cost obligations over the next year contravenes the inherent uncertainty accepted by forgoing hedging. An unhedged position directly exposes PPT's interest expense and budget adherence to the full volatility of the 3-month BBSY.
 
-\subsection{Liquidation}
+The nature of REITs and the expectations of their investors generally favour stable and predictable income streams, often to support regular distributions (\cite{g}). The market can perceive the earnings volatility introduced by unhedged, large-scale floating-rate debt negatively, potentially increasing PPT's cost of equity or reducing its valuation multiples (\cite{aw}). Furthermore, the Sterling Square (SS) development, representing \$200m of the new debt, will be in a non-income-generating construction phase until FY27. During this period, its floating-rate interest payments will be a direct charge against earnings generated by other assets, heightening the sensitivity of PPT's overall financial health to interest rate spikes. Not hedging this specific exposure during the construction phase is particularly risky.
 
-\subsubsection{Mechanics}
+From a managerial decision-making standpoint, the theory of real options might suggest that maintaining flexibility (by not locking into hedges) has value, especially in uncertain environments (\cite{d}). However, this value of flexibility must be weighed against the potentially catastrophic costs of a covenant breach. Given the apparent severity of the ICR situation, the argument for preserving flexibility by not hedging is substantially weakened. The primary objective should shift towards ensuring financial stability and covenant compliance (\cite{t}).
 
-\subsubsection{Size or Number of Contracts}
-
-\subsubsection{Position and Contract Maturities}
-
-\subsubsection{Timing and Tenor}
-
-\subsubsection{Initial and Ongoing Cashflows and Costs}
-
-\subsubsection{Expected Outcomes or Payoffs}
-
-\subsubsection{Risks and Downside}
-
-\subsubsection{Feasibility and Suitability}
+\subsection{Conclusion}
+Remaining unhedged, while the simplest option, exposes Prime Property Trust to unmitigated interest rate risk that directly threatens its ability to meet budgeted costs and, critically, to comply with its ICR covenant. Given the projected financials, this strategy is exceptionally high-risk and appears unsuitable for PPT. It would require a radical deviation from prudent financial management unless significant undisclosed information alters the risk landscape.
 
 \newpage
 
@@ -261,10 +280,21 @@ A Forward Rate Agreement (FRAs) is an over-the-counter (OTC) contract that locks
 \newpage
 
 \subsection{Futures}
-
+Employing exchange-traded futures contracts represents a standardized approach for PPT to manage its exposure to fluctuating 3-month BBSY rates. 
 \subsubsection{Mechanics}
-
+ASX 90-Day Bank Bill Futures are standardized, legally binding agreements to notionally buy or sell a 90-day bank-accepted bill with a face value of AUD $1,000,000$. 
 \subsubsection{Size or Number of Contracts}
+
+\begin{equation}
+    \text{Number of Contracts} = h^{*} \cdot \frac{\text{Amount to be Hedged}}{\text{Value of One Futures Contract}}
+\end{equation}
+
+where $h^{*}$ denotes the hedge ratio. Notably, we can express the hedge ratio as:
+
+\begin{equation}
+    h^{*} = \rho_{SF} \frac{\sigma_S}{\sigma_F} = \frac{\text{Cov}(S, F)}{\text{Var}(F)}
+\end{equation}
+where $S$ is the spot price of the underlying asset, and $F$ is the futures price.
 
 \subsubsection{Position and Contract Maturities}
 
@@ -273,26 +303,46 @@ A Forward Rate Agreement (FRAs) is an over-the-counter (OTC) contract that locks
 \subsubsection{Initial and Ongoing Cashflows and Costs}
 
 \subsubsection{Expected Outcomes or Payoffs}
+The primary expected outcome of employing a short futures hedge is the stabilization of future effective borrowing costs against variability in the 3-month BBSY.
+
 
 \subsubsection{Risks and Downside}
+Substantial adverse movements in futures prices can trigger significant margin calls, requiring PPT to provide liquid funds at short notice. Failure to meet margin calls could lead to the premature and forced liquidation of the hedge at an unfavorable time (\cite{}).
+
+The daily mark-to-market and variation margining process is a significant operational risk.
+
 
 \subsubsection{Feasibility and Suitability}
+
+\newpage
+
+\subsubsection{Conclusion}
 
 \newpage
 
 \subsection{Swaps}
 
 \subsubsection{Mechanics}
-
+An interest rate swap (IRS) is a contractual agreement between two counterparties to exchange a series of interest payments over a specified period, calculated on a common notional principal amount which itself is typically not exchanged. In its most common form, a "plain vanilla" swap, one party agrees to make payments based on a predetermined fixed interest rate, while the other party agrees to make payments based on a floating interest rate, such as the Bank Bill Swap Rate (BBSY) or another relevant reference rate (REFERENCE, 0000). On each scheduled payment date (e.g., quarterly or semi-annually), these obligations are usually netted, with only the difference being paid by the party owing the larger amount. The fixed rate of the swap is determined at inception such that the initial market value of the swap is typically zero for both parties, reflecting prevailing market conditions and expectations for future interest rates (REFERENCE, 0000). This derivative allows entities to effectively transform the nature of their interest rate exposures or receipts without altering their underlying debt or asset portfolios. 
 \subsubsection{Size or Number of Contracts}
 
 \subsubsection{Position and Contract Maturities}
+To convert its floating-rate payments into fixed payments, PPT would enter into a payer swap, meaning it agrees to pay the fixed rate and receive the floating rate (3-month BBSY). This effectively neutralizes its floating rate exposure on the debt.
 
+The maturity of the IRS can be customized to match the tenor of the underlying debt exposure PPT wishes to hedge. Specifically, for the 3-year PCT facility, PPT could enter into a 3-year interest rate swap, whereas for the 5-year SS facility, a 5-year swap could be used.
+
+Alternatively, PPT could use shorter-dated swaps and roll them, or use a series of forward-starting swaps to hedge specific future periods, particularly for the concern over the "next year". The ability to precisely match the tenor of the liability is a significant advantage of swaps over futures, which often require rolling for longer-term hedges (REFERENCE, 0000).
 \subsubsection{Timing and Tenor}
+The swap would ideally be entered into as soon as PPT wishes to lock in a fixed rate for its future interest payments. The fixed rate achievable will depend on the swap market conditions at the time of execution. The "next year" focus () might lead to considering swaps covering that period, or even forward-starting swaps that become effective at a future date.
+
+The tenor of an IRS is highly customizable. PPT can choose tenors ranging from a few months to several years (e.g., 1, 2, 3, 5 years or even longer), allowing for a precise match with the life of its debt facilities or its specific hedging horizon. This alignment reduces the risks associated with maturity mismatches.
 
 \subsubsection{Initial and Ongoing Cashflows and Costs}
+Typically, a standard ("at-market") interest rate swap has no upfront premium or initial cost, as the fixed rate is set such that the initial present value of the fixed and expected floating legs are equal. However, transaction costs or bid-ask spreads charged by the swap dealer (the bank) are implicitly built into the agreed fixed rate. Off-market swaps (where the fixed rate is set above or below the prevailing market rate) would involve an upfront payment or receipt.
 
 \subsubsection{Expected Outcomes or Payoffs}
+The primary outcome of entering a payer swap is the conversion of PPT's variable interest expense into a predictable, fixed expense for the term of the swap.
+
 
 \subsubsection{Risks and Downside}
 
@@ -302,6 +352,8 @@ A Forward Rate Agreement (FRAs) is an over-the-counter (OTC) contract that locks
 
 \section{Hedging Rationale}
 
+\newpage
 
+\printbibliography
 
 \end{document}

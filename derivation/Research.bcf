@@ -2791,6 +2791,32 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">sr</bcf:citekey>
+    <bcf:citekey order="2">ss</bcf:citekey>
+    <bcf:citekey order="3">sr</bcf:citekey>
+    <bcf:citekey order="4">ss</bcf:citekey>
+    <bcf:citekey order="5">tw</bcf:citekey>
+    <bcf:citekey order="6">fss</bcf:citekey>
+    <bcf:citekey order="7">ms</bcf:citekey>
+    <bcf:citekey order="8">ons</bcf:citekey>
+    <bcf:citekey order="9">mw</bcf:citekey>
+    <bcf:citekey order="10">fss</bcf:citekey>
+    <bcf:citekey order="11">ss</bcf:citekey>
+    <bcf:citekey order="12">g</bcf:citekey>
+    <bcf:citekey order="13">aw</bcf:citekey>
+    <bcf:citekey order="14">d</bcf:citekey>
+    <bcf:citekey order="15">t</bcf:citekey>
+    <bcf:citekey order="17">sr</bcf:citekey>
+    <bcf:citekey order="18">ss</bcf:citekey>
+    <bcf:citekey order="19">tw</bcf:citekey>
+    <bcf:citekey order="20">fss</bcf:citekey>
+    <bcf:citekey order="21">ms</bcf:citekey>
+    <bcf:citekey order="22">ons</bcf:citekey>
+    <bcf:citekey order="23">mw</bcf:citekey>
+    <bcf:citekey order="24">g</bcf:citekey>
+    <bcf:citekey order="25">aw</bcf:citekey>
+    <bcf:citekey order="26">d</bcf:citekey>
+    <bcf:citekey order="27">t</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
@@ -2833,4 +2859,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="apa/global//global/global"
+                type="entry"
+                sortingtemplatename="apa"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

@@ -16,5 +16,596 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{aw}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b8bda8042cd437e19dcaf93ff58e2e97}{%
+           family={Allayannis},
+           familyi={A\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88b42a48e5eeffb24ec39a006cc115ea}{%
+           family={Weston},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{11e38db4d5f042f78538083e3df2fc25}
+      \strng{fullhash}{11e38db4d5f042f78538083e3df2fc25}
+      \strng{bibnamehash}{11e38db4d5f042f78538083e3df2fc25}
+      \strng{authorbibnamehash}{11e38db4d5f042f78538083e3df2fc25}
+      \strng{authornamehash}{11e38db4d5f042f78538083e3df2fc25}
+      \strng{authorfullhash}{11e38db4d5f042f78538083e3df2fc25}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article examines the use of foreign currency derivatives (FCDs) in a sample of 720 large U.S. nonfinancial firms between 1990 and 1995 and its potential impact on firm value. Using Tobin's Q as a proxy for firm value, we find a positive relation between firm value and the use of FCDs. The hedging premium is statistically and economically significant for firms with exposure to exchange rates and is on average 4.87\% of firm value. We also find some evidence consistent with the hypothesis that hedging causes an increase in firm value.}
+      \field{issn}{0893-9454}
+      \field{journaltitle}{The Review of Financial Studies}
+      \field{note}{Publisher: [Oxford University Press, Society for Financial Studies]}
+      \field{number}{1}
+      \field{title}{The {Use} of {Foreign} {Currency} {Derivatives} and {Firm} {Market} {Value}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{14}
+      \field{year}{2001}
+      \field{urldateera}{ce}
+      \field{pages}{243\bibrangedash 276}
+      \range{pages}{34}
+      \verb{file}
+      \verb JSTOR Full Text PDF:/Users/zackienzle/Zotero/storage/3TW2FR33/Allayannis and Weston - 2001 - The Use of Foreign Currency Derivatives and Firm Market Value.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/2696762
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/2696762
+      \endverb
+    \endentry
+    \entry{d}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=669113694d92a734ea0f8d93c3b51034}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Graham\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{669113694d92a734ea0f8d93c3b51034}
+      \strng{fullhash}{669113694d92a734ea0f8d93c3b51034}
+      \strng{bibnamehash}{669113694d92a734ea0f8d93c3b51034}
+      \strng{authorbibnamehash}{669113694d92a734ea0f8d93c3b51034}
+      \strng{authornamehash}{669113694d92a734ea0f8d93c3b51034}
+      \strng{authorfullhash}{669113694d92a734ea0f8d93c3b51034}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0301-4207}
+      \field{journaltitle}{Resources Policy}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shorttitle}{Real options}
+      \field{title}{Real options: {Managerial} flexibility and strategy in resource allocation: {Lenos} {Trigeorgis} {The} {MIT} {Press}, {Cambridge}, {MA}, 1996, xiii + 427 pp. (hardcover), {ISBN} 0-262-20102-{X}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{22}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{218\bibrangedash 220}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1016/S0301-4207(97)84900-8
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Snapshot:/Users/zackienzle/Zotero/storage/GZYSCWEC/S0301420797849008.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0301420797849008
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0301420797849008
+      \endverb
+    \endentry
+    \entry{fss}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0d306ea69aed0b69615aafa3809cb56b}{%
+           family={Froot},
+           familyi={F\bibinitperiod},
+           given={Kenneth\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aec4a44daee76b5fe87178d609192f7e}{%
+           family={Scharfstein},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=575642568e62a6731db350819c4f4dc2}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={Jeremy\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{aab4a31a4a26bb363cc95708761bf359}
+      \strng{fullhash}{20e613ff74f7fef99489f261ba9a1244}
+      \strng{bibnamehash}{20e613ff74f7fef99489f261ba9a1244}
+      \strng{authorbibnamehash}{20e613ff74f7fef99489f261ba9a1244}
+      \strng{authornamehash}{aab4a31a4a26bb363cc95708761bf359}
+      \strng{authorfullhash}{20e613ff74f7fef99489f261ba9a1244}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper develops a general framework for analyzing corporate risk management policies. We begin by observing that if external sources of finance are more costly to corporations than internally generated funds, there will typically be a benefit to hedging: hedging adds value to the extent that it helps ensure that a corporation has sufficient internal funds available to take advantage of attractive investment opportunities. We then argue that this simple observation has wide ranging implications for the design of risk management strategies. We delineate how these strategies should depend on such factors as shocks to investment and financing opportunities. We also discuss exchange rate hedging strategies for multinationals, as well as strategies involving “nonlinear” instruments like options.}
+      \field{issn}{1540-6261}
+      \field{journaltitle}{The Journal of Finance}
+      \field{note}{\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.1993.tb05123.x}
+      \field{number}{5}
+      \field{shorttitle}{Risk {Management}}
+      \field{title}{Risk {Management}: {Coordinating} {Corporate} {Investment} and {Financing} {Policies}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{48}
+      \field{year}{1993}
+      \field{urldateera}{ce}
+      \field{pages}{1629\bibrangedash 1658}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1111/j.1540-6261.1993.tb05123.x
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/zackienzle/Zotero/storage/KXL22SY8/Froot et al. - 1993 - Risk Management Coordinating Corporate Investment and Financing Policies.pdf:application/pdf;Snapshot:/Users/zackienzle/Zotero/storage/3TC38WXQ/j.1540-6261.1993.tb05123.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1993.tb05123.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1993.tb05123.x
+      \endverb
+    \endentry
+    \entry{g}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b049c8ec5fc42cb64a72248f4116f3c0}{%
+           family={Giliberto},
+           familyi={G\bibinitperiod},
+           given={S.\bibnamedelimi Michael},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b049c8ec5fc42cb64a72248f4116f3c0}
+      \strng{fullhash}{b049c8ec5fc42cb64a72248f4116f3c0}
+      \strng{bibnamehash}{b049c8ec5fc42cb64a72248f4116f3c0}
+      \strng{authorbibnamehash}{b049c8ec5fc42cb64a72248f4116f3c0}
+      \strng{authornamehash}{b049c8ec5fc42cb64a72248f4116f3c0}
+      \strng{authorfullhash}{b049c8ec5fc42cb64a72248f4116f3c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Some investors view equity real estate investment trusts (EREITs) as partial substitutes for conventional real estate investments, although the correlation between EREIT and real estate returns is insignificant. However, this study finds that the residuals from regressions of both real estate series on financial asset returns are significantly correlated. This supports the notion that there is a common factor (or factors) associated with real estate that affects both sets of returns. In addition, lagged values of the EREIT residuals help explain variations in the conventional unsecuritized real estate return residuals.}
+      \field{issn}{0896-5803}
+      \field{journaltitle}{The Journal of Real Estate Research}
+      \field{note}{Publisher: American Real Estate Society}
+      \field{number}{2}
+      \field{title}{Equity {Real} {Estate} {Investment} {Trusts} and {Real} {Estate} {Returns}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{1990}
+      \field{urldateera}{ce}
+      \field{pages}{259\bibrangedash 263}
+      \range{pages}{5}
+      \verb{file}
+      \verb JSTOR Full Text PDF:/Users/zackienzle/Zotero/storage/F4I6F7ST/Giliberto - 1990 - Equity Real Estate Investment Trusts and Real Estate Returns.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/44095306
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/44095306
+      \endverb
+    \endentry
+    \entry{ms}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ac039602140b9da1d10d1dbf5fae8595}{%
+           family={Mayers},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4cb45d8820835c8aa7adae1504a15b29}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Clifford\bibnamedelima W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{16f2729a656c9185bf356348a97bdcd0}
+      \strng{fullhash}{16f2729a656c9185bf356348a97bdcd0}
+      \strng{bibnamehash}{16f2729a656c9185bf356348a97bdcd0}
+      \strng{authorbibnamehash}{16f2729a656c9185bf356348a97bdcd0}
+      \strng{authornamehash}{16f2729a656c9185bf356348a97bdcd0}
+      \strng{authorfullhash}{16f2729a656c9185bf356348a97bdcd0}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A casualty loss produces option-like characteristics in assets because their value depends on further discretionary investment. With risky debt in the firm's capital structure, the shareholders can have incentives to forgo the discretionary investment, even though it has a positive net present value. Thus a potential incentive conflict exists between the bondholders who want the investment made and the shareholders who do not. The incentive problem can be controlled by including a covenant in the bond contract requiring insurance coverage. Full coverage is generally not required. The maximum deductible depends on the amount of debt in the firm's capital structure and the feasible set of net casualty losses.}
+      \field{issn}{0022-4367}
+      \field{journaltitle}{The Journal of Risk and Insurance}
+      \field{note}{Publisher: [American Risk and Insurance Association, Wiley]}
+      \field{number}{1}
+      \field{title}{Corporate {Insurance} and the {Underinvestment} {Problem}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{54}
+      \field{year}{1987}
+      \field{urldateera}{ce}
+      \field{pages}{45\bibrangedash 54}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.2307/252881
+      \endverb
+      \verb{file}
+      \verb JSTOR Full Text PDF:/Users/zackienzle/Zotero/storage/JLYXRTFN/Mayers and Smith - 1987 - Corporate Insurance and the Underinvestment Problem.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/252881
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/252881
+      \endverb
+    \endentry
+    \entry{mw}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a4a8d301a0cef9208b27d80ba3c7ecb4}{%
+           family={Myer},
+           familyi={M\bibinitperiod},
+           given={F.\bibnamedelimi C.\bibnamedelimi Neil},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebf2f9cfb2f9ec67d5fee9cb040d8882}{%
+           family={Webb},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7a3bd5af9e745a8a7f268a9967b0e708}
+      \strng{fullhash}{7a3bd5af9e745a8a7f268a9967b0e708}
+      \strng{bibnamehash}{7a3bd5af9e745a8a7f268a9967b0e708}
+      \strng{authorbibnamehash}{7a3bd5af9e745a8a7f268a9967b0e708}
+      \strng{authornamehash}{7a3bd5af9e745a8a7f268a9967b0e708}
+      \strng{authorfullhash}{7a3bd5af9e745a8a7f268a9967b0e708}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Most previous studies of REIT-securitized real estate examine the performance of REITs versus only common stocks. In addition, previous studies have focused on the mean and standard deviation of returns, while this study also examines skewness, kurtosis, and conducts several tests of normality for the returns. The time series properties of the returns are also examined by calculating the autocorrelation function for each of the series. Finally, this study extends the results of Giliberto concerning the intertemporal relationship between REIT returns and real estate returns by examining a vector autoregressive model in which returns on pairs of assets are modeled as a linear function of lags of their own returns and lags of the returns on the other asset in the pair. Granger causality tests are also performed to determine if an asset's returns Granger cause the returns on the other asset. In a distributional and time series sense, equity REIT returns appear to be much more like those on common stocks and closed-end funds than those on unsecuritized commercial real estate. Intertemporally, REIT returns are much more strongly related to unsecuritized real estate than stocks or closed-end funds. The equity REIT index returns were found to Granger cause unsecuritized real estate returns for most of the real estate indices. Results were somewhat mixed for the individual REITs.}
+      \field{issn}{0896-5803}
+      \field{journaltitle}{The Journal of Real Estate Research}
+      \field{note}{Publisher: American Real Estate Society}
+      \field{number}{1}
+      \field{shorttitle}{Return {Properties} of {Equity} {REITs}, {Common} {Stocks}, and {Commercial} {Real} {Estate}}
+      \field{title}{Return {Properties} of {Equity} {REITs}, {Common} {Stocks}, and {Commercial} {Real} {Estate}: {A} {Comparison}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{8}
+      \field{year}{1993}
+      \field{urldateera}{ce}
+      \field{pages}{87\bibrangedash 106}
+      \range{pages}{20}
+      \verb{file}
+      \verb JSTOR Full Text PDF:/Users/zackienzle/Zotero/storage/4DQCJJC7/Myer and Webb - 1993 - Return Properties of Equity REITs, Common Stocks, and Commercial Real Estate A Comparison.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/44095413
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/44095413
+      \endverb
+    \endentry
+    \entry{ons}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a31a4ba65960bc38d2c68d60b6c16b2f}{%
+           family={Ooi},
+           familyi={O\bibinitperiod},
+           given={Joseph\bibnamedelimb T.\bibnamedelimi L.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0811c8f6c73468e6b3863d33de4ae99}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={Graeme},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b7577ef194e11786fbd6308c6bd83a7}{%
+           family={Sing},
+           familyi={S\bibinitperiod},
+           given={Tien-Foo},
+           giveni={T\bibinithyphendelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1fb187825d61c0945893309a4e9f9dc2}
+      \strng{fullhash}{ab2d822d9ad876b3acbd5a4f1339532e}
+      \strng{bibnamehash}{ab2d822d9ad876b3acbd5a4f1339532e}
+      \strng{authorbibnamehash}{ab2d822d9ad876b3acbd5a4f1339532e}
+      \strng{authornamehash}{1fb187825d61c0945893309a4e9f9dc2}
+      \strng{authorfullhash}{ab2d822d9ad876b3acbd5a4f1339532e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Real Estate Investment Trusts (REITs) emerged in Asia in 2001, with Japan and Singapore as the market leaders. South Korea, Taiwan, Hong Kong and Malaysia have also launched REITs. This paper examines these REIT markets. The paper first examines the background of macroeconomic, financial market and real estate market development. The driving forces for REIT development on the supply and demand sides, government initiatives and market obstacles are also discussed. The initial performance of Asia REITs will be reviewed and contrasted with the common stocks in the respective markets. Finally, the future prospects of Asia REITs are assessed.}
+      \field{issn}{0927-7544}
+      \field{journaltitle}{Journal of Real Estate Literature}
+      \field{note}{Publisher: American Real Estate Society}
+      \field{number}{2}
+      \field{title}{The {Growth} of {REIT} {Markets} in {Asia}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{14}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \field{pages}{203\bibrangedash 222}
+      \range{pages}{20}
+      \verb{file}
+      \verb JSTOR Full Text PDF:/Users/zackienzle/Zotero/storage/ELFMJVFW/Ooi et al. - 2006 - The Growth of REIT Markets in Asia.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/44103548
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/44103548
+      \endverb
+    \endentry
+    \entry{ss}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=4cb45d8820835c8aa7adae1504a15b29}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Clifford\bibnamedelima W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7fc218f05a3550a77ae11d02addb8e94}{%
+           family={Stulz},
+           familyi={S\bibinitperiod},
+           given={René\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {[Cambridge University Press, University of Washington School of Business Administration]}%
+      }
+      \strng{namehash}{a2f10a89ecae671f8a364d7e2669c735}
+      \strng{fullhash}{a2f10a89ecae671f8a364d7e2669c735}
+      \strng{bibnamehash}{a2f10a89ecae671f8a364d7e2669c735}
+      \strng{authorbibnamehash}{a2f10a89ecae671f8a364d7e2669c735}
+      \strng{authornamehash}{a2f10a89ecae671f8a364d7e2669c735}
+      \strng{authorfullhash}{a2f10a89ecae671f8a364d7e2669c735}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We develop a positive theory of the hedging behavior of value-maximizing corporations. We treat hedging by corporations simply as one part of the firm's financing decisions. We examine (1) taxes, (2) contracting costs, and (3) the impact of hedging policy on the firm's investment decisions as explanations of the observed wide diversity of hedging practices among large, widely-held corporations. Our theory provides answers to the questions: (1) why some firms hedge and others do not; (2) why firms hedge some risks but not others; and (3) why some firms hedge their accounting risk exposure while others hedge their economic value.}
+      \field{issn}{00221090, 17566916}
+      \field{journaltitle}{The Journal of Financial and Quantitative Analysis}
+      \field{number}{4}
+      \field{title}{The Determinants of Firms' Hedging Policies}
+      \field{urlday}{14}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{20}
+      \field{year}{1985}
+      \field{urldateera}{ce}
+      \field{pages}{391\bibrangedash 405}
+      \range{pages}{15}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2330757
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2330757
+      \endverb
+    \endentry
+    \entry{sr}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7fc218f05a3550a77ae11d02addb8e94}{%
+           family={Stulz},
+           familyi={S\bibinitperiod},
+           given={René\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{7fc218f05a3550a77ae11d02addb8e94}
+      \strng{fullhash}{7fc218f05a3550a77ae11d02addb8e94}
+      \strng{bibnamehash}{7fc218f05a3550a77ae11d02addb8e94}
+      \strng{authorbibnamehash}{7fc218f05a3550a77ae11d02addb8e94}
+      \strng{authornamehash}{7fc218f05a3550a77ae11d02addb8e94}
+      \strng{authorfullhash}{7fc218f05a3550a77ae11d02addb8e94}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a theory of corporate risk management that attempts to go beyond the “variance-minimization” model that dominates most academic discussions of the subject. It argues that the primary goal of risk management is not to dampen swings in corporate cash flows or value, but rather to provide protection against the possibility of costly lower-tail outcomes–situations that would cause financial distress or make a company unable to carry out its investment strategy. (In the jargon of finance specialists, risk management can be viewed as the purchase of well-out-of-the-money put options designed to limit downside risk.) By eliminating downside risk and reducing the expected costs of financial trouble, risk management can also help a company to achieve both its optimal capital structure and its optimal ownership structure. For, besides increasing corporate debt capacity, the reduction of downside risk also encourages larger equity stakes for managers by shielding their investments from “uncontrollables.” The paper also departs from standard finance theory in suggesting that some companies may have a comparative advantage in bearing certain financial market risks–an advantage that derives from information acquired through their normal business activities. Although such specialized information may lead some companies to take speculative positions in commodities or currencies, it is more likely to encourage “selective” hedging, a practice in which the risk manager's “view” of future price movements influences the percentage of the exposure that is hedged. But, to the extent that such view-taking becomes an accepted part of a company's risk management program, it is important to evaluate managers' bets on a risk-adjusted basis and relative to the market. If risk managers want to behave like money managers, they should be evaluated like money managers.}
+      \field{issn}{1745-6622}
+      \field{journaltitle}{Journal of Applied Corporate Finance}
+      \field{note}{\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1745-6622.1996.tb00295.x}
+      \field{number}{3}
+      \field{title}{Rethinking {Risk} {Management}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{8\bibrangedash 25}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1111/j.1745-6622.1996.tb00295.x
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/zackienzle/Zotero/storage/NBQ64XCE/Stulz - 1996 - Rethinking Risk Management.pdf:application/pdf;Snapshot:/Users/zackienzle/Zotero/storage/Q3Y3BHNB/j.1745-6622.1996.tb00295.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1745-6622.1996.tb00295.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1745-6622.1996.tb00295.x
+      \endverb
+    \endentry
+    \entry{tw}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b04b73173bde12f6affb3df7b9d475c1}{%
+           family={Titman},
+           familyi={T\bibinitperiod},
+           given={Sheridan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=653a4678861010e86a3663541207a424}{%
+           family={Wessels},
+           familyi={W\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f3489ae777448396a6144629e492cb78}
+      \strng{fullhash}{f3489ae777448396a6144629e492cb78}
+      \strng{bibnamehash}{f3489ae777448396a6144629e492cb78}
+      \strng{authorbibnamehash}{f3489ae777448396a6144629e492cb78}
+      \strng{authornamehash}{f3489ae777448396a6144629e492cb78}
+      \strng{authorfullhash}{f3489ae777448396a6144629e492cb78}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper analyzes the explanatory power of some of the recent theories of optimal capital structure. The study extends empirical work on capital structure theory in three ways. First, it examines a much broader set of capital structure theories, many of which have not previously been analyzed empirically. Second, since the theories have different empirical implications in regard to different types of debt instruments, the authors analyze measures of short-term, long-term, and convertible debt rather than an aggregate measure of total debt. Third, the study uses a factor-analytic technique that mitigates the measurement problems encountered when working with proxy variables.}
+      \field{issn}{0022-1082}
+      \field{journaltitle}{The Journal of Finance}
+      \field{note}{Publisher: [American Finance Association, Wiley]}
+      \field{number}{1}
+      \field{title}{The {Determinants} of {Capital} {Structure} {Choice}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{43}
+      \field{year}{1988}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 19}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.2307/2328319
+      \endverb
+      \verb{file}
+      \verb JSTOR Full Text PDF:/Users/zackienzle/Zotero/storage/XFPGB37A/Titman and Wessels - 1988 - The Determinants of Capital Structure Choice.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/2328319
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/2328319
+      \endverb
+    \endentry
+    \entry{t}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e61ed79a170d8e7c80f82d23bf55fd1e}{%
+           family={Tufano},
+           familyi={T\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e61ed79a170d8e7c80f82d23bf55fd1e}
+      \strng{fullhash}{e61ed79a170d8e7c80f82d23bf55fd1e}
+      \strng{bibnamehash}{e61ed79a170d8e7c80f82d23bf55fd1e}
+      \strng{authorbibnamehash}{e61ed79a170d8e7c80f82d23bf55fd1e}
+      \strng{authornamehash}{e61ed79a170d8e7c80f82d23bf55fd1e}
+      \strng{authorfullhash}{e61ed79a170d8e7c80f82d23bf55fd1e}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This article examines a new database that details corporate risk management activity in the North American gold mining industry. I find little empirical support for the predictive power of theories that view risk management as a means to maximize shareholder value. However, firms whose managers hold more options manage less gold price risk, and firms whose managers hold more stock manage more gold price risk, suggesting that managerial risk aversion may affect corporate risk management policy. Further, risk management policy. Further, risk management is negatively associated with the tenure of firms' CFOs, perhaps reflecting managerial interests, skills, or preferences.}
+      \field{issn}{0022-1082}
+      \field{journaltitle}{The Journal of Finance}
+      \field{note}{Publisher: [American Finance Association, Wiley]}
+      \field{number}{4}
+      \field{shorttitle}{Who {Manages} {Risk}?}
+      \field{title}{Who {Manages} {Risk}? {An} {Empirical} {Examination} of {Risk} {Management} {Practices} in the {Gold} {Mining} {Industry}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{51}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{1097\bibrangedash 1137}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.2307/2329389
+      \endverb
+      \verb{file}
+      \verb JSTOR Full Text PDF:/Users/zackienzle/Zotero/storage/858ZT2J6/Tufano - 1996 - Who Manages Risk An Empirical Examination of Risk Management Practices in the Gold Mining Industry.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/2329389
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/2329389
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
