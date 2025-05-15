@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber Research"] 1747287497 "Research.bcf" "Research.bbl" "Research" 1747289317
-  "Research.bcf" 1747289317 124726 c23ac787c17256ff1601f02fdc7bd121 "pdflatex"
+["biber Research"] 1747287497 "Research.bcf" "Research.bbl" "Research" 1747291066
+  "Research.bcf" 1747291066 124726 c23ac787c17256ff1601f02fdc7bd121 "pdflatex"
   "references.bib" 1747279630 16016 465e8202cac90063298f4365e419b42b ""
   (generated)
   "Research.bbl"
   "Research.blg"
-["pdflatex"] 1747289312 "/Users/zackienzle/CBA/derivation/Research.tex" "Research.pdf" "Research" 1747289317
+["pdflatex"] 1747291061 "/Users/zackienzle/CBA/derivation/Research.tex" "Research.pdf" "Research" 1747291066
   "/Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png" 1747275492 1234277 5fb5bd6e2c43a94ec55b71b9b96c5cc7 ""
-  "/Users/zackienzle/CBA/derivation/Research.tex" 1747289312 23702 d879b41dda809f66e279142bd2380a8e ""
+  "/Users/zackienzle/CBA/derivation/Research.tex" 1747291060 23720 03d09aae0ee7bbe83101af345df149b3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -369,14 +369,14 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1673166148 2826432 4875d37a157a46c6b2a2554bd28444cb ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "Preamble.tex" 1747108361 28722 627e97747bedc59c736d19930fdd283d ""
-  "Research.aux" 1747289317 11009 4ef899fe0dcca657746ee50b19c28d9b "pdflatex"
+  "Research.aux" 1747291066 11009 4ef899fe0dcca657746ee50b19c28d9b "pdflatex"
   "Research.bbl" 1747287499 33216 4d30dfb0ba6c7cf61fac22cf052bfc2a "biber Research"
   "Research.loa" 0 -1 0 "pdflatex"
   "Research.lot" 0 -1 0 "pdflatex"
-  "Research.out" 1747289317 10661 78831f3cc9f3e51d442c1fbe9ad7600c "pdflatex"
-  "Research.run.xml" 1747289317 2455 fe8de052c7c36d172d7abd3813e67e10 "pdflatex"
-  "Research.tex" 1747289312 23702 d879b41dda809f66e279142bd2380a8e ""
-  "Research.toc" 1747289317 4846 96787bcb89a8bb6f67ee93ecf38cb4f6 "pdflatex"
+  "Research.out" 1747291066 10661 78831f3cc9f3e51d442c1fbe9ad7600c "pdflatex"
+  "Research.run.xml" 1747291066 2455 fe8de052c7c36d172d7abd3813e67e10 "pdflatex"
+  "Research.tex" 1747291060 23720 03d09aae0ee7bbe83101af345df149b3 ""
+  "Research.toc" 1747291066 4846 96787bcb89a8bb6f67ee93ecf38cb4f6 "pdflatex"
   (generated)
   "Research.aux"
   "Research.bcf"
