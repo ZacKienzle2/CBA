@@ -25,7 +25,7 @@
     pdftitle={\PaperTitle},
     pdfauthor={\AuthorName},
     pdfsubject={Quantitative Finance Research},
-    pdfkeywords={Market Making, Statistical Arbitrage, Pairs Trading},
+    pdfkeywords={Multivariate Time Series, Derivatives Pricing, Stochastic Calculus},
     bookmarksopen=true,
     bookmarksnumbered=true,
     pdfpagemode=UseOutlines,
@@ -141,9 +141,62 @@ BBSY (\%) & 3.70\% & 3.75\% & 3.49\% & 3.36\% & 3.40\% & 3.49\% & 3.59\% & 3.71\
 \end{tcolorbox}
 
 \newpage
-\section{Rates Outlook}
+\section{Secular Economic Variables Analysis}
 
 \subsection{Equilibrium and Dynamic Relationships}
+
+\subsubsection{Mathematical Construction}
+The empirical analysis of multiple financial time series frequently encounters non-stationarity, often attributable to the presence of unit roots, which cause shocks to have persistent effects on the levels of the variables (\cite{np}). A variable $y_t$ contains a unit root if its characteristic autoregressive polynomial $\phi(L)$ (where $L$ is the lag operator in $\phi(L)y_t = \text{deterministic terms} + u_t$) has a root $z=1$, implying $\phi(1)=0$ (Fuller, 1976). Such $I(1)$ processes exhibit infinite variance and no tendency towards a mean or deterministic trend. Standard regression inference is invalid for $I(1)$ variables unless they are cointegrated due to the risk of spurious regression (\cite{gk}). Thus, preliminary unit root testing, using procedures like the Augmented Dickey-Fuller (ADF) tests (\cite{df1979}; \cite{df1981}), is essential to ascertain the order of integration.
+
+If a $k \times 1$ vector of $I(1)$ variables $Y_t$ possesses a linear combination $\beta'Y_t$ that is stationary, $I(0)$, the variables are cointegrated, with $\beta$ being the cointegrating vector (\cite{eg}). The relationship $\beta'Y_t = \text{constant}$ defines a long-run equilibrium. The joint dynamics of such cointegrated systems are captured by a Vector Error Correction Model (VECM), a restricted Vector Autoregression (VAR) (\cite{s}).
+
+A VAR model of order $p$, VAR($p$), is given by Equation \ref{VarRepresentation}:
+\begin{equation}
+ Y_t = A_1 Y_{t-1} + A_2 Y_{t-2} + \dots + A_p Y_{t-p} + \mu + \epsilon_t
+    \label{VarRepresentation} 
+\end{equation}
+where $A_i$ are $k \times k$ coefficient matrices, $\mu$ contains deterministic terms, and $\epsilon_t$ is $k \times 1$ white noise with $E(\epsilon_t)=0$ and covariance $\Sigma_\epsilon$. This VAR($p$) is reparameterized into its VECM form (\cite{l}; \cite{j1995}):
+\begin{equation}
+    \Delta Y_t = \Pi Y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta Y_{t-i} + \mu + \epsilon_t
+    \label{VarECM} 
+\end{equation}
+Here, $\Delta$ is the first difference operator, $\Pi = -\left(I - \sum_{i=1}^{p} A_i\right)$ is the long-run impact matrix, and $\Gamma_i = -\sum_{j=i+1}^{p} A_j$ capture short-run dynamics. The Granger Representation Theorem (\cite{eg}) dictates that for cointegrated variables, $\Pi$ has reduced rank $r$ ($0 < r < k$) and can be factored as $\Pi = \alpha \beta'$ (Equation \ref{PiDecomp}):
+\begin{equation}
+    \Pi = \alpha \beta'
+    \label{PiDecomp} 
+\end{equation}
+The $k \times r$ matrix $\beta$ contains $r$ cointegrating vectors defining long-run equilibria; $\beta'Y_{t-1}$ represents stationary deviations from these equilibria (\cite{j1991}). The $k \times r$ matrix $\alpha$ contains adjustment coefficients, $\alpha_{ij}$ measuring the speed at which variable $i$ responds to disequilibrium in the $j$-th cointegrating relationship. This yields the VECM:
+\begin{equation}
+    \Delta Y_t = \alpha (\beta'Y_{t-1}) + \sum_{i=1}^{p-1} \Gamma_i \Delta Y_{t-i} + \mu + \epsilon_t
+    \label{VECM}
+\end{equation}
+The term $\alpha (\beta'Y_{t-1})$ is the error correction mechanism. The Johansen procedure (\cite{j1988}; \cite{j1991}; \cite{j1995}) provides a maximum likelihood framework for determining $r$ and estimating VECM parameters.
+
+Dynamic shock propagation is analyzed using Impulse Response Functions (IRFs), which trace the effects of a one-time shock in $\epsilon_t$ on $Y_t$ (\cite{h}; \cite{l}). IRFs are derived from the Vector Moving Average (VMA($\infty$)) representation of the levels VAR (Equation \ref{VarRepresentation}), assuming $\mu=0$:
+\begin{equation}
+ Y_t = \sum_{s=0}^{\infty} \Phi_s \epsilon_{t-s}
+    \label{VMARepresentation} 
+\end{equation}
+where $\Phi_0 = I_k$, and $\Phi_s$ are $k \times k$ impulse response matrices, computable recursively or via the VAR(1) companion form (Equation \ref{VarCompanion}):
+\begin{equation}
+    \mathbf{Y}_t = \mathbf{A} \mathbf{Y}_{t-1} + \mathbf{E}_t
+    \label{VarCompanion} 
+\end{equation}
+where $\mathbf{Y}_t$ is a $kp \times 1$ stack of $Y_t, \dots, Y_{t-p+1}$, $\mathbf{A}$ is the $kp \times kp$ companion matrix, and $\Phi_s = J \mathbf{A}^s J'$, with $J = [I_k, 0, \dots, 0]$ being a $k \times kp$ selection matrix (\cite{l}).
+
+For structural interpretation, VAR residuals $\epsilon_t$, typically contemporaneously correlated (non-diagonal $\Sigma_\epsilon$), are orthogonalized into structural shocks $u_t$. The Cholesky decomposition of $\hat{\Sigma}_\epsilon = \hat{P}\hat{P}'$ (with $\hat{P}$ lower triangular) yields $u_t = \hat{P}^{-1}\epsilon_t$. Structural IRFs are then $\Theta_s = \Phi_s \hat{P}$ (\cite{s}; \cite{l}). This identification is ordering-dependent. In a VECM, these IRFs show dynamic adjustment towards the equilibria defined by $\beta$ at speeds governed by $\alpha$.
+
+\subsubsection{Algorithmic Implementation}
+
+\newpage
+
+\subsubsection{Code Base Outputs}
+
+\newpage
+
+% \subsection{Stochastic Differential Equations (SDEs)}
+
+\newpage
 
 \subsection{Macroeconomics}
 
@@ -530,7 +583,6 @@ FRAs are highly feasible for PPT, being standard, customisable OTC products. The
 
 \subsubsection{Conclusion}
 Forward Rate Agreements offer Prime Property Trust a precise OTC tool to lock in interest rates for specific future quarterly loan periods, directly supporting budget certainty. Their customizability and lack of ongoing cash flow requirements (pre-settlement) are advantageous for targeted, short-term risk management. While suitable for hedging discrete near-term exposures (e.g., via a 12-month strip), FRAs may be less efficient than other instruments for comprehensive, multi-year hedging strategies due to liquidity constraints in longer tenors and the administrative complexities of managing numerous individual contracts. Counterparty risk is a manageable consideration.
-
 
 \newpage
 

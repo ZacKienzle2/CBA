@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.8)  16 MAY 2025 13:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.8)  16 MAY 2025 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1683,64 +1683,64 @@ Package microtype Info: Loading generic protrusion settings for font family
 
  [3] [1
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
-</Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png, id=541, 714.08783pt x 377.7312pt>
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+</Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png, id=610, 714.08783pt x 377.7312pt>
 File: /Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png Graphic file (type png)
 <use /Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png>
-Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png  used on input line 467.
+Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png  used on input line 520.
 (pdftex.def)             Requested size: 452.9679pt x 239.6088pt.
- [15 </Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png>] [16] [17]
+ [18 </Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png>] [19] [20]
 
-LaTeX Warning: Citation 'lt' on page 18 undefined on input line 504.
-
-[18]
-</Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png, id=585, 714.9912pt x 541.24208pt>
-File: /Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png Graphic file (type png)
-<use /Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png>
-Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png  used on input line 520.
-(pdftex.def)             Requested size: 452.9679pt x 342.90033pt.
- [19 </Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png>] [20]
-
-LaTeX Warning: Citation 'lt' on page 21 undefined on input line 543.
+LaTeX Warning: Citation 'lt' on page 21 undefined on input line 557.
 
 [21]
-</Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png, id=610, 714.9912pt x 541.24208pt>
+</Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png, id=652, 714.9912pt x 541.24208pt>
+File: /Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png Graphic file (type png)
+<use /Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png>
+Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png  used on input line 573.
+(pdftex.def)             Requested size: 452.9679pt x 342.90033pt.
+ [22 </Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png>] [23]
+
+LaTeX Warning: Citation 'lt' on page 24 undefined on input line 595.
+
+[24]
+</Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png, id=678, 714.9912pt x 541.24208pt>
 File: /Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png Graphic file (type png)
 <use /Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png>
-Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png  used on input line 560.
+Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png  used on input line 612.
 (pdftex.def)             Requested size: 452.9679pt x 342.90033pt.
 
 
-LaTeX Warning: Citation 'lt' on page 22 undefined on input line 566.
+LaTeX Warning: Citation 'lt' on page 25 undefined on input line 618.
 
-[22 </Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png>] [23] [24]
-</Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png, id=644, 714.9912pt x 541.24208pt>
+[25 </Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png>] [26] [27]
+</Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png, id=712, 714.9912pt x 541.24208pt>
 File: /Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png Graphic file (type png)
 <use /Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png>
-Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png  used on input line 596.
+Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png  used on input line 648.
 (pdftex.def)             Requested size: 452.9679pt x 342.90033pt.
- [25 </Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png>] [26] [27]
-</Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png, id=671, 714.9912pt x 570.15007pt>
+ [28 </Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png>] [29] [30]
+</Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png, id=740, 714.9912pt x 570.15007pt>
 File: /Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png Graphic file (type png)
 <use /Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png>
-Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png  used on input line 634.
+Package pdftex.def Info: /Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png  used on input line 686.
 (pdftex.def)             Requested size: 452.9679pt x 361.2148pt.
- [28 </Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png>] [29] [30]
-Overfull \hbox (47.99031pt too wide) in paragraph at lines 655--655
+ [31 </Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png>] [32] [33]
+Overfull \hbox (47.99031pt too wide) in paragraph at lines 707--707
 \T1/lmr/m/n/10.95 (-20) In-vest-ment and Fi-nanc-ing Poli-cies [_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-
  []
 
-[31]
-Overfull \hbox (84.86258pt too wide) in paragraph at lines 655--655
+[34] [35]
+Overfull \hbox (84.86258pt too wide) in paragraph at lines 707--707
 [][]\T1/lmr/m/n/10.95 (-20) Stulz, R. M. (1996). Re-think-ing Risk Man-age-ment [_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1745-
  []
 
-[32] (./Research.aux)
+[36] (./Research.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Research.out' has not changed.
-(rerunfilecheck)             Checksum: 422D98FBB3F7A33FFDDEA26BF86B0C69;14889.
+(rerunfilecheck)             Checksum: 1679F4D09A4F03200BFBFE791A62E4AA;15653.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                Research
@@ -1751,21 +1751,21 @@ Package logreq Info: Writing requests to 'Research.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57635 strings out of 478268
- 1305343 string characters out of 5846348
- 2165851 words of memory out of 5000000
- 74421 multiletter control sequences out of 15000+600000
- 575181 words of font info for 235 fonts, out of 8000000 for 9000
+ 57816 strings out of 478268
+ 1308857 string characters out of 5846348
+ 2168786 words of memory out of 5000000
+ 74540 multiletter control sequences out of 15000+600000
+ 585176 words of font info for 250 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,17n,120p,2037b,5160s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,17n,120p,2093b,5160s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Research.pdf (35 pages, 8219844 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmb10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Research.pdf (39 pages, 8258449 bytes).
 PDF statistics:
- 876 PDF objects out of 1000 (max. 8388607)
- 783 compressed objects within 8 object streams
- 190 named destinations out of 1000 (max. 500000)
- 57998 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 972 PDF objects out of 1000 (max. 8388607)
+ 872 compressed objects within 9 object streams
+ 214 named destinations out of 1000 (max. 500000)
+ 64166 words of extra memory for PDF output out of 74296 (max. 10000000)
 
