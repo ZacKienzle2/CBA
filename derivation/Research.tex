@@ -151,29 +151,284 @@ BBSY (\%) & 3.70\% & 3.75\% & 3.49\% & 3.36\% & 3.40\% & 3.49\% & 3.59\% & 3.71\
 
 \section{Hedging Objectives}
 
-Maintenance of the debt covenants 
+Prime Property Trust’s (PPT) foremost hedging objective, in response to its new \$300 million floating-rate debt facilities benchmarked to the 3-month BBSY, is the maintenance of its debt covenants. Specifically, PPT must ensure its Interest Coverage Ratio (ICR) remains above 1.75x at all times to avoid a covenant breach and the potential withdrawal of funding. Given that projected FY25 financials indicate a pro-forma ICR substantially below this threshold even under base-case BBSY assumptions, strategies that stabilise or reduce interest expense are paramount to mitigate this critical financial distress risk (\cite{ss}). This defensive posture aims to preserve financial stability and access to capital markets.
 
+A concurrent primary objective, directly articulated by PPT’s Treasury team, is to achieve budgetary stability and control over financing costs, particularly concerning their “ability to meet budgeted cost obligations over the next year”. By hedging its exposure to volatile 3-month BBSY movements, PPT seeks to transform unpredictable floating-rate interest expenses into more predictable outlays. This enhanced certainty in debt servicing costs facilitates more reliable financial planning, forecasting, and protection of operating cash flows, which is crucial for sustaining operations, funding ongoing developments such as Sterling Square, and aligning with the general expectation for REITs to deliver stable income streams to investors (\cite{fss}).
 \newpage
 
 \section{Interest Rate Derivatives Valuation}
 
-\newpage
-
 \subsection{Forward Rate Agreements (FRAs)}
 
-A Forward Rate Agreement (FRAs) is an over-the-counter (OTC) contract that locks in an interest rate for a future loan or deposit. The buyer of an FRA locks in the right to borrow at a specific rate, while the seller locks in the right to lend at that rate. The contract is settled with a single cash payment at the settlement date, based on the difference between the agreed-upon forward rate and the actual market interest rate (the "fixing rate") on a notional principal amount. No actual principal is exchanged.
+\subsubsection{Notation}
+\begin{itemize}
+    \item $t$: The current time (valuation date).
+    \item $N_V$: The notional principal amount of the FRA.
+    \item $R_{FRA}$: The annualized fixed interest rate agreed upon at the inception of the FRA contract. This is the "FRA rate."
+    \item $T_0$: The settlement date of the FRA. This is the date on which the reference rate is determined and the cash settlement occurs, and it marks the *beginning* of the interest period covered by the FRA. ($t \le T_0$).
+    \item $T_1$: The maturity date of the interest period covered by the FRA. ($T_1 > T_0$).
+    \item $\tau$: The day-count fraction for the interest period $[T_0, T_1]$, calculated as $(T_1 - T_0)$ in years according to the relevant market convention (e.g., Actual/365). For a 3-month period, $\tau \approx 0.25$.
+    \item $L(T_0, T_1)$: The annualized floating market reference rate (e.g., 3-month BBSY) observed at time $T_0$ for the period $[T_0, T_1]$. This is the "settlement rate" or "fixing rate."
+    \item $Z(t, T')$: The risk-free discount factor at the current time $t$ for a unit of currency payable at a future date $T'$.
+\end{itemize}
+
+\subsubsection{Payoff Computation}
+
+The FRA is cash-settled at time $T_0$. The party that effectively agreed to "pay" $R_{FRA}$ and "receive" $L(T_0, T_1)$ (i.e., a borrower hedging against rising rates, or an FRA buyer) receives a net payment if $L(T_0, T_1) > R_{FRA}$, and makes a net payment if $L(T_0, T_1) < R_{FRA}$.
+
+The settlement amount, $C(T_0)$, paid to the FRA buyer at time $T_0$ is calculated as the present value (at $T_0$, discounted over the period $\tau$ using the settlement rate $L(T_0, T_1)$) of the interest differential on the notional principal:
+\begin{equation}
+    C(T_0) = N_V \cdot \frac{(L(T_0, T_1) - R_{FRA}) \cdot \tau}{1 + L(T_0, T_1) \cdot \tau}
+    \label{eq:FRASettlement_rigorous}
+\end{equation}
+This discounting reflects the fact that the interest payment on an actual loan for the period $[T_0, T_1]$ would typically occur at $T_1$, whereas the FRA settles at $T_0$. Thus, the party receiving a positive settlement at $T_0$ can invest it at $L(T_0, T_1)$ to realize the full interest differential at $T_1$.
+
+
+\subsubsection{Pricing}
+An FRA is a forward contract, and its "price" (the agreed fixed rate $R_{FRA}$) is set at inception ($t=0$) such that the initial value of the contract is zero to both parties. This is achieved by setting $R_{FRA}$ equal to the implied simple forward interest rate derived from the current term structure of risk-free zero-coupon rates.
+
+Let:
+\begin{itemize}
+    \item $r(0, T_0)$: The annualized simple risk-free spot interest rate at time $t=0$ for the period of length $T_0$ (from $0$ to $T_0$).
+    \item $r(0, T_1)$: The annualized simple risk-free spot interest rate at time $t=0$ for the period of length $T_1$ (from $0$ to $T_1$).
+    \item $\tau_0$: The year fraction from $0$ to $T_0$.
+    \item $\tau_1$: The year fraction from $0$ to $T_1$.
+    \item $\tau = \tau_1 - \tau_0$: The year fraction of the FRA period itself (from $T_0$ to $T_1$).
+\end{itemize}
+The no-arbitrage condition implies that the return from investing for period $\tau_1$ at $r(0, T_1)$ must be equivalent to investing for $\tau_0$ at $r(0, T_0)$ and then reinvesting for the forward period $\tau$ at $R_{FRA}$:
+\begin{equation}
+    (1 + r(0, T_1) \cdot \tau_1) = (1 + r(0, T_0) \cdot \tau_0) \cdot (1 + R_{FRA} \cdot \tau)
+\end{equation}
+Solving for $R_{FRA}$:
+\begin{equation}
+    R_{FRA} = \left( \frac{1 + r(0, T_1) \cdot \tau_1}{1 + r(0, T_0) \cdot \tau_0} - 1 \right) \frac{1}{\tau}
+    \label{eq:fra_rate_simple_rigorous}
+\end{equation}
+This $R_{FRA}$ is the simply compounded forward rate that ensures the FRA has zero value at initiation. The spot rates $r(0, T_0)$ and $r(0, T_1)$ are derived from the current zero-coupon yield curve, which is typically bootstrapped from observable market instruments (e.g., cash rates, bank bill futures, and interest rate swaps).
+
+Alternatively, using continuously compounded spot rates $r_c(0, T_0)$ and $r_c(0, T_1)$, the continuously compounded forward rate $R_{FRA,c}$ for the period $[T_0, T_1]$ is:
+\begin{equation}
+    R_{FRA,c} = \frac{r_c(0, T_1)T_1 - r_c(0, T_0)T_0}{T_1 - T_0}
+    \label{eq:fra_rate_continuous_rigorous}
+\end{equation}
+This $R_{FRA,c}$ would then need to be converted to a simple interest equivalent using the appropriate day-count convention to align with the market quotation for $R_{FRA}$.
+
+The valuation of an existing FRA at any time $t$ (where $0 < t < T_0$) would involve calculating the present value (at $t$) of the expected settlement at $T_0$, using the currently implied forward rate for the period $[T_0, T_1]$ and the original $R_{FRA}$. Specifically, using Equation \ref{eq:FRASettlement_rigorous}, replace $L(T_0,T_1)$ with the current forward rate $F(t; T_0, T_1)$ and discount the resulting expected settlement from $T_0$ back to $t$:
+\begin{equation}
+    V_{FRA, buyer}(t) = \left( N_V \cdot \frac{(F(t; T_0, T_1) - R_{FRA}) \cdot \tau}{1 + F(t; T_0, T_1) \cdot \tau} \right) \cdot Z(t, T_0)
+    \label{eq:fra_valuation_t_rigorous}
+\end{equation}
 
 \newpage
 
 \subsection{BAB Futures}
 
+\subsubsection{Notation}
+\begin{itemize}
+    \item $t$: Current time (valuation date).
+    \item $T_e$: Expiry date of the futures contract. This is also the date on which the reference rate (3-month BBSY) is fixed for the underlying notional 90-day period.
+    \item $T_m$: Maturity date of the notional 90-day bank bill underlying the futures contract (i.e., $T_m \approx T_e + \tau$, where $\tau$ is the day-count fraction for the 90-day period).
+    \item $P_F(t, T_e)$: The price of the BAB future at time $t$ for a contract expiring at $T_e$.
+    \item $Y_F(t, T_e)$: The annualized yield implied by the futures price $P_F(t, T_e)$. The relationship is:
+    \begin{equation}
+        P_F(t, T_e) = 100 - Y_F(t, T_e)
+    \end{equation}
+    \item $L(T_e, T_m)$: The actual 3-month Bank Bill Swap Rate (BBSY) observed at time $T_e$, applicable for the period $[T_e, T_m]$. This is the final settlement rate for the futures contract.
+    \item $N_V$: Notional face value of one BAB futures contract, which is AUD 1,000,000.
+    \item $\tau$: The day-count fraction for the 90-day period of the underlying notional bill, typically $90/365$ in the Australian market.
+    \item $Z(t, T')$: The risk-free discount factor at time $t$ for a cash flow at time $T'$.
+\end{itemize}
+
+The dollar value of a one basis point (0.01\%) change in the yield (tick value, $TV$) for one contract is approximately:
+\begin{equation}
+    TV \approx N_V \cdot 0.0001 \cdot \tau
+\end{equation}
+For $N_V = \$1,000,000$ and $\tau = 90/365$, $TV \approx \$1,000,000 \cdot 0.0001 \cdot (90/365) \approx \$24.6575$.
+The contracts are cash-settled at expiry ($T_e$) against the 3-month BBSY.
+
+\subsubsection{Payoff Computation}
+The profit or loss (P\&L) for a BAB futures position at expiry ($T_e$) is determined by the difference between the initial contract price (or yield) and the final settlement price (or yield), scaled by the contract's value per index point. The final settlement yield is $L(T_e, T_m)$.
+
+Let $Y_{F,entry}$ be the yield at which a futures contract was initially entered (bought or sold).
+
+A long position profits if the futures price rises, which corresponds to a fall in yields.
+\begin{align}
+    \text{P\&L}_{\text{long}} &= (P_{F,settle} - P_{F,entry}) \cdot \frac{TV}{0.01} \\
+    &= ((100 - L(T_e, T_m)) - (100 - Y_{F,entry})) \cdot \frac{N_V \cdot \tau}{0.01} \cdot 0.0001 \nonumber \\
+    &= (Y_{F,entry} - L(T_e, T_m)) \cdot N_V \cdot \tau \label{eq:long_futures_pnl}
+\end{align}
+Thus, a long position profits if the actual settlement yield $L(T_e, T_m)$ is \textit{lower} than the initial futures yield $Y_{F,entry}$.
+
+A short position profits if the futures price falls, which corresponds to a rise in yields. This is the relevant position for an entity like PPT hedging against rising borrowing costs.
+\begin{align}
+    \text{P\&L}_{\text{short}} &= (P_{F,entry} - P_{F,settle}) \cdot \frac{TV}{0.01} \\
+    &= ((100 - Y_{F,entry}) - (100 - L(T_e, T_m))) \cdot \frac{N_V \cdot \tau}{0.01} \cdot 0.0001 \nonumber \\
+    &= (L(T_e, T_m) - Y_{F,entry}) \cdot N_V \cdot \tau \label{eq:short_futures_pnl}
+\end{align}
+
+Thus, a short position profits if the actual settlement yield $L(T_e, T_m)$ is \textit{higher} than the initial futures yield $Y_{F,entry}$.
+
+\subsubsection{Pricing}
+The theoretical price of a futures contract, $P_F(t, T_e)$, and its implied yield, $Y_F(t, T_e)$, are determined by the no-arbitrage principle. The futures yield should closely reflect the implied forward interest rate for the 90-day period $[T_e, T_m]$ as seen from the current time $t$. This forward rate is derived from the existing risk-free zero-coupon yield curve.
+
+Let $r(t, T')$ denote the continuously compounded risk-free spot rate at time $t$ for maturity $T'$. The continuously compounded forward rate $f(t, T_e^*, T_m^*)$ for the period between $T_e^*$ and $T_m^*$ (where these are times from $t$) is:
+\begin{equation} \label{eq:cont_forward_rate}
+    f(t, T_e^*, T_m^*) = \frac{r(t, T_m^*)T_m^* - r(t, T_e^*)T_e^*}{T_m^* - T_e^*}
+\end{equation}
+This forward rate, $f(t, T_e^*, T_m^*)$, once converted to the appropriate simple interest and day-count convention (Actual/365 for BBSY), forms the primary basis for the futures yield $Y_F(t, T_e)$. The zero-coupon rates $r(t, T')$ are typically bootstrapped from observable market instruments like cash BBSW rates, other BAB futures, and AUD Interest Rate Swaps.
+
+A subtle theoretical distinction exists between forward rates and futures rates due to the daily mark-to-market feature of futures contracts. If interest rates are stochastic and correlated with futures prices, a convexity adjustment is necessary. The approximate relationship is:
+\begin{equation} \label{eq:convexity_adjustment}
+    Y_{\text{futures}} \approx Y_{\text{forward}} - \frac{1}{2} \sigma_r^2 T_e^* (T_m^* - T_e^*)
+\end{equation}
+where $Y_{\text{forward}}$ is the simply compounded forward rate implied by the yield curve, and $\sigma_r$ is the volatility of the instantaneous short-term interest rate. For short-term interest rate (STIR) futures like 90-Day BABs, this adjustment is generally small and often disregarded in less complex pricing models, leading to the common approximation $Y_F(t, T_e) \approx Y_{\text{forward}}(t; T_e, T_m)$.
+
+The value of an established futures position prior to expiry (at time $t < T_e$), entered at $Y_{F,entry}$, continuously accrues value reflected in daily margin account settlements. The theoretical value of the commitment, separate from accumulated cash P\&L, can be expressed as the discounted expected difference between the original contract yield and the current futures yield for the same expiry:
+For a short position:
+\begin{equation} \label{eq:futures_valuation_t}
+    V_{\text{short}}(t) \approx N_V \cdot (Y_{F,current}(t,T_e) - Y_{F,entry}) \cdot \tau \cdot Z(t, T_e)
+\end{equation}
+This indicates that if current market expectations for the future BBSY (reflected in $Y_{F,current}$) have increased above the yield at which the futures were sold ($Y_{F,entry}$), the short position has accrued a positive unrealized value. This valuation framework underscores the market's continuous reassessment of expected future interest rates, against which the BAB futures contract provides a mechanism for price discovery and risk transfer.
 \newpage
 
 \subsection{Interest Rate Swaps}
 
+\subsubsection{Notation}
+\begin{itemize}
+    \item $t$: The current time (valuation date).
+    \item $N_V$: The notional principal amount of the swap, constant for plain vanilla swaps.
+    \item $R_{FIX}$: The annualized fixed interest rate agreed upon at the swap's inception.
+    \item $L(T_{k-1}, T_k)$: The annualized floating market reference rate (e.g., 3-month BBSY) determined (set or fixed) at time $T_{k-1}$ (the reset date for period $k$) and applicable for the interest accrual period $[T_{k-1}, T_k]$.
+    \item $T_0, T_1, \dots, T_M$: The sequence of pre-agreed dates where $T_0$ is the effective (start) date of the swap, $T_M$ is the maturity (termination) date, and $T_1, \dots, T_M$ are the payment dates. For the floating leg, $T_0, T_1, \dots, T_{M-1}$ are also typically the reset dates for the subsequent period's floating rate.
+    \item $\tau_k$: The day-count fraction for the $k^{th}$ interest period, covering the interval $[T_{k-1}, T_k]$. This is calculated based on the applicable day-count convention (e.g., Actual/365). For instance, for quarterly payments, $\tau_k \approx 0.25$.
+    \item $Z(t, T_k)$: The risk-free discount factor at the current time $t$ for a unit of currency payable at a future date $T_k$. These are derived from the prevailing zero-coupon yield curve.
+\end{itemize}
+On each payment date $T_k$ (for $k=1, \dots, M$), the gross cash flows before netting are:
+\begin{itemize}
+    \item Fixed Leg Payment (by the fixed-rate payer):
+        \begin{equation}
+            C_{FIX,k} = N_V \cdot R_{FIX} \cdot \tau_k
+            \label{eq:irs_fixed_payment_final}
+        \end{equation}
+    \item Floating Leg Payment (by the floating-rate payer):
+        \begin{equation}
+            C_{FLOAT,k} = N_V \cdot L(T_{k-1}, T_k) \cdot \tau_k
+            \label{eq:irs_float_payment_final}
+        \end{equation}
+\end{itemize}
+Market practice typically involves netting these payments on each $T_k$.
+
+\subsubsection{Payoff Computation}
+Consider a counterparty who enters into a payer swap (pays $R_{FIX}$, receives floating rate $L$). For each interest period $k$ (from $T_{k-1}$ to $T_k$), the net cash flow, $\text{NetSettle}_k$, received by this fixed-rate payer at time $T_k$ is:
+\begin{equation}
+    \text{NetSettle}_k = C_{FLOAT,k} - C_{FIX,k} = N_V \cdot (L(T_{k-1}, T_k) - R_{FIX}) \cdot \tau_k
+    \label{eq:irs_net_settlement_rigorous_final}
+\end{equation}
+If $L(T_{k-1}, T_k) > R_{FIX}$, the fixed-rate payer receives a net payment. If $L(T_{k-1}, T_k) < R_{FIX}$, the fixed-rate payer makes a net payment. The economic value of the swap at any time is the sum of the present values of all such remaining expected net settlements.
+
+\subsubsection{Pricing}
+The "price" of an interest rate swap at its inception ($t=0$) is the specific fixed rate, $R_{FIX}$ (the par swap rate), which ensures the swap has an initial market value of zero to both counterparties. This rate is derived from the no-arbitrage condition that the present value ($PV$) of the fixed leg payments must equal the $PV$ of the expected floating leg payments.
+
+The fixed leg of the swap, comprising payments of $N_V \cdot R_{FIX} \cdot \tau_k$ at each $T_k$, is equivalent to the cash flows from a fixed-coupon bond. Its present value at time $t=0$ is:
+\begin{equation}
+    PV_{FIX}(0) = \sum_{k=1}^{M} (N_V \cdot R_{FIX} \cdot \tau_k) \cdot Z(0, T_k) = N_V \cdot R_{FIX} \cdot \sum_{k=1}^{M} \tau_k Z(0, T_k)
+    \label{eq:pv_fixed_leg_final_v3}
+\end{equation}
+The term $A(0, T_M) = \sum_{k=1}^{M} \tau_k Z(0, T_k)$ is the present value of an annuity paying 1 unit of currency per annum in installments of $\tau_k$ for $M$ periods, discounted using the zero-coupon yield curve.
+
+The floating leg consists of payments $C_{FLOAT,k} = N_V \cdot L(T_{k-1}, T_k) \cdot \tau_k$. The future rates $L(T_{k-1}, T_k)$ are unknown at $t=0$ (except for the first period if $T_0=0$ and the rate is already set). To value this leg, the unknown future floating rates are replaced by the implied forward rates $F(0; T_{k-1}, T_k)$ derived from the current ($t=0$) zero-coupon yield curve. The present value of these expected floating coupons is:
+\begin{equation}
+    PV_{FLOAT}(0)_{\text{coupons}} = \sum_{k=1}^{M} (N_V \cdot F(0; T_{k-1}, T_k) \cdot \tau_k) \cdot Z(0, T_k)
+    \label{eq:pv_float_leg_forwards_final_v3}
+\end{equation}
+A fundamental result in fixed income valuation, based on no-arbitrage, is that a floating-rate note (FRN) that pays the market reference rate $L$ (consistent with the discount curve used for $Z(0,T_k)$) and resets its coupon at each period is valued at its par value ($N_V$) immediately after each coupon payment, and thus also at $t=0$ if the first coupon is set based on current market rates. This implies that if one considers a conceptual final exchange of notional $N_V$ at $T_M$ for the floating leg, its total present value (coupons + principal) at $t=0$ would be $N_V$. Therefore, the present value of *only the stream of floating coupons* is:
+\begin{equation}
+    PV_{FLOAT}(0)_{\text{coupons only}} = N_V \cdot (1 - Z(0, T_M))
+    \label{eq:pv_float_leg_coupons_final_v3}
+\end{equation}
+This widely accepted valuation for the floating leg of a par swap assumes that notional principals are not explicitly exchanged at maturity under the swap agreement itself, or if they are considered for valuation consistency (viewing each leg as a bond), they offset.
+
+For the swap to have zero initial value, the present values of the two legs must be equal: $PV_{FIX}(0) = PV_{FLOAT}(0)_{\text{coupons only}}$. Substituting from Equations \ref{eq:pv_fixed_leg_final_v3} and \ref{eq:pv_float_leg_coupons_final_v3}:
+\begin{equation}
+    N_V \cdot R_{FIX} \cdot \sum_{k=1}^{M} \tau_k Z(0, T_k) = N_V (1 - Z(0, T_M))
+\end{equation}
+Solving for the par swap rate $R_{FIX}$:
+\begin{equation}
+    R_{FIX} = \frac{1 - Z(0, T_M)}{\sum_{k=1}^{M} \tau_k Z(0, T_k)} = \frac{1 - Z(0, T_M)}{A(0, T_M)}
+    \label{eq:par_swap_rate_rigorous_final_v3}
+\end{equation}
+The discount factors $Z(0, T_k)$ are derived from the current risk-free (or appropriate interbank, e.g., BBSW-based) zero-coupon yield curve. This curve is typically constructed using bootstrapping techniques from a set of liquid market instruments such as cash deposit rates, Bank Bill Futures prices, and existing par interest rate swap quotes for various tenors.
+
+At any subsequent time $t$ during the life of an existing swap (which was initiated with a fixed rate $R_{FIX,orig}$), its market value to the fixed-rate payer is the present value of the remaining expected net cash flows:
+\begin{equation}
+    V_{SWAP, payer}(t) = PV_{FLOAT,remaining}(t) - PV_{FIX,remaining}(t)
+    \label{eq:swap_valuation_t_rigorous_final_v3}
+\end{equation}
+Here, $PV_{FIX,remaining}(t) = N_V \cdot R_{FIX,orig} \cdot \sum_{j=k}^{M} \tau_j Z(t, T_j)$ (where the sum is over remaining fixed payments from the next payment date $T_k$, and $Z(t, T_j)$ are current discount factors). Similarly, $PV_{FLOAT,remaining}(t)$ is the present value of the remaining expected floating payments, where future unknown floating rates $L(T_{j-1},T_j)$ are substituted with current forward rates $F(t; T_{j-1},T_j)$ derived from the yield curve at time $t$, and then discounted using $Z(t,T_j)$. A common alternative valuation expresses the swap's value by comparing its original fixed rate to the current market swap rate for the remaining tenor:
+\begin{equation}
+    V_{SWAP, payer}(t) \approx N_V \cdot (R_{FIX,current}(t, T_M) - R_{FIX,orig}) \cdot A(t, T_{M,remaining})
+    \label{eq:swap_valuation_vs_current_rate_final_v3}
+\end{equation}
+where $R_{FIX,current}(t, T_M)$ is the prevailing par swap rate at time $t$ for a new swap with the same remaining maturity profile as the existing swap, and $A(t, T_{M,remaining})$ is the present value of a 1-unit per annum annuity factor for the remaining term, based on the current yield curve at time $t$.
+
 \newpage
 
-\subsection{Caplets and Floorlets}
+\subsection{Interest Rate Caps}
+
+\subsubsection{Notation}
+\begin{itemize}
+    \item $t$: The current time (valuation date).
+    \item $N_V$: The notional principal amount of the cap, upon which interest differentials are calculated.
+    \item $R_K$: The strike rate (or cap rate) of the cap, an annualized percentage. If the reference rate exceeds $R_K$, the caplet for that period pays out.
+    \item $L(T_{j-1}, T_j)$: The annualized floating market reference rate (e.g., 3-month BBSY) observed at time $T_{j-1}$ (the reset date for period $j$) and applicable for the interest accrual period $[T_{j-1}, T_j]$.
+    \item $T_0, T_1, \dots, T_M$: A sequence of pre-agreed dates. For a cap, $T_0$ is often the start of the first period covered. $T_1, \dots, T_M$ are the payment dates for each caplet (typically the end of each interest period). $T_0, T_1, \dots, T_{M-1}$ are the reset dates for the reference rate $L$ applicable to periods $[T_0,T_1], [T_1,T_2], \dots, [T_{M-1},T_M]$ respectively.
+    \item $\tau_j$: The day-count fraction for the $j^{th}$ interest period, corresponding to the interval $[T_{j-1}, T_j]$.
+    \item $Z(t, T_j)$: The risk-free discount factor at time $t$ for a unit of currency payable at a future date $T_j$.
+    \item $C(t)$: The total premium (price) of the interest rate cap at time $t$.
+    \item $c_j(t)$: The price at time $t$ of an individual caplet covering the $j^{th}$ period $[T_{j-1}, T_j]$ and paying at $T_j$.
+\end{itemize}
+
+\subsubsection{Payoff Computation}
+
+For each individual caplet $j$, covering the period $[T_{j-1}, T_j]$ with payment at $T_j$:
+The payoff of the caplet at its payment date $T_j$, from the perspective of the cap buyer, is:
+\begin{equation}
+    \text{Payoff}_{\text{caplet}, j}(T_j) = N_V \cdot \max(0, L(T_{j-1}, T_j) - R_K) \cdot \tau_j
+    \label{eq:caplet_payoff_rigorous}
+\end{equation}
+This payoff occurs only if the market reference rate $L(T_{j-1}, T_j)$ fixed at the beginning of the period $T_{j-1}$ exceeds the strike rate $R_K$. If $L(T_{j-1}, T_j) \le R_K$, the caplet for that period expires worthless, and its payoff is zero. The total cap consists of a series of such caplets.
+
+
+\subsubsection{Pricing}
+The price (premium) of an interest rate cap at time $t$ is the sum of the present values of all its constituent caplets:
+\begin{equation}
+    C(t) = \sum_{j=1}^{M} c_j(t)
+    \label{eq:cap_price_sum_caplets}
+\end{equation}
+Each caplet $c_j(t)$ can be priced as a European call option on the forward interest rate $F(t; T_{j-1}, T_j)$, which is the forward rate for the period $[T_{j-1}, T_j]$ as seen from the current valuation time $t$. The most common model for pricing caplets is an adaptation of the Black model (Black, 1976), which is a variant of the Black-Scholes-Merton model for options on forwards or futures.
+
+The price of an individual caplet $j$ (covering period $[T_{j-1}, T_j]$, payment at $T_j$) at time $t$ (where $t \le T_{j-1}$) is given by:
+\begin{equation}
+    c_j(t) = N_V \cdot \tau_j \cdot Z(t, T_j) \left[ F(t; T_{j-1}, T_j) \mathcal{N}(d_1) - R_K \mathcal{N}(d_2) \right]
+    \label{eq:caplet_black_model}
+\end{equation}
+where:
+\begin{itemize}
+    \item $F(t; T_{j-1}, T_j)$: The forward interest rate at time $t$ for the period $[T_{j-1}, T_j]$, compounded according to the day-count fraction $\tau_j$. This forward rate is derived from the current zero-coupon yield curve:
+    \begin{equation}
+        F(t; T_{j-1}, T_j) = \frac{1}{\tau_j} \left( \frac{Z(t, T_{j-1})}{Z(t, T_j)} - 1 \right)
+        \label{eq:forward_rate_from_zeros}
+    \end{equation}
+    \item $\sigma_{F,j}$: The annualized volatility of the forward rate $F(t; T_{j-1}, T_j)$ over the period until $T_{j-1}$ (the rate-fixing date for the caplet). This is a key unobservable input that is typically implied from market prices of caps/floors.
+    \item $T_{j-1}^* = T_{j-1} - t$: Time from current valuation $t$ until the fixing of the rate $L(T_{j-1}, T_j)$.
+    \item $\mathcal{N}(\cdot)$: The cumulative standard normal distribution function.
+    \item $d_1$ and $d_2$ are defined as:
+    \begin{align}
+        d_1 &= \frac{\ln(F(t; T_{j-1}, T_j) / R_K) + \frac{1}{2}\sigma_{F,j}^2 T_{j-1}^*}{\sigma_{F,j} \sqrt{T_{j-1}^*}} \label{eq:caplet_d1} \\
+        d_2 &= d_1 - \sigma_{F,j} \sqrt{T_{j-1}^*} \label{eq:caplet_d2}
+    \end{align}
+\end{itemize}
+The term $Z(t, T_j)$ discounts the expected payoff (which occurs at $T_j$) back to the current time $t$. The Black model effectively prices the caplet in a forward measure where the forward rate itself is the asset. The discount factors $Z(t,T_j)$ and the forward rates $F(t; T_{j-1},T_j)$ are derived from the prevailing risk-free (or interbank) zero-coupon yield curve, which is typically bootstrapped from observable market instruments. The volatility $\sigma_{F,j}$ is a crucial input often referred to as "implied volatility" when backed out from market cap prices.
 
 
 
@@ -226,7 +481,7 @@ The "cost" inherent in this strategy is the economic uncertainty surrounding the
 \subsubsection{Expected Outcomes or Payoffs}
 The financial outcome of an unhedged strategy is contingent upon the realised path of future interest rates, juxtaposed with PPT's treasury team's expectations. Contextually, if prevailing market rates rise, PPT weathers escalating interest expenses, which reduce operating cash flows and pressure the ICR, directly eroding firm profitability. Conversely, if interest rates decline, PPT benefits from reduced interest payments, enhancing cash flows and improving the ICR. However, a notable characteristic is the market rate volatility regardless of net direction, wherein PPT's interest expenses become unpredictable, complicating financial planning, budgeting and potentially dividend policy. Such volatility can be particularly detrimental to REITs, which are often valued for stable and predictable income streams. The sensitivity of the annual interest expense and ICR to changes in BBSY is illustrated in Figure \ref{fig:UnhedgedParameterSensitivity}.
 
-\begin{figure}[h] % 'h'ere, 't'op, 'b'ottom, 'p'age of floats
+\begin{figure}[H] % 'h'ere, 't'op, 'b'ottom, 'p'age of floats
  \centering
  \includegraphics[width=\textwidth]{/Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png} 
  \caption{Sensitivity of Prime Property Trust's Annual Interest Expense and ICR to BBSY Changes under an Unhedged Strategy.}
@@ -243,7 +498,7 @@ Maintaining an interest coverage ratio (ICR) greater than 1.75x is a significant
 
 Unhedged interest expenses introduce significant volatility into PPT's earnings and cash flow profile, wherein this unpredictability can complicate internal capital budgeting and strategic planning (\cite{fss}), lead to underinvestment if internally generated funds are unexpectedly diverted to higher debt servicing (\cite{ms}) or engender equity market penalisation, especially for REITs where investors often seek stable dividend yields (\cite{ons}).
 
-Firm value considerations.
+% Firm value considerations.
 
 \subsubsection{Feasibility and Suitability}
 The operational feasibility of a non-hedging strategy is indisputable, as it represents the default state requiring no proactive financial market intervention or associated transaction costs. PPT can readily implement this strategy by simply servicing its debt obligations as they fall due, based on the prevailing floating market rates. However, the critical question pertains to the suitability of such an approach for PPT, given its specific financial structure, risk exposures, stated objectives, and the broader expectations for entities within the REIT sector (\cite{mw}).
@@ -254,7 +509,7 @@ The nature of REITs and the expectations of their investors generally favour sta
 
 From a managerial decision-making standpoint, the theory of real options might suggest that maintaining flexibility (by not locking into hedges) has value, especially in uncertain environments (\cite{d}). However, this value of flexibility must be weighed against the potentially catastrophic costs of a covenant breach. Given the apparent severity of the ICR situation, the argument for preserving flexibility by not hedging is substantially weakened. The primary objective should shift towards ensuring financial stability and covenant compliance (\cite{t}).
 
-\subsection{Conclusion}
+\subsubsection{Conclusion}
 Remaining unhedged, while the simplest option, exposes Prime Property Trust to unmitigated interest rate risk that directly threatens its ability to meet budgeted costs and, critically, to comply with its ICR covenant. Given the projected financials, this strategy is exceptionally high-risk and appears unsuitable for PPT. It would require a radical deviation from prudent financial management unless significant undisclosed information alters the risk landscape.
 
 \newpage
@@ -262,91 +517,152 @@ Remaining unhedged, while the simplest option, exposes Prime Property Trust to u
 \subsection{Forwards}
 
 \subsubsection{Mechanics}
+A Forward Rate Agreement (FRA) is an Over-The-Counter (OTC) bilateral contract where two parties agree on an interest rate ($R_{FRA}$) to be applied to a specified notional principal for a predetermined future period (e.g., a 3-month period starting in 3 months is a ``3x6'' FRA). The notional principal is not exchanged; the contract is cash-settled based on the difference between the agreed $R_{FRA}$ and the actual market reference rate ($R_{Market}$, e.g., 3-month BBSY) observed on the settlement date at the beginning of the FRA period. The settlement amount effectively compensates the party advantaged by the rate movement.
 
 \subsubsection{Size or Number of Contracts}
+The "size" of an FRA is its notional principal amount ($N_V$). For PPT to hedge a specific quarterly interest payment on one of its loan facilities (e.g., the \$100m PCT facility or the \$200m SS facility, ), it would enter into an FRA with a notional principal precisely matching that loan amount for that specific quarter. Unlike exchange-traded futures, which have standardized contract sizes, FRAs offer complete flexibility in tailoring the notional to the exact exposure. Typically, one FRA contract is executed for each discrete future interest period and notional to be hedged. While a minimum-variance hedge ratio ($h^*$) could theoretically be estimated, for an FRA designed to hedge its exact underlying reference rate (3-month BBSY) for a perfectly matched period, $h^*$ is effectively 1.0, making notional matching the optimal and standard approach (\cite{lt}).
 
 \subsubsection{Position and Contract Maturities}
+To protect against rising interest rates, PPT would act as an FRA buyer. This position benefits if the market reference rate at settlement ($L(T_0, T_1)$) exceeds the agreed $R_{FRA}$. An FRA is defined by two key dates: the Settlement Date ($T_0$), when the market reference rate is fixed and cash settlement occurs (marking the start of the hedged interest period), and the Maturity Date ($T_1$), marking the end of this period. For PPT's quarterly resetting debt, FRAs covering sequential 3-month periods would be used (e.g., a ``3x6'' FRA hedges the 3-month period starting three months hence).
 
 \subsubsection{Timing and Tenor}
+The timing of entering an FRA involves PPT committing today to an $R_{FRA}$ for a specific future period, based on its interest rate outlook and desire to lock in a rate before the actual BBSY fixing. The $R_{FRA}$ is determined by the prevailing forward yield curve at the transaction time. The tenor of an individual FRA is short (e.g., 3 months for PPT). To hedge multiple future quarters, such as the ``next year,'' PPT would use a strip of FRAs—separate FRA contracts for each successive future period (e.g., 0x3, 3x6, 6x9, 9x12 FRAs). Liquidity for FRAs generally diminishes for periods starting further in the future (\cite{fjlsz}).
 
 \subsubsection{Initial and Ongoing Cashflows and Costs}
+A key feature of at-market FRAs is the absence of an initial premium or payment if the agreed $R_{FRA}$ equals the prevailing market-implied forward rate. The FRA has a zero initial value. There are no interim cash flows or margin calls during the FRA's life, distinguishing them from futures and simplifying liquidity management. The sole cash flow occurs on the settlement date ($T_0$), representing the net difference between interest calculated at $R_{Market}$ and $R_{FRA}$. Transaction costs are embedded in the bid-ask spread of the $R_{FRA}$ quoted by the financial institution.
 
 \subsubsection{Expected Outcomes or Payoffs}
+The primary outcome for an FRA buyer like PPT is the elimination of uncertainty regarding the benchmark interest rate for a specific future borrowing period. If $R_{Market}$ at settlement is higher than $R_{FRA}$, PPT receives a net cash payment, compensating for higher loan interest. If $R_{Market}$ is lower, PPT makes a net payment, offsetting the loan's lower interest cost. PPT's effective benchmark borrowing cost for the hedged period is thus locked in at approximately $R_{FRA}$, resulting in a total effective cost of $R_{FRA}$ plus the loan spread, thereby providing certainty for budgeting .
+
+\begin{figure}[H] % 'h'ere, 't'op, 'b'ottom, 'p'age of floats
+ \centering
+ \includegraphics[width=\textwidth]{/Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png} 
+ \caption{Payoff Profile of a short FRA position.}
+    \label{fig:fra_hedging_outcomes}
+\end{figure}
 
 \subsubsection{Risks and Downside}
+FRAs entail specific risks. Counterparty credit risk exposes PPT to the counterparty's potential default on settlement payments if the FRA is in-the-money for PPT. This is managed via credit assessments and ISDA Master Agreements (Gregory, J., 2010). An opportunity cost exists: if $R_{Market}$ falls significantly below $R_{FRA}$, PPT forgoes the benefit of lower rates due to the FRA payment. Basis risk, though typically low for direct hedges, can arise if the FRA's reference rate or fixing mechanism imperfectly matches the loan's terms (Oldfield, G.S. \& Rogalski, R.J., 1981, discuss basis risk in forward markets generally). Unwinding an FRA before settlement can be illiquid and requires negotiation with the original counterparty, with costs depending on intervening rate movements. The single-period focus of each FRA means hedging multiple periods requires a strip of contracts, which can be administratively more intensive than a single multi-period instrument like a swap.
 
 \subsubsection{Feasibility and Suitability}
+FRAs are highly feasible for PPT, being standard, customizable OTC products. They suit PPT’s short-term hedging needs by providing precise certainty for specific upcoming quarterly interest resets, aiding budget control and ICR management for those discrete periods. The absence of upfront premium and margin calls is operationally attractive. However, for comprehensive long-term hedging of multi-year facilities (PCT and SS), managing a strip of FRAs becomes increasingly complex and potentially less liquid for distant tenors compared to alternative derivatives instruments (\cite{fss}; \cite{ss}).
+
+\subsubsection{Conclusion}
+Forward Rate Agreements offer Prime Property Trust a precise OTC tool to lock in interest rates for specific future quarterly loan periods, directly supporting budget certainty. Their customizability and lack of ongoing cash flow requirements (pre-settlement) are advantageous for targeted, short-term risk management. While suitable for hedging discrete near-term exposures (e.g., via a 12-month strip), FRAs may be less efficient than other instruments for comprehensive, multi-year hedging strategies due to liquidity constraints in longer tenors and administrative complexities of managing numerous individual contracts. Counterparty risk is a manageable consideration.
+
 
 \newpage
 
 \subsection{Futures}
-Employing exchange-traded futures contracts represents a standardized approach for PPT to manage its exposure to fluctuating 3-month BBSY rates. 
+
 \subsubsection{Mechanics}
-ASX 90-Day Bank Bill Futures are standardized, legally binding agreements to notionally buy or sell a 90-day bank-accepted bill with a face value of AUD $1,000,000$. 
+To hedge against rising interest rates on its floating-rate debt, Prime Property Trust (PPT) would establish a short position by selling ASX 90-Day Bank Bill Futures. This strategy creates an offsetting financial exposure: an increase in the 3-month Bank Bill Swap Rate (BBSY) by the loan's reset date leads to a decrease in the price of the Bank Bill Futures (quoted as $100 - \text{Yield}$). Consequently, PPT's short futures position would generate a profit upon cash settlement or if closed out (by repurchasing the contracts) at this lower price. This profit is designed to substantially counteract the increased interest expense on PPT's underlying loans. Conversely, a decrease in BBSY would result in a futures loss, largely offsetting the benefit of lower loan interest payments. The contracts are cash-settled against the 3-month BBSY fixing, providing a direct hedging mechanism against this specific benchmark and effectively aiming to convert a variable interest rate exposure into a more predictable rate for the hedged period.
+
 \subsubsection{Size or Number of Contracts}
+The optimal number of futures contracts ($N_c$) is determined by the minimum-variance hedge ratio ($h^*$), the notional amount to be hedged ($V_A$), and the notional value per futures contract ($V_F$): $N_c = h^* \cdot (V_A / V_F)$. The minimum-variance hedge ratio, $h^{*} = \rho_{S,F} (\sigma_S / \sigma_F)$, where $\rho_{S,F}$ is the correlation coefficient between changes in spot rates ($\Delta S$) and futures rates ($\Delta F$), and $\sigma_S, \sigma_F$ are their respective standard deviations, is crucial for effective risk reduction (\cite{e}). For hedging 3-month BBSY with ASX 90-Day Bank Bill Futures, $h^*$ is theoretically close to 1.0 due to their direct linkage and congruent tenors, suggesting approximately 300 contracts (each with a \$1 million notional) for PPT's \$300 million quarterly exposure. While empirical estimation of $h^*$ using historical data can refine this, a unitary hedge ratio is a common and practical starting point for such closely matched hedges (\cite{lt}).
 
-\begin{equation}
-    \text{Number of Contracts} = h^{*} \cdot \frac{\text{Amount to be Hedged}}{\text{Value of One Futures Contract}}
-\end{equation}
-
-where $h^{*}$ denotes the hedge ratio. Notably, we can express the hedge ratio as:
-
-\begin{equation}
-    h^{*} = \rho_{SF} \frac{\sigma_S}{\sigma_F} = \frac{\text{Cov}(S, F)}{\text{Var}(F)}
-\end{equation}
-where $S$ is the spot price of the underlying asset, and $F$ is the futures price.
 
 \subsubsection{Position and Contract Maturities}
+To protect against rising interest rates, PPT must establish and maintain a short position by selling ASX 90-Day Bank Bill Futures. These contracts have standardized quarterly maturity months. PPT would select contracts whose settlement dates align closely with the commencement of its quarterly loan interest periods. For comprehensive risk management over a 12-month period, a strip hedge would be implemented, involving the sale of a series of futures contracts with successive quarterly maturities (e.g., June, September, December, and the following March contracts) to synthetically extend the hedging horizon (\cite{ch}).
 
 \subsubsection{Timing and Tenor}
+The timing of hedge initiation for each quarterly period should precede the relevant BBSY fixing date and will be influenced by PPT's interest rate forecasts, risk tolerance, and the prevailing forward yield curve implied by futures prices. The tenor for PPT's immediate ``next year'' concern is achievable via a strip of four quarterly contracts. Hedging longer-term exposures, such as the 5-year Sterling Square facility, with futures necessitates a rolling hedge strategy: systematically closing maturing short positions and re-establishing them in later-dated contracts. This process introduces ``roll risk''---the uncertainty associated with the prices at which future contracts can be rolled forward, influenced by changes in the forward yield curve and inter-contract spreads (\cite{af}).
 
 \subsubsection{Initial and Ongoing Cashflows and Costs}
+Hedging with exchange-traded futures involves distinct cash flows. An initial margin per contract must be deposited with the clearing member—a collateral deposit, not an expense, mandated by ASX Clear (Futures) to cover potential initial adverse price movements. Futures positions are marked-to-market daily, meaning changes in value are settled in cash daily. If futures prices rise (yields fall), PPT's short position incurs a loss, debited from its margin account; if prices fall (yields rise), a profit is credited. Margin calls occur if the account balance falls below a maintenance level, requiring immediate cash replenishment. This daily margining creates significant liquidity risk that requires robust cash flow management (\cite{fg}; \cite{bp}). Brokerage commissions are incurred for executing trades. Notably, unlike options, establishing a futures position entails no upfront premium.
 
 \subsubsection{Expected Outcomes or Payoffs}
-The primary expected outcome of employing a short futures hedge is the stabilization of future effective borrowing costs against variability in the 3-month BBSY.
+A short futures hedge aims to stabilize effective borrowing costs against BBSY variability. The profit and loss (P\&L) from the futures position is designed to offset changes in the BBSY component of loan interest payments. If BBSY at expiry is higher than the yield at which futures were sold ($Y_{F,entry}$), the futures generate a profit, compensating for higher loan interest. If BBSY is lower, a futures loss largely offsets the lower loan interest. PPT's effective interest rate for the hedged period is thus substantially ``locked in'' near $Y_{F,entry}$ plus its loan spread, aiding in meeting budgeted costs.
 
+\begin{figure}[H] % 'h'ere, 't'op, 'b'ottom, 'p'age of floats
+ \centering
+ \includegraphics[width=\textwidth]{/Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png} 
+ \caption{Payoff Profile of the Short Futures Position}
+    \label{fig:ShortFuturesPayoff}
+\end{figure}
 
 \subsubsection{Risks and Downside}
-Substantial adverse movements in futures prices can trigger significant margin calls, requiring PPT to provide liquid funds at short notice. Failure to meet margin calls could lead to the premature and forced liquidation of the hedge at an unfavorable time (\cite{}).
-
-The daily mark-to-market and variation margining process is a significant operational risk.
-
+Futures hedging entails several risks. Basis risk arises if the futures price does not move perfectly with the spot BBSY determining loan payments. Although ASX 90-Day Bank Bill Futures are cash-settled against BBSY, mitigating this risk at expiry, discrepancies can occur from fixing time differences or if the hedge is lifted pre-expiry (\cite{af}). Margin call risk (liquidity risk) is critical due to daily mark-to-market; adverse price movements can trigger substantial, unpredictable margin calls, necessitating readily available liquid assets (\cite{fk}; \cite{gp}). Rolling risk applies to long-term hedges, involving uncertainty in the prices for future contracts when rolling positions forward. Hedge ratio risk (model risk) exists if the empirically estimated $h^*$ is suboptimal due to non-stationary correlations or volatilities (\cite{lt}). An opportunity cost is inherent as futures provide a symmetric outcome, foregoing benefits if BBSY falls below the locked-in rate.
 
 \subsubsection{Feasibility and Suitability}
-
-\newpage
-
+Hedging with ASX 90-Day Bank Bill Futures is highly feasible for a corporate entity such as Prime Property Trust (PPT), as these exchange-traded instruments on the Australian Securities Exchange (ASX) ensure price transparency, regulatory oversight, and significantly reduced counterparty credit risk via the intermediation of ASX Clear (Futures). Liquidity for nearer-dated contracts is generally robust, facilitating efficient trade execution, although PPT would need to establish appropriate brokerage relationships and internal controls for managing futures trading and margin accounts. In terms of suitability, futures directly address PPT’s budget concerns by enabling greater certainty over interest expenses, crucial for financial planning and Interest Coverage Ratio (ICR) covenant management (\cite{ms}). However, the efficacy of a futures hedge in resolving PPT's severe ICR pressure is contingent on the level at which interest rates can be locked in relative to its projected EBITDA. The primary operational challenge is the daily variation margining, which demands robust liquidity management. While a strip hedge is viable for addressing concerns over the ``next year,'' a rolling strategy for longer tenors, such as for the 5-year Sterling Square (SS) facility, introduces roll risk and operational complexity. Nonetheless, by reducing earnings volatility, hedging with futures can align with REIT investor preferences, and reduces financial distress costs and stabilize cash flows, thereby facilitating core operations (\cite{fss}; \cite{ss}).
 \subsubsection{Conclusion}
+ASX 90-Day Bank Bill Futures offer Prime Property Trust a transparent and liquid means to mitigate 3-month BBSY volatility. A short futures strategy can stabilize interest expenses, aiding budgetary predictability and ICR management, particularly for short-to-medium terms. Key considerations are the operational demands of daily margining and the symmetric hedge outcome, foregoing gains from falling rates. While effective in capping further borrowing cost increases, their ability to resolve PPT’s existing ICR covenant pressure is contingent on the prevailing market-implied forward rates.
 
 \newpage
 
 \subsection{Swaps}
 
 \subsubsection{Mechanics}
-An interest rate swap (IRS) is a contractual agreement between two counterparties to exchange a series of interest payments over a specified period, calculated on a common notional principal amount which itself is typically not exchanged. In its most common form, a "plain vanilla" swap, one party agrees to make payments based on a predetermined fixed interest rate, while the other party agrees to make payments based on a floating interest rate, such as the Bank Bill Swap Rate (BBSY) or another relevant reference rate (REFERENCE, 0000). On each scheduled payment date (e.g., quarterly or semi-annually), these obligations are usually netted, with only the difference being paid by the party owing the larger amount. The fixed rate of the swap is determined at inception such that the initial market value of the swap is typically zero for both parties, reflecting prevailing market conditions and expectations for future interest rates (REFERENCE, 0000). This derivative allows entities to effectively transform the nature of their interest rate exposures or receipts without altering their underlying debt or asset portfolios. 
+An interest rate swap (IRS) is a contractual agreement between two counterparties to exchange a series of interest payments over a specified period, calculated on a common notional principal amount which itself is typically not exchanged. In its most common form, a "plain vanilla" swap, one party agrees to make payments based on a predetermined fixed interest rate, while the other party agrees to make payments based on a floating interest rate, such as the Bank Bill Swap Rate (BBSY) or another relevant reference rate. On each scheduled payment date (e.g., quarterly or semi-annually), these obligations are usually netted, with only the difference being paid by the party owing the larger amount. The fixed rate of the swap is determined at inception such that the initial market value of the swap is typically zero for both parties, reflecting prevailing market conditions and expectations for future interest rates. This derivative allows entities to effectively transform the nature of their interest rate exposures or receipts without altering their underlying debt or asset portfolios. 
 \subsubsection{Size or Number of Contracts}
+The size of an interest rate swap is its notional principal amount. For Prime Property Trust (PPT), to fully convert a floating-rate loan to a synthetic fixed-rate obligation, the swap's notional principal would typically match the loan's principal. For instance, a \$100 million swap for the Prime Corporate Tower (PCT) facility and a \$200 million swap for the Sterling Square (SS) facility would achieve a direct hedge of the benchmark rate exposure. The Over-The-Counter (OTC) nature of swaps facilitates precise tailoring of this notional amount, a key advantage over standardized contracts. While more complex strategies might employ duration or PV01 matching, direct notional matching is standard and effective for converting specific loan exposures when the swap's floating leg mirrors the loan's benchmark and payment frequency (\cite{ml}). Partial hedging, using a swap notional less than the loan principal, remains an option.
 
 \subsubsection{Position and Contract Maturities}
-To convert its floating-rate payments into fixed payments, PPT would enter into a payer swap, meaning it agrees to pay the fixed rate and receive the floating rate (3-month BBSY). This effectively neutralizes its floating rate exposure on the debt.
+To transform its floating-rate debt payments into fixed obligations, PPT would enter into a payer swap, agreeing to pay the fixed rate and receive the floating rate (e.g., 3-month BBSY). This transaction effectively neutralizes the variability of its benchmark interest payments on the underlying debt. The maturity of the IRS can be customized to align with the tenor of the debt exposure PPT intends to hedge. For instance, a 3-year swap could hedge the PCT facility, and a 5-year swap could cover the SS facility. The ability to precisely match the liability's tenor is a significant advantage of swaps, particularly for longer-term hedging compared to strategies involving rolling shorter-dated instruments, which can introduce roll risk and administrative burden (\cite{d}).
 
-The maturity of the IRS can be customized to match the tenor of the underlying debt exposure PPT wishes to hedge. Specifically, for the 3-year PCT facility, PPT could enter into a 3-year interest rate swap, whereas for the 5-year SS facility, a 5-year swap could be used.
-
-Alternatively, PPT could use shorter-dated swaps and roll them, or use a series of forward-starting swaps to hedge specific future periods, particularly for the concern over the "next year". The ability to precisely match the tenor of the liability is a significant advantage of swaps over futures, which often require rolling for longer-term hedges (REFERENCE, 0000).
 \subsubsection{Timing and Tenor}
-The swap would ideally be entered into as soon as PPT wishes to lock in a fixed rate for its future interest payments. The fixed rate achievable will depend on the swap market conditions at the time of execution. The "next year" focus () might lead to considering swaps covering that period, or even forward-starting swaps that become effective at a future date.
-
-The tenor of an IRS is highly customizable. PPT can choose tenors ranging from a few months to several years (e.g., 1, 2, 3, 5 years or even longer), allowing for a precise match with the life of its debt facilities or its specific hedging horizon. This alignment reduces the risks associated with maturity mismatches.
+The swap should ideally be executed when PPT decides to lock in a fixed interest rate for its future payments, with the achievable fixed rate contingent upon swap market conditions at that point. Concerns regarding specific future periods, such as the ``next year,'' might prompt consideration of swaps covering that particular timeframe, potentially including forward-starting swaps which become effective at a future date. The tenor of an IRS is highly customizable, from months to many years, allowing precise alignment with debt facility lifespans or specific hedging horizons, thereby mitigating risks associated with maturity mismatches (\cite{t}). Market liquidity in interest rate swaps, while generally robust for standard tenors, can be influenced by monetary policy events and broader fixed income market conditions (\cite{bfs}).
 
 \subsubsection{Initial and Ongoing Cashflows and Costs}
-Typically, a standard ("at-market") interest rate swap has no upfront premium or initial cost, as the fixed rate is set such that the initial present value of the fixed and expected floating legs are equal. However, transaction costs or bid-ask spreads charged by the swap dealer (the bank) are implicitly built into the agreed fixed rate. Off-market swaps (where the fixed rate is set above or below the prevailing market rate) would involve an upfront payment or receipt.
+Standard at-market interest rate swaps typically involve no upfront premium, as the fixed rate is set to equalize the present values of the fixed and expected floating legs at inception. Transaction costs or bid-ask spreads are implicitly incorporated into the agreed fixed rate by the swap dealer. If an ``off-market'' swap is structured (with a fixed rate differing from the prevailing market rate), an upfront payment from one party to the other would be required to compensate for this deviation. Ongoing cash flows consist of the periodic net interest payments.
 
 \subsubsection{Expected Outcomes or Payoffs}
-The primary outcome of entering a payer swap is the conversion of PPT's variable interest expense into a predictable, fixed expense for the term of the swap.
+The principal outcome for PPT from entering a payer interest rate swap is the conversion of its variable interest expense on the notional amount to a predictable fixed expense. This directly supports PPT's goal of mitigating interest rate volatility impacts on budgeted costs. Should actual BBSY rates exceed the swap's fixed rate ($R_{FIX}$), PPT’s higher loan payments are offset by net receipts from the swap. Conversely, if BBSY falls below $R_{FIX}$, PPT makes net payments on the swap, but benefits from lower loan payments, again resulting in an effective benchmark cost near $R_{FIX}$. This certainty in interest expense aids financial planning and is crucial for managing financial covenants like the Interest Coverage Ratio (ICR) by stabilizing a major financing cost component. Empirical studies have shown that firms, particularly those with higher leverage or lower credit ratings, often enter swaps as fixed-rate payers to manage such risks (\cite{ml}; \cite{ts}). The trade-off is forgoing potential savings if BBSY falls substantially below the locked-in fixed rate.
 
+\begin{figure}[H] % 'h'ere, 't'op, 'b'ottom, 'p'age of floats
+ \centering
+ \includegraphics[width=\textwidth]{/Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png} 
+ \caption{Payoff Profile of the Payer Swap Position}
+    \label{fig:swap_hedging_outcomes}
+\end{figure}
 
 \subsubsection{Risks and Downside}
+Interest rate swaps, while effective, carry inherent risks. Counterparty credit risk is prominent in OTC contracts, where PPT faces the risk of the swap counterparty defaulting, especially if the swap is significantly in-the-money for PPT. This risk is managed via ISDA Master Agreements, netting provisions, and collateral posting under Credit Support Annexes (CSAs). Regulatory initiatives have also promoted central clearing for many standard swaps, significantly mitigating this risk by interposing a Central Counterparty (CCP) (\cite{mv}). An opportunity cost arises as PPT forgoes benefits if BBSY falls significantly below the fixed swap rate. Basis risk, though typically low for plain vanilla swaps, can occur if the swap's floating leg terms (e.g., fixing conventions, payment dates) do not perfectly match the underlying loan terms (\cite{ds}). Liquidity and early termination risk exist; unwinding a bespoke OTC swap before maturity can be complex and potentially costly, depending on prevailing rates and the swap's remaining life. Finally, documentation and legal costs are associated with establishing ISDA agreements.
 
 \subsubsection{Feasibility and Suitability}
+Interest rate swaps are highly feasible for PPT, being standard, customizable OTC products offered by financial institutions. Their suitability for PPT is compelling. Swaps provide budget certainty by fixing variable interest expenses, crucial for meeting cost obligations and managing the ICR covenant, especially given its current sensitivity. This aligns with corporate risk management theories where firms hedge to reduce expected costs of financial distress and stabilize cash flows (\cite{ss}; \cite{fss}). The ability to match long tenors, such as for the 3-year PCT and 5-year SS facilities, is a distinct advantage, avoiding roll risk. This is particularly beneficial for the SS facility during its non-income-generating construction phase. For REITs, the predictable interest expense profile achieved through swaps can be attractive to investors seeking stable distributions (\cite{bk}). The main trade-off remains the opportunity cost if rates decline. Recent trends in real estate finance indicate an increasing consideration of swaps as hedging instruments, particularly as the cost of alternatives like caps fluctuates.
+
+\subsubsection{Conclusion}
+Interest rate swaps offer Prime Property Trust a robust and highly customizable solution for converting its floating-rate interest exposure on 3-month BBSY to fixed payments. This strategy directly addresses the objectives of ensuring budget certainty, managing the Interest Coverage Ratio, and providing long-term interest rate protection matched to debt tenors, particularly for the new PCT and SS facilities. The primary cost is the potential opportunity cost in a falling rate environment. Given PPT's financial context and risk management needs, the benefits of predictable financing costs through swaps appear to significantly outweigh the inherent risks, making them a highly suitable hedging instrument.
+
+\newpage
+
+\subsection{Options}
+
+\subsubsection{Mechanics}
+An Interest Rate Cap, an Over-The-Counter (OTC) derivative, functions as a sequence of European call options (caplets) on a specified interest rate, providing indemnification to the buyer should the reference rate surpass a predetermined strike rate ($R_K$) during contractually agreed periods. The premium paid by the cap buyer compensates the seller for undertaking the obligation of potential future payments, the magnitude of which is determined by the cap's strike, tenor, the prevailing forward yield curve, and crucially, the implied volatility of future interest rates (Black, 1976; Merton, 1973). While designed to protect borrowers, the imposition and structure of interest rate caps can have complex, sometimes unintended, macroeconomic consequences, including impacts on credit supply and pricing transparency, as documented in analyses of their use as policy tools (World Bank, 2018). The payout for each caplet, should the reference rate $L(T_{j-1}, T_j)$ exceed $R_K$ over an interest period $\tau_j$ for a notional $N_V$, is $N_V \cdot \max(0, L(T_{j-1}, T_j) - R_K) \cdot \tau_j$.
+
+\subsubsection{Size or Number of Contracts}
+The primary dimension of an interest rate cap is its notional principal, which is tailored to the hedger's specific underlying debt amount. Understanding the option's sensitivities, or ``Greeks,'' is critical for assessing its cost and hedge effectiveness. Delta ($\Delta$) quantifies the cap's price change relative to movements in the underlying interest rate, indicating initial hedge responsiveness. Gamma ($\Gamma$) measures the rate of change of Delta, highlighting how this responsiveness adjusts as rates fluctuate, being highest for at-the-money options. Vega ($\nu$) captures sensitivity to implied volatility, a key component of the premium, reflecting the market's expectation of future rate uncertainty. Theta ($\Theta$) represents the erosion of the cap's value as time to expiry decreases, a direct cost of holding the option. Rho ($\rho$) indicates sensitivity to changes in the risk-free discount rate. Effective risk management using options necessitates careful monitoring and interpretation of these Greeks (Investopedia, ``Option Greeks: The 4 Factors to Measure Risk''; Stojanov, S., 2012). Empirical research sometimes focuses on the responsiveness of in-the-money (ITM) options, suggesting specific delta ranges for optimal strike selection in certain contexts (A., D. P., 2021).
+
+\subsubsection{Position and Contract Maturities}
+A hedger seeking protection against rising interest rates, such as Prime Property Trust (PPT), would adopt a long position by purchasing an interest rate cap. The maturities of the individual caplets are structured to align with the interest reset dates of the hedged floating-rate debt, while the overall tenor of the cap is customized to the desired length of protection.
+
+\subsubsection{Timing and Tenor}
+The decision to purchase a cap involves assessing prevailing market conditions, particularly forward interest rates and implied volatility, which directly influence the premium. The selected strike rate ($R_K$) is a pivotal choice, balancing the desired level of protection against the upfront cost; lower strikes offer greater protection but incur higher premiums. The tenor is customized to the hedging horizon. Academic work explores optimal strategies in related derivative markets, such as swaptions, considering the dynamics of volatility and skewness, which are influenced by macroeconomic beliefs and monetary policy objectives (Trolle, A. B., \& Schwartz, E. S., 2010).
+
+\subsubsection{Initial and Ongoing Cashflows and Costs}
+The cap buyer makes a single, non-refundable upfront premium payment. A significant advantage is the absence of ongoing margin calls from the seller, simplifying cash flow forecasting post-purchase. The buyer continues to service its underlying debt. If, on any reset date, the reference rate surpasses the strike, the cap seller makes a payment to the buyer, offsetting the increased interest cost on the loan for that period.
+
+\subsubsection{Expected Outcomes or Payoffs}
+The cap provides an asymmetric payoff: if the benchmark rate exceeds the strike, the buyer's effective benchmark cost is limited to the strike rate (plus spread and amortized premium). If the benchmark remains below the strike, the buyer benefits from lower prevailing rates, with the only hedging cost being the amortized premium for that period. This structure ensures protection against rate upswings while allowing participation in rate downswings.
+
+\begin{figure}[H] % 'h'ere, 't'op, 'b'ottom, 'p'age of floats
+ \centering
+ \includegraphics[width=\textwidth]{/Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png} 
+ \caption{Payoff Profile of the Long Interest Rate Cap Position}
+    \label{fig:LongCapsPayoff}
+\end{figure}
+
+\subsubsection{Risks and Downside}
+The primary downside is the upfront premium, which is a sunk cost if rates remain below the strike. Counterparty credit risk, inherent in OTC derivatives, exposes the buyer to potential default by the seller when the cap is in-the-money; this risk is a subject of ongoing analysis, particularly regarding concentration and systemic implications within financial networks (Segoviano, M. A., \& Singh, M., 2008; Gauthier, G. et al., 2015). Basis risk can occur if the cap's reference rate or terms do not perfectly match the underlying loan, though careful structuring can minimize this. Such basis risk can be exacerbated if hedging contracts include termination rights triggered by the hedger's deteriorating credit quality, potentially removing the hedge when most needed (Hainz, C., Kuznetsova, E., \& Volpin, P., 2024). The initial premium is also sensitive to prevailing implied volatility (Vega); purchasing when volatility is high translates to a more expensive cap.
+
+\subsubsection{Feasibility and Suitability}
+Interest rate caps are standard, customizable OTC products readily available from financial institutions, making them highly feasible for entities like PPT. For PPT, a cap strategy is particularly suitable for addressing concerns about rising interest rates impacting budgeted costs and its Interest Coverage Ratio (ICR) covenant of $1.75 \times$. By limiting the benchmark interest expense to the strike rate, a cap aids ICR predictability and compliance. This aligns with corporate finance theories suggesting hedging is valuable for reducing expected financial distress costs and aligning internal fund availability with investment needs, especially when external financing is costly (Géczy, C., Minton, B. A., \& Schrand, C., 1997; Dadalt, P. et al., 2002; Aretz, K., Bartram, S. M., \& Dufey, G., 2007). The Sterling Square (SS) facility, being non-income generating initially, particularly benefits from such protection without forfeiting gains from lower rates. The upfront premium is a budgetable insurance cost, and the absence of margin calls simplifies liquidity management. The selection of an appropriate strike rate is critical, balancing protection level against premium affordability, especially pertinent to PPT's current financial position. Research into commercial real estate finance also implicitly supports managing interest rate exposure, as cap rates (property yields) are influenced by interest rate levels and investor risk appetite (Wall Street Prep).
+
+\subsubsection{Conclusion}
+Purchasing an interest rate cap offers Prime Property Trust a precise and strategically advantageous mechanism to mitigate exposure to rising 3-month BBSY rates. This instrument provides a ceiling on benchmark interest costs, directly supporting budget stability and management of the critical ICR covenant, while allowing participation in favorable rate movements, net of the premium. The primary trade-off is the upfront premium against the value of asymmetric protection and covenant compliance. The high degree of customization, coupled with the absence of ongoing margin calls, renders caps highly suitable for PPT's specific debt profile and risk management objectives, with the strike rate selection being a key determinant of cost and protection.
 
 \newpage
 

@@ -1,15 +1,21 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'Research.blg'
-[56] biber-darwin:340> INFO - === Thu May 15, 2025, 15:38:19
-[72] Biber.pm:418> INFO - Reading 'Research.bcf'
-[146] Biber.pm:972> INFO - Found 11 citekeys in bib section 0
-[158] Biber.pm:4383> INFO - Processing section 0
-[166] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[168] bibtex.pm:1713> INFO - LaTeX decoding ...
-[184] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[252] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[252] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[252] Biber.pm:4203> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[252] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[265] bbl.pm:654> INFO - Writing 'Research.bbl' with encoding 'UTF-8'
-[269] bbl.pm:757> INFO - Output to Research.bbl
+[60] biber-darwin:340> INFO - === Fri May 16, 2025, 12:18:32
+[76] Biber.pm:418> INFO - Reading 'Research.bcf'
+[159] Biber.pm:972> INFO - Found 26 citekeys in bib section 0
+[170] Biber.pm:4383> INFO - Processing section 0
+[180] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[185] bibtex.pm:1713> INFO - LaTeX decoding ...
+[228] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[370] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[370] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[370] Biber.pm:4203> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[370] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[393] bbl.pm:654> INFO - Writing 'Research.bbl' with encoding 'UTF-8'
+[403] bbl.pm:757> INFO - Output to Research.bbl
+[403] Biber.pm:130> WARN - Duplicate entry key: 't' in file 'references.bib', skipping ...
+[403] Biber.pm:130> WARN - Duplicate entry key: 'ms' in file 'references.bib', skipping ...
+[403] Biber.pm:130> WARN - Name in key 'lt' is empty (probably consecutive 'and'): skipping entry 'lt'
+[403] Biber.pm:130> WARN - Entry with key 'lt' in section '0' is cited and found but not created (likely due to sourcemap)
+[403] Biber.pm:130> WARN - BibTeX subsystem: substring 2, warning: empty substring
+[403] Biber.pm:132> INFO - WARNINGS: 5

@@ -19,6 +19,60 @@
 
 \refsection{0}
   \datalist[entry]{apa/global//global/global}
+    \entry{af}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9590d2746b33b09275cf4018b84c5354}{%
+           family={Adam},
+           familyi={A\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80efcf5ead2f31fcf8d6081889b585dc}{%
+           family={Fernando},
+           familyi={F\bibinitperiod},
+           given={Chitru\bibnamedelima S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{7f643cf7024fc46881a155d1dc535701}
+      \strng{fullhash}{7f643cf7024fc46881a155d1dc535701}
+      \strng{bibnamehash}{7f643cf7024fc46881a155d1dc535701}
+      \strng{authorbibnamehash}{7f643cf7024fc46881a155d1dc535701}
+      \strng{authornamehash}{7f643cf7024fc46881a155d1dc535701}
+      \strng{authorfullhash}{7f643cf7024fc46881a155d1dc535701}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We document that firms in the gold mining industry have consistently realized economically significant cash flow gains from their derivatives transactions. We conclude that these cash flows have increased shareholder value since there is no evidence of an offsetting adjustment in firms' systematic risk. This finding contradicts a central assumption in the risk management literature, that derivatives transactions have zero net present value, and highlights an important motive for firms to use derivatives that the literature has hitherto ignored. Although we find considerable evidence of selective hedging in our sample, the cash flow gains from selective hedging appear to be small at best.}
+      \field{month}{8}
+      \field{title}{Hedging, {Speculation} and {Shareholder} {Value}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=764887
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=764887
+      \endverb
+      \keyw{Corporate risk management,hedging,hedging benefits,risk premium,speculation}
+    \endentry
     \entry{aw}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b8bda8042cd437e19dcaf93ff58e2e97}{%
@@ -71,6 +125,227 @@
       \verb https://www.jstor.org/stable/2696762
       \endverb
     \endentry
+    \entry{bfs}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5d87d046fa5be44b5f5c4abd23346f90}{%
+           family={Boudiaf},
+           familyi={B\bibinitperiod},
+           given={Ismael\bibnamedelima Alexander},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cad050bb78dfb9bfa8d4cea2a9ce93d5}{%
+           family={Frieden},
+           familyi={F\bibinitperiod},
+           given={Immo},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d6d644afd865bf749c6c8093d2c5390}{%
+           family={Scheicher},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{1b9d9cc512f268ddee03105664d5107f}
+      \strng{fullhash}{0964a44b1373be440be3ed69b2764052}
+      \strng{bibnamehash}{0964a44b1373be440be3ed69b2764052}
+      \strng{authorbibnamehash}{0964a44b1373be440be3ed69b2764052}
+      \strng{authornamehash}{1b9d9cc512f268ddee03105664d5107f}
+      \strng{authorfullhash}{0964a44b1373be440be3ed69b2764052}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper studies market liquidity in interest rate swaps (IRS) before and during the global tightening of monetary policy. IRS constitute the single largest derivatives segment globally. Banks and Pension Funds extensively rely on IRS to hedge interest rate risk. Hence, providing an understanding of this market and the drivers of market liquidity is a key research question in the current market context. We use price and volume data from around 338,000 trades in the most active long-horizon swap contract denominated in EUR to construct seven liquidity measures. Taking a comprehensive approach, we apply linear regressions to determine the drivers of variation in liquidity. Our liquidity measures are significantly related to monetary policy, market-wide fixed income liquidity, EURIBOR rate volatility and Dealer behaviour. Indicators for generic market stress such as VIX which are often documented in the literature are not strongly connected to IRS trading conditions.}
+      \field{month}{3}
+      \field{title}{The {Market} {Liquidity} of {Interest} {Rate} {Swaps}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2139/ssrn.4745740
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/zackienzle/Zotero/storage/NH3JTHX7/Boudiaf et al. - 2024 - The Market Liquidity of Interest Rate Swaps.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=4745740
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=4745740
+      \endverb
+      \keyw{fixed income,liquidity,market structure,swap}
+    \endentry
+    \entry{bk}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c9fd49bc55050aeafc967e50f086e8cd}{%
+           family={Browne},
+           familyi={B\bibinitperiod},
+           given={Lynn\bibnamedelima E},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73199a16f08d9647b5c683d8a1d906fc}{%
+           family={Case},
+           familyi={C\bibinitperiod},
+           given={Karl\bibnamedelima E},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \strng{namehash}{a3acbe684fd82b0bbdc24bdf5efb98eb}
+      \strng{fullhash}{a3acbe684fd82b0bbdc24bdf5efb98eb}
+      \strng{bibnamehash}{a3acbe684fd82b0bbdc24bdf5efb98eb}
+      \strng{authorbibnamehash}{a3acbe684fd82b0bbdc24bdf5efb98eb}
+      \strng{authornamehash}{a3acbe684fd82b0bbdc24bdf5efb98eb}
+      \strng{authorfullhash}{a3acbe684fd82b0bbdc24bdf5efb98eb}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Conference Series ; [Proceedings]}
+      \field{note}{Publisher: Federal Reserve Bank of Boston}
+      \field{number}{36}
+      \field{title}{How the commercial real estate boom undid the banks}
+      \field{year}{1992}
+      \field{pages}{57\bibrangedash 113}
+      \range{pages}{57}
+      \keyw{Construction industry,Real property,Regional economics}
+    \endentry
+    \entry{bp}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=666c570191064e2eed87db0ce81d1f88}{%
+           family={Brunnermeier},
+           familyi={B\bibinitperiod},
+           given={Markus\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07123ce41f03a63251aed38e35aa6029}{%
+           family={Pedersen},
+           familyi={P\bibinitperiod},
+           given={Lasse\bibnamedelima Heje},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{6a3774a942351c9276277c55c5a9e8a5}
+      \strng{fullhash}{6a3774a942351c9276277c55c5a9e8a5}
+      \strng{bibnamehash}{6a3774a942351c9276277c55c5a9e8a5}
+      \strng{authorbibnamehash}{6a3774a942351c9276277c55c5a9e8a5}
+      \strng{authornamehash}{6a3774a942351c9276277c55c5a9e8a5}
+      \strng{authorfullhash}{6a3774a942351c9276277c55c5a9e8a5}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We provide a model that links an asset's market liquidity (i.e., the ease with which it is traded) and traders' funding liquidity (i.e., the ease with which they can obtain funding). Traders provide market liquidity, and their ability to do so depends on their availability of funding. Conversely, traders' funding, i.e., their capital and margin requirements, depends on the assets' market liquidity. We show that, under certain conditions, margins are destabilizing and market liquidity and funding liquidity are mutually reinforcing, leading to liquidity spirals. The model explains the empirically documented features that market liquidity (i) can suddenly dry up, (ii) has commonality across securities, (iii) is related to volatility, (iv) is subject to “flight to quality,” and (v) co-moves with the market. The model provides new testable predictions, including that speculators' capital is a driver of market liquidity and risk premiums.}
+      \field{month}{6}
+      \field{title}{Market {Liquidity} and {Funding} {Liquidity}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=1408432
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=1408432
+      \endverb
+      \keyw{Lasse Heje Pedersen,Market Liquidity and Funding Liquidity,Markus K. Brunnermeier,SSRN}
+    \endentry
+    \entry{ch}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b6e79f1da5bfcb69929e818417bb2206}{%
+           family={Cotter},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ae3dd29b1cdafcba7eeeb179faf739d}{%
+           family={Hanly},
+           familyi={H\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{c0d9140644fda16a2004d346aacc9aa2}
+      \strng{fullhash}{c0d9140644fda16a2004d346aacc9aa2}
+      \strng{bibnamehash}{c0d9140644fda16a2004d346aacc9aa2}
+      \strng{authorbibnamehash}{c0d9140644fda16a2004d346aacc9aa2}
+      \strng{authornamehash}{c0d9140644fda16a2004d346aacc9aa2}
+      \strng{authorfullhash}{c0d9140644fda16a2004d346aacc9aa2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper examines the volatility and covariance dynamics of cash and futures contracts that underlie the Optimal Hedge Ratio (OHR) across different hedging time horizons. We examine whether hedge ratios calculated over a short term hedging horizon can be scaled and successfully applied to longer term horizons. We also test the equivalence of scaled hedge ratios with those calculated directly from lower frequency data and compare them in terms of hedging effectiveness. Our findings show that the volatility and covariance dynamics may differ considerably depending on the hedging horizon and this gives rise to significant differences between short term and longer term hedges. Despite this, scaling provides good hedging outcomes in terms of risk reduction which are comparable to those based on direct estimation.}
+      \field{month}{12}
+      \field{shorttitle}{Hedging}
+      \field{title}{Hedging: {Scaling} and the {Investor} {Horizon}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2139/ssrn.1517115
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/zackienzle/Zotero/storage/IPHV6XZT/Cotter and Hanly - 2009 - Hedging Scaling and the Investor Horizon.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=1517115
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=1517115
+      \endverb
+      \keyw{Forecasting,Hedging Effectiveness,Scaling,Volatility Modelling}
+    \endentry
     \entry{d}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=669113694d92a734ea0f8d93c3b51034}{%
@@ -119,6 +394,292 @@
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/S0301420797849008
       \endverb
+    \endentry
+    \entry{ds}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=41e57cb33fe261e63fff879cbd1d79c1}{%
+           family={Duffie},
+           familyi={D\bibinitperiod},
+           given={Darrell},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bd41af694b4ec070a5c14d9d08b42de}{%
+           family={Singleton},
+           familyi={S\bibinitperiod},
+           given={Kenneth\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{39f8ed681b6a914f5c4081ef8aeb2537}
+      \strng{fullhash}{39f8ed681b6a914f5c4081ef8aeb2537}
+      \strng{bibnamehash}{39f8ed681b6a914f5c4081ef8aeb2537}
+      \strng{authorbibnamehash}{39f8ed681b6a914f5c4081ef8aeb2537}
+      \strng{authornamehash}{39f8ed681b6a914f5c4081ef8aeb2537}
+      \strng{authorfullhash}{39f8ed681b6a914f5c4081ef8aeb2537}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper develops a multi-factor econometric model of the term structure of interest-rate swap yields. The model accommodates the possibility of counterparty default and any differences in the liquidities of the Treasury and Swap markets. By parameterizing a model of swap rates directly, we are able to compute model-based estimates of the defaultable zero coupon bond rates implicit in the swap market without having to specify a priori the dependence of these rates on default hazard or recovery rates. The time series analysis of spreads between zero-coupon swap and treasury yields reveals that both credit and liquidity factors were important sources of variation in swap spreads over the past decade.}
+      \field{month}{10}
+      \field{title}{An {Econometric} {Model} of the {Term} {Structure} of {Interest}-{Rate} {Swap} {Yields}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{1997}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=11214
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=11214
+      \endverb
+      \keyw{An Econometric Model of the Term Structure of Interest-Rate Swap Yields,Darrell Duffie,Kenneth J. Singleton,SSRN}
+    \endentry
+    \entry{e}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c15cac7ac6849bb751b5a3e507926185}{%
+           family={Ederington},
+           familyi={E\bibinitperiod},
+           given={Louis\bibnamedelima H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c15cac7ac6849bb751b5a3e507926185}
+      \strng{fullhash}{c15cac7ac6849bb751b5a3e507926185}
+      \strng{bibnamehash}{c15cac7ac6849bb751b5a3e507926185}
+      \strng{authorbibnamehash}{c15cac7ac6849bb751b5a3e507926185}
+      \strng{authornamehash}{c15cac7ac6849bb751b5a3e507926185}
+      \strng{authorfullhash}{c15cac7ac6849bb751b5a3e507926185}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{By Louis H Ederington; The Hedging Performance of the New Futures Markets}
+      \field{journaltitle}{Journal of Finance}
+      \field{note}{Publisher: American Finance Association}
+      \field{number}{1}
+      \field{title}{The {Hedging} {Performance} of the {New} {Futures} {Markets}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{34}
+      \field{year}{1979}
+      \field{urldateera}{ce}
+      \field{pages}{157\bibrangedash 70}
+      \range{pages}{21}
+      \verb{file}
+      \verb Snapshot:/Users/zackienzle/Zotero/storage/6N8U226W/v_3a34_3ay_3a1979_3ai_3a1_3ap_3a157-70.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://EconPapers.repec.org/RePEc:bla:jfinan:v:34:y:1979:i:1:p:157-70
+      \endverb
+      \verb{url}
+      \verb https://EconPapers.repec.org/RePEc:bla:jfinan:v:34:y:1979:i:1:p:157-70
+      \endverb
+    \endentry
+    \entry{fk}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=da2a8eeb0949fede1f0103d08b9a355a}{%
+           family={Fenn},
+           familyi={F\bibinitperiod},
+           given={George\bibnamedelima W.},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e28f722a8679ee550962e14bb73f599}{%
+           family={Kupiec},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{15eab33ca028d0600f7caa658d9eb755}
+      \strng{fullhash}{15eab33ca028d0600f7caa658d9eb755}
+      \strng{bibnamehash}{15eab33ca028d0600f7caa658d9eb755}
+      \strng{authorbibnamehash}{15eab33ca028d0600f7caa658d9eb755}
+      \strng{authornamehash}{15eab33ca028d0600f7caa658d9eb755}
+      \strng{authorfullhash}{15eab33ca028d0600f7caa658d9eb755}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{No abstract is available for this item.}
+      \field{journaltitle}{Journal of Futures Markets}
+      \field{note}{Publisher: John Wiley \& Sons, Ltd.}
+      \field{number}{4}
+      \field{title}{Prudential margin policy in a futures‐style settlement system}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{13}
+      \field{year}{1993}
+      \field{urldateera}{ce}
+      \field{pages}{389\bibrangedash 408}
+      \range{pages}{20}
+      \verb{file}
+      \verb Snapshot:/Users/zackienzle/Zotero/storage/GGIHV333/v13y1993i4p389-408.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://ideas.repec.org//a/wly/jfutmk/v13y1993i4p389-408.html
+      \endverb
+      \verb{url}
+      \verb https://ideas.repec.org//a/wly/jfutmk/v13y1993i4p389-408.html
+      \endverb
+    \endentry
+    \entry{fg}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=72eec8b02ed6ac0c4a945bdbd8d7030b}{%
+           family={Fishe},
+           familyi={F\bibinitperiod},
+           given={Raymond\bibnamedelimb P.\bibnamedelimi H.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40e0ea25d9d10db48c72e27e2dc4ee25}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Lawrence\bibnamedelima G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{448c38b5d7c65462523263cf0da48c80}
+      \strng{fullhash}{448c38b5d7c65462523263cf0da48c80}
+      \strng{bibnamehash}{448c38b5d7c65462523263cf0da48c80}
+      \strng{authorbibnamehash}{448c38b5d7c65462523263cf0da48c80}
+      \strng{authornamehash}{448c38b5d7c65462523263cf0da48c80}
+      \strng{authorfullhash}{448c38b5d7c65462523263cf0da48c80}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{No abstract is available for this item.}
+      \field{journaltitle}{Journal of Futures Markets}
+      \field{note}{Publisher: John Wiley \& Sons, Ltd.}
+      \field{number}{2}
+      \field{title}{The effects of margins on trading in futures markets}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{6}
+      \field{year}{1986}
+      \field{urldateera}{ce}
+      \field{pages}{261\bibrangedash 271}
+      \range{pages}{11}
+      \verb{file}
+      \verb Snapshot:/Users/zackienzle/Zotero/storage/IKVM9M26/v6y1986i2p261-271.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://ideas.repec.org//a/wly/jfutmk/v6y1986i2p261-271.html
+      \endverb
+      \verb{url}
+      \verb https://ideas.repec.org//a/wly/jfutmk/v6y1986i2p261-271.html
+      \endverb
+    \endentry
+    \entry{fjlsz}{misc}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=a61e1a510c3895e7ad54bfeda899d6a9}{%
+           family={Fleming},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=689017a86b536bc4ddd8fcc19ff4a5cb}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1275c2dcbc5b07ffbac485b93a8db288}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ada},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7eb85e96c75f2c02ec1a3548bf1a6302}{%
+           family={Sarkar},
+           familyi={S\bibinitperiod},
+           given={Asani},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cdcc00ebb87f2ba0b800a00a6f7161a4}{%
+           family={Zobel},
+           familyi={Z\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{d2a9f4dcb77d5268b3542276f59beb42}
+      \strng{fullhash}{98031f5aabcd78370b48a6fb1ac7e23b}
+      \strng{bibnamehash}{98031f5aabcd78370b48a6fb1ac7e23b}
+      \strng{authorbibnamehash}{98031f5aabcd78370b48a6fb1ac7e23b}
+      \strng{authornamehash}{d2a9f4dcb77d5268b3542276f59beb42}
+      \strng{authorfullhash}{98031f5aabcd78370b48a6fb1ac7e23b}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper examines the over-the-counter (OTC) interest rate derivatives (IRD) market in order to inform the design of post-trade price reporting. Our analysis uses a novel transaction-level data set to examine trading activity, the composition of market participants, levels of product standardization, and market-making behavior. We find that trading activity in the IRD market is dispersed across a broad array of product types, currency denominations, and maturities, leading to more than 10,500 observed unique product combinations. While a select group of standard instruments trade with relative frequency and may provide timely and pertinent price information for market participants, many other IRD instruments trade infrequently and with diverse contract terms, limiting the impact on price formation from the reporting of those transactions. Nonetheless, we find evidence of dealers hedging rapidly after large interest rate swap trades, suggesting that, for this product, a price-reporting regime could be designed in a manner that does not disrupt market-making activity.}
+      \field{month}{3}
+      \field{shorttitle}{An {Analysis} of {OTC} {Interest} {Rate} {Derivatives} {Transactions}}
+      \field{title}{An {Analysis} of {OTC} {Interest} {Rate} {Derivatives} {Transactions}: {Implications} for {Public} {Reporting}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2139/ssrn.2030461
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/zackienzle/Zotero/storage/KIH6DF2A/Fleming et al. - 2012 - An Analysis of OTC Interest Rate Derivatives Transactions Implications for Public Reporting.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=2030461
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=2030461
+      \endverb
+      \keyw{interest rate derivatives,price reporting,public transparency,standardization}
     \endentry
     \entry{fss}{article}{}
       \name{author}{3}{}{%
@@ -185,6 +746,63 @@
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1993.tb05123.x
       \endverb
     \endentry
+    \entry{gp}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8b7b1dd2973438ae488b7ad6b44978b6}{%
+           family={Garleanu},
+           familyi={G\bibinitperiod},
+           given={Nicolae},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07123ce41f03a63251aed38e35aa6029}{%
+           family={Pedersen},
+           familyi={P\bibinitperiod},
+           given={Lasse\bibnamedelima Heje},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{b7accce08ed3fc2595a6d6def3c6a055}
+      \strng{fullhash}{b7accce08ed3fc2595a6d6def3c6a055}
+      \strng{bibnamehash}{b7accce08ed3fc2595a6d6def3c6a055}
+      \strng{authorbibnamehash}{b7accce08ed3fc2595a6d6def3c6a055}
+      \strng{authornamehash}{b7accce08ed3fc2595a6d6def3c6a055}
+      \strng{authorfullhash}{b7accce08ed3fc2595a6d6def3c6a055}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In a model with heterogeneous-risk-aversion agents facing margin constraints, we show how securities' required returns are characterized both by their betas and their margin requirements. Negative shocks to fundamentals make margin constraints bind, lowering risk-free rates and raising Sharpe ratios of risky securities, especially for high-margin securities. Such a funding-liquidity crisis gives rise to "bases," that is, price gaps between securities with identical cash-flows but different margins. In the time series, bases depend on the shadow cost of capital, which can be captured through the interest-rate spread between collateralized and uncollateralized loans, and, in the cross section, they depend on relative margins. We test the model empirically using the CDS-bond bases and other deviations from the Law of One Price, and use it to evaluate central banks' lending facilities.}
+      \field{month}{2}
+      \field{title}{Margin-{Based} {Asset} {Pricing} and {Deviations} from the {Law} of {One} {Price}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Full Text PDF:/Users/zackienzle/Zotero/storage/LC4253BK/Garleanu and Pedersen - 2011 - Margin-Based Asset Pricing and Deviations from the Law of One Price.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=1759849
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=1759849
+      \endverb
+      \keyw{Lasse Heje Pedersen,Margin-Based Asset Pricing and Deviations from the Law of One Price,Nicolae Garleanu,SSRN}
+    \endentry
     \entry{g}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b049c8ec5fc42cb64a72248f4116f3c0}{%
@@ -230,6 +848,67 @@
       \verb{url}
       \verb https://www.jstor.org/stable/44095306
       \endverb
+    \endentry
+    \entry{ml}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fdd5e22164d293ff1f7537b4a7496bb1}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Connie\bibnamedelima X.},
+           giveni={C\bibinitperiod\bibinitdelim X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b2e4fb833b9d7101b582bca3225fbb9}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Haitao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \list{publisher}{1}{%
+        {Social Science Research Network}%
+      }
+      \strng{namehash}{7ad0ff6b78e33b10819d2157f521c18f}
+      \strng{fullhash}{7ad0ff6b78e33b10819d2157f521c18f}
+      \strng{bibnamehash}{7ad0ff6b78e33b10819d2157f521c18f}
+      \strng{authorbibnamehash}{7ad0ff6b78e33b10819d2157f521c18f}
+      \strng{authornamehash}{7ad0ff6b78e33b10819d2157f521c18f}
+      \strng{authorfullhash}{7ad0ff6b78e33b10819d2157f521c18f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We develop a simply theory on interest rate swaps based on the difference between bank loans and public debts. While restrictive covenants of bank loans help reduce agency costs, banks also have natural disadvantages in bearing interest rate risk due to their floating liabilities. A firm that wants a fixed-rate loan can borrow a floating-rate loan from a bank and enter an interest rate swap to hedge the interest rate risk. Consistent with our theory, we find empirically that fixed-rate swap payers generally have lower credit ratings, higher leverage ratios, higher percentages of long-term floating-rate loans, and are more likely to use bank loans than floating-rate swap payers.}
+      \field{month}{12}
+      \field{shorttitle}{Corporate {Use} of {Interest} {Rate} {Swaps}}
+      \field{title}{Corporate {Use} of {Interest} {Rate} {Swaps}: {Theory} and {Evidence}}
+      \field{type}{{SSRN} {Scholarly} {Paper}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2139/ssrn.327422
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/Users/zackienzle/Zotero/storage/L5ET8XAG/Mao and Li - 2002 - Corporate Use of Interest Rate Swaps Theory and Evidence.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=327422
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=327422
+      \endverb
+      \keyw{Agency costs,Bank loan,Comparative advantage,Information Asymmetry,Interest rate swap}
     \endentry
     \entry{ms}{article}{}
       \name{author}{2}{}{%
@@ -284,6 +963,64 @@
       \endverb
       \verb{url}
       \verb https://www.jstor.org/stable/252881
+      \endverb
+    \endentry
+    \entry{mv}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b6a928a702ce345503f645f784eaae28}{%
+           family={Menkveld},
+           familyi={M\bibinitperiod},
+           given={Albert\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b20f4d10657b3128d389743dff55c972}{%
+           family={Vuillemey},
+           familyi={V\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{f476bbd546e58ff1fbb087c08b620add}
+      \strng{fullhash}{f476bbd546e58ff1fbb087c08b620add}
+      \strng{bibnamehash}{f476bbd546e58ff1fbb087c08b620add}
+      \strng{authorbibnamehash}{f476bbd546e58ff1fbb087c08b620add}
+      \strng{authornamehash}{f476bbd546e58ff1fbb087c08b620add}
+      \strng{authorfullhash}{f476bbd546e58ff1fbb087c08b620add}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Central clearing counterparties (CCPs) have a variety of economic rationales. The Great Recession of 2007-2009 led regulators to mandate CCPs for most interest-rate and credit derivatives, markets in which large amounts of risks are transferred across agents. This change led to a large increase in CCP studies which, along with classical studies, are surveyed in this article. Discussed are, for example, multilateral netting, the insurance against counterparty risk, the eﬀect of CCPs on asset prices and ﬁre sales, margins setting, the default waterfall, and CCP governance. We review both CCP theory and empirics, and conclude by discussing regulatory issues.}
+      \field{issn}{1941-1367, 1941-1375}
+      \field{journaltitle}{Annual Review of Financial Economics}
+      \field{month}{11}
+      \field{number}{1}
+      \field{title}{The {Economics} of {Central} {Clearing}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{13}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{153\bibrangedash 178}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1146/annurev-financial-100520-100321
+      \endverb
+      \verb{file}
+      \verb PDF:/Users/zackienzle/Zotero/storage/5YNPE8CW/Menkveld and Vuillemey - 2021 - The Economics of Central Clearing.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.annualreviews.org/doi/10.1146/annurev-financial-100520-100321
+      \endverb
+      \verb{url}
+      \verb https://www.annualreviews.org/doi/10.1146/annurev-financial-100520-100321
       \endverb
     \endentry
     \entry{mw}{article}{}
@@ -498,6 +1235,55 @@
       \endverb
       \verb{url}
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1745-6622.1996.tb00295.x
+      \endverb
+    \endentry
+    \entry{ts}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b04b73173bde12f6affb3df7b9d475c1}{%
+           family={Titman},
+           familyi={T\bibinitperiod},
+           given={Sheridan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b04b73173bde12f6affb3df7b9d475c1}
+      \strng{fullhash}{b04b73173bde12f6affb3df7b9d475c1}
+      \strng{bibnamehash}{b04b73173bde12f6affb3df7b9d475c1}
+      \strng{authorbibnamehash}{b04b73173bde12f6affb3df7b9d475c1}
+      \strng{authornamehash}{b04b73173bde12f6affb3df7b9d475c1}
+      \strng{authorfullhash}{b04b73173bde12f6affb3df7b9d475c1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{ABSTRACT This paper describes the firm's decision to borrow short‐term versus long‐term and shows how the introduction of interest rate swaps affects this choice. The model shows that in the absence of a swap market, interest rate uncertainty can lead firms to substitute long‐term for short‐term financing. However, when swaps exist, there is a tendency for firms that expect their credit quality to improve to borrow short‐term and use swaps to hedge interest rate risk. The model suggests that, while the demand for fixed for floating swaps is enhanced, the demand for floating for fixed swaps is reduced by the presence of asymmetric information.}
+      \field{issn}{0022-1082, 1540-6261}
+      \field{journaltitle}{The Journal of Finance}
+      \field{month}{9}
+      \field{number}{4}
+      \field{title}{Interest {Rate} {Swaps} and {Corporate} {Financing} {Choices}}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{47}
+      \field{year}{1992}
+      \field{urldateera}{ce}
+      \field{pages}{1503\bibrangedash 1516}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1111/j.1540-6261.1992.tb04667.x
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1992.tb04667.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1992.tb04667.x
       \endverb
     \endentry
     \entry{tw}{article}{}
