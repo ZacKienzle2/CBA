@@ -162,26 +162,26 @@ A concurrent primary objective, directly articulated by PPT’s Treasury team, i
 
 \subsubsection{Notation}
 \begin{itemize}
-    \item $t$: The current time (valuation date).
-    \item $N_V$: The notional principal amount of the FRA.
-    \item $R_{FRA}$: The annualized fixed interest rate agreed upon at the inception of the FRA contract. This is the "FRA rate."
-    \item $T_0$: The settlement date of the FRA. This is the date on which the reference rate is determined and the cash settlement occurs, and it marks the *beginning* of the interest period covered by the FRA. ($t \le T_0$).
-    \item $T_1$: The maturity date of the interest period covered by the FRA. ($T_1 > T_0$).
-    \item $\tau$: The day-count fraction for the interest period $[T_0, T_1]$, calculated as $(T_1 - T_0)$ in years according to the relevant market convention (e.g., Actual/365). For a 3-month period, $\tau \approx 0.25$.
-    \item $L(T_0, T_1)$: The annualized floating market reference rate (e.g., 3-month BBSY) observed at time $T_0$ for the period $[T_0, T_1]$. This is the "settlement rate" or "fixing rate."
-    \item $Z(t, T')$: The risk-free discount factor at the current time $t$ for a unit of currency payable at a future date $T'$.
+ \item $t$: The current time (valuation date).
+ \item $N_V$: The notional principal amount of the FRA.
+ \item $R_{FRA}$: The annualised fixed interest rate agreed upon at the inception of the FRA contract. This is the "FRA rate."
+ \item $T_0$: The settlement date of the FRA. This is the date on which the reference rate is determined, and the cash settlement occurs, and it marks the *beginning* of the interest period covered by the FRA. ($t \le T_0$).
+ \item $T_1$: The maturity date of the interest period covered by the FRA. ($T_1 > T_0$).
+ \item $\tau$: The day-count fraction for the interest period $[T_0, T_1]$, calculated as $(T_1 - T_0)$ in years according to the relevant market convention (e.g., Actual/365). For 3 months, $\tau \approx 0.25$.
+ \item $L(T_0, T_1)$: The annualised floating market reference rate (e.g., 3-month BBSY) observed at time $T_0$ for the period $[T_0, T_1]$. This is the "settlement rate" or "fixing rate."
+ \item $Z(t, T')$: The risk-free discount factor at the current time $t$ for a unit of currency payable at a future date $T'$.
 \end{itemize}
 
 \subsubsection{Payoff Computation}
 
-The FRA is cash-settled at time $T_0$. The party that effectively agreed to "pay" $R_{FRA}$ and "receive" $L(T_0, T_1)$ (i.e., a borrower hedging against rising rates, or an FRA buyer) receives a net payment if $L(T_0, T_1) > R_{FRA}$, and makes a net payment if $L(T_0, T_1) < R_{FRA}$.
+The FRA is cash-settled at time $T_0$. The party that effectively agreed to "pay" $R_{FRA}$ and "receive" $L(T_0, T_1)$ (i.e., a borrower hedging against rising rates or an FRA buyer) receives a net payment if $L(T_0, T_1) > R_{FRA}$, and makes a net payment if $L(T_0, T_1) < R_{FRA}$.
 
 The settlement amount, $C(T_0)$, paid to the FRA buyer at time $T_0$ is calculated as the present value (at $T_0$, discounted over the period $\tau$ using the settlement rate $L(T_0, T_1)$) of the interest differential on the notional principal:
 \begin{equation}
-    C(T_0) = N_V \cdot \frac{(L(T_0, T_1) - R_{FRA}) \cdot \tau}{1 + L(T_0, T_1) \cdot \tau}
-    \label{eq:FRASettlement_rigorous}
+ C(T_0) = N_V \cdot \frac{(L(T_0, T_1) - R_{FRA}) \cdot \tau}{1 + L(T_0, T_1) \cdot \tau}
+ \label{eq:FRASettlement_rigorous}
 \end{equation}
-This discounting reflects the fact that the interest payment on an actual loan for the period $[T_0, T_1]$ would typically occur at $T_1$, whereas the FRA settles at $T_0$. Thus, the party receiving a positive settlement at $T_0$ can invest it at $L(T_0, T_1)$ to realize the full interest differential at $T_1$.
+This discounting reflects that the interest payment on an actual loan for the period $[T_0, T_1]$ would typically occur at $T_1$, whereas the FRA settles at $T_0$. Thus, the party receiving a positive settlement at $T_0$ can invest it at $L(T_0, T_1)$ to realise the full interest differential at $T_1$.
 
 
 \subsubsection{Pricing}
@@ -189,34 +189,34 @@ An FRA is a forward contract, and its "price" (the agreed fixed rate $R_{FRA}$) 
 
 Let:
 \begin{itemize}
-    \item $r(0, T_0)$: The annualized simple risk-free spot interest rate at time $t=0$ for the period of length $T_0$ (from $0$ to $T_0$).
-    \item $r(0, T_1)$: The annualized simple risk-free spot interest rate at time $t=0$ for the period of length $T_1$ (from $0$ to $T_1$).
-    \item $\tau_0$: The year fraction from $0$ to $T_0$.
-    \item $\tau_1$: The year fraction from $0$ to $T_1$.
-    \item $\tau = \tau_1 - \tau_0$: The year fraction of the FRA period itself (from $T_0$ to $T_1$).
+ \item $r(0, T_0)$: The annualized simple risk-free spot interest rate at time $t=0$ for the period of length $T_0$ (from $0$ to $T_0$).
+ \item $r(0, T_1)$: The annualized simple risk-free spot interest rate at time $t=0$ for the period of length $T_1$ (from $0$ to $T_1$).
+ \item $\tau_0$: The year fraction from $0$ to $T_0$.
+ \item $\tau_1$: The year fraction from $0$ to $T_1$.
+ \item $\tau = \tau_1 - \tau_0$: The year fraction of the FRA period itself (from $T_0$ to $T_1$).
 \end{itemize}
-The no-arbitrage condition implies that the return from investing for period $\tau_1$ at $r(0, T_1)$ must be equivalent to investing for $\tau_0$ at $r(0, T_0)$ and then reinvesting for the forward period $\tau$ at $R_{FRA}$:
+The no-arbitrage condition implies that the return from investing for the period $\tau_1$ at $r(0, T_1)$ must be equivalent to investing for $\tau_0$ at $r(0, T_0)$ and then reinvesting for the forward period $\tau$ at $R_{FRA}$:
 \begin{equation}
-    (1 + r(0, T_1) \cdot \tau_1) = (1 + r(0, T_0) \cdot \tau_0) \cdot (1 + R_{FRA} \cdot \tau)
+ (1 + r(0, T_1) \cdot \tau_1) = (1 + r(0, T_0) \cdot \tau_0) \cdot (1 + R_{FRA} \cdot \tau)
 \end{equation}
 Solving for $R_{FRA}$:
 \begin{equation}
-    R_{FRA} = \left( \frac{1 + r(0, T_1) \cdot \tau_1}{1 + r(0, T_0) \cdot \tau_0} - 1 \right) \frac{1}{\tau}
-    \label{eq:fra_rate_simple_rigorous}
+ R_{FRA} = \left( \frac{1 + r(0, T_1) \cdot \tau_1}{1 + r(0, T_0) \cdot \tau_0} - 1 \right) \frac{1}{\tau}
+ \label{eq:fra_rate_simple_rigorous}
 \end{equation}
-This $R_{FRA}$ is the simply compounded forward rate that ensures the FRA has zero value at initiation. The spot rates $r(0, T_0)$ and $r(0, T_1)$ are derived from the current zero-coupon yield curve, which is typically bootstrapped from observable market instruments (e.g., cash rates, bank bill futures, and interest rate swaps).
+This $R_{FRA}$ is the compounded forward rate that ensures the FRA has zero value at initiation. The spot rates $r(0, T_0)$ and $r(0, T_1)$ are derived from the current zero-coupon yield curve, which is typically bootstrapped from observable market instruments (e.g., cash rates, bank bill futures, and interest rate swaps).
 
 Alternatively, using continuously compounded spot rates $r_c(0, T_0)$ and $r_c(0, T_1)$, the continuously compounded forward rate $R_{FRA,c}$ for the period $[T_0, T_1]$ is:
 \begin{equation}
-    R_{FRA,c} = \frac{r_c(0, T_1)T_1 - r_c(0, T_0)T_0}{T_1 - T_0}
-    \label{eq:fra_rate_continuous_rigorous}
+ R_{FRA,c} = \frac{r_c(0, T_1)T_1 - r_c(0, T_0)T_0}{T_1 - T_0}
+ \label{eq:fra_rate_continuous_rigorous}
 \end{equation}
-This $R_{FRA,c}$ would then need to be converted to a simple interest equivalent using the appropriate day-count convention to align with the market quotation for $R_{FRA}$.
+This $R_{FRA,c}$ would need to be converted to a simple interest equivalent using the appropriate day-count convention to align with the market quotation for $R_{FRA}$.
 
 The valuation of an existing FRA at any time $t$ (where $0 < t < T_0$) would involve calculating the present value (at $t$) of the expected settlement at $T_0$, using the currently implied forward rate for the period $[T_0, T_1]$ and the original $R_{FRA}$. Specifically, using Equation \ref{eq:FRASettlement_rigorous}, replace $L(T_0,T_1)$ with the current forward rate $F(t; T_0, T_1)$ and discount the resulting expected settlement from $T_0$ back to $t$:
 \begin{equation}
-    V_{FRA, buyer}(t) = \left( N_V \cdot \frac{(F(t; T_0, T_1) - R_{FRA}) \cdot \tau}{1 + F(t; T_0, T_1) \cdot \tau} \right) \cdot Z(t, T_0)
-    \label{eq:fra_valuation_t_rigorous}
+ V_{FRA, buyer}(t) = \left( N_V \cdot \frac{(F(t; T_0, T_1) - R_{FRA}) \cdot \tau}{1 + F(t; T_0, T_1) \cdot \tau} \right) \cdot Z(t, T_0)
+ \label{eq:fra_valuation_t_rigorous}
 \end{equation}
 
 \newpage
@@ -225,23 +225,23 @@ The valuation of an existing FRA at any time $t$ (where $0 < t < T_0$) would inv
 
 \subsubsection{Notation}
 \begin{itemize}
-    \item $t$: Current time (valuation date).
-    \item $T_e$: Expiry date of the futures contract. This is also the date on which the reference rate (3-month BBSY) is fixed for the underlying notional 90-day period.
-    \item $T_m$: Maturity date of the notional 90-day bank bill underlying the futures contract (i.e., $T_m \approx T_e + \tau$, where $\tau$ is the day-count fraction for the 90-day period).
-    \item $P_F(t, T_e)$: The price of the BAB future at time $t$ for a contract expiring at $T_e$.
-    \item $Y_F(t, T_e)$: The annualized yield implied by the futures price $P_F(t, T_e)$. The relationship is:
-    \begin{equation}
-        P_F(t, T_e) = 100 - Y_F(t, T_e)
-    \end{equation}
-    \item $L(T_e, T_m)$: The actual 3-month Bank Bill Swap Rate (BBSY) observed at time $T_e$, applicable for the period $[T_e, T_m]$. This is the final settlement rate for the futures contract.
-    \item $N_V$: Notional face value of one BAB futures contract, which is AUD 1,000,000.
-    \item $\tau$: The day-count fraction for the 90-day period of the underlying notional bill, typically $90/365$ in the Australian market.
-    \item $Z(t, T')$: The risk-free discount factor at time $t$ for a cash flow at time $T'$.
+ \item $t$: Current time (valuation date).
+ \item $T_e$: Expiry date of the futures contract. This is also the date the reference rate (3-month BBSY) is fixed for the underlying notional 90-day period.
+ \item $T_m$: Maturity date of the notional 90-day bank bill underlying the futures contract (i.e., $T_m \approx T_e + \tau$, where $\tau$ is the day-count fraction for the 90 days).
+ \item $P_F(t, T_e)$: The price of the BAB future at time $t$ for a contract expiring at $T_e$.
+ \item $Y_F(t, T_e)$: The annualized yield implied by the futures price $P_F(t, T_e)$. The relationship is:
+ \begin{equation}
+ P_F(t, T_e) = 100 - Y_F(t, T_e)
+ \end{equation}
+ \item $L(T_e, T_m)$: The actual 3-month Bank Bill Swap Rate (BBSY) observed at time $T_e$, applicable for the period $[T_e, T_m]$. This is the final settlement rate for the futures contract.
+ \item $N_V$: The actual face value of one BAB futures contract is AUD 1,000,000.
+ \item $\tau$: The day-count fraction for the 90 days of the underlying notional bill, typically $90/365$ in the Australian market.
+ \item $Z(t, T')$: The risk-free discount factor at time $t$ for a cash flow at time $T'$.
 \end{itemize}
 
 The dollar value of a one basis point (0.01\%) change in the yield (tick value, $TV$) for one contract is approximately:
 \begin{equation}
-    TV \approx N_V \cdot 0.0001 \cdot \tau
+ TV \approx N_V \cdot 0.0001 \cdot \tau
 \end{equation}
 For $N_V = \$1,000,000$ and $\tau = 90/365$, $TV \approx \$1,000,000 \cdot 0.0001 \cdot (90/365) \approx \$24.6575$.
 The contracts are cash-settled at expiry ($T_e$) against the 3-month BBSY.
@@ -249,127 +249,127 @@ The contracts are cash-settled at expiry ($T_e$) against the 3-month BBSY.
 \subsubsection{Payoff Computation}
 The profit or loss (P\&L) for a BAB futures position at expiry ($T_e$) is determined by the difference between the initial contract price (or yield) and the final settlement price (or yield), scaled by the contract's value per index point. The final settlement yield is $L(T_e, T_m)$.
 
-Let $Y_{F,entry}$ be the yield at which a futures contract was initially entered (bought or sold).
+Let $Y_{F, entry}$ be the yield at which a futures contract was initially entered (bought or sold).
 
-A long position profits if the futures price rises, which corresponds to a fall in yields.
+A long position profits if the futures price rises, corresponding to a fall in yields.
 \begin{align}
-    \text{P\&L}_{\text{long}} &= (P_{F,settle} - P_{F,entry}) \cdot \frac{TV}{0.01} \\
-    &= ((100 - L(T_e, T_m)) - (100 - Y_{F,entry})) \cdot \frac{N_V \cdot \tau}{0.01} \cdot 0.0001 \nonumber \\
-    &= (Y_{F,entry} - L(T_e, T_m)) \cdot N_V \cdot \tau \label{eq:long_futures_pnl}
+ \text{P\&L}_{\text{long}} &= (P_{F,settle} - P_{F,entry}) \cdot \frac{TV}{0.01} \\
+ &= ((100 - L(T_e, T_m)) - (100 - Y_{F,entry})) \cdot \frac{N_V \cdot \tau}{0.01} \cdot 0.0001 \nonumber \\
+ &= (Y_{F,entry} - L(T_e, T_m)) \cdot N_V \cdot \tau \label{eq:long_futures_pnl}
 \end{align}
-Thus, a long position profits if the actual settlement yield $L(T_e, T_m)$ is \textit{lower} than the initial futures yield $Y_{F,entry}$.
+Thus, a long position profits if the actual settlement yield $L(T_e, T_m)$ is \textit{lower} than the initial futures yield $Y_{F, entry}$.
 
-A short position profits if the futures price falls, which corresponds to a rise in yields. This is the relevant position for an entity like PPT hedging against rising borrowing costs.
+A short position profits if the futures price falls, corresponding to a yield rise. This is the relevant position for an entity like PPT hedging against rising borrowing costs.
 \begin{align}
-    \text{P\&L}_{\text{short}} &= (P_{F,entry} - P_{F,settle}) \cdot \frac{TV}{0.01} \\
-    &= ((100 - Y_{F,entry}) - (100 - L(T_e, T_m))) \cdot \frac{N_V \cdot \tau}{0.01} \cdot 0.0001 \nonumber \\
-    &= (L(T_e, T_m) - Y_{F,entry}) \cdot N_V \cdot \tau \label{eq:short_futures_pnl}
+ \text{P\&L}_{\text{short}} &= (P_{F,entry} - P_{F,settle}) \cdot \frac{TV}{0.01} \\
+ &= ((100 - Y_{F,entry}) - (100 - L(T_e, T_m))) \cdot \frac{N_V \cdot \tau}{0.01} \cdot 0.0001 \nonumber \\
+ &= (L(T_e, T_m) - Y_{F,entry}) \cdot N_V \cdot \tau \label{eq:short_futures_pnl}
 \end{align}
 
-Thus, a short position profits if the actual settlement yield $L(T_e, T_m)$ is \textit{higher} than the initial futures yield $Y_{F,entry}$.
+Thus, a short position profits if the actual settlement yield $L(T_e, T_m)$ is \textit{higher} than the initial futures yield $Y_{F, entry}$.
 
 \subsubsection{Pricing}
-The theoretical price of a futures contract, $P_F(t, T_e)$, and its implied yield, $Y_F(t, T_e)$, are determined by the no-arbitrage principle. The futures yield should closely reflect the implied forward interest rate for the 90-day period $[T_e, T_m]$ as seen from the current time $t$. This forward rate is derived from the existing risk-free zero-coupon yield curve.
+The theoretical price of a futures contract, $P_F(t, T_e)$, and its implied yield, $Y_F(t, T_e)$, are determined by the no-arbitrage principle. The futures yield should closely reflect the implied forward interest rate for the 90 days $[T_e, T_m]$ as seen from the current time $t$. This forward rate is derived from the existing risk-free zero-coupon yield curve.
 
 Let $r(t, T')$ denote the continuously compounded risk-free spot rate at time $t$ for maturity $T'$. The continuously compounded forward rate $f(t, T_e^*, T_m^*)$ for the period between $T_e^*$ and $T_m^*$ (where these are times from $t$) is:
 \begin{equation} \label{eq:cont_forward_rate}
-    f(t, T_e^*, T_m^*) = \frac{r(t, T_m^*)T_m^* - r(t, T_e^*)T_e^*}{T_m^* - T_e^*}
+ f(t, T_e^*, T_m^*) = \frac{r(t, T_m^*)T_m^* - r(t, T_e^*)T_e^*}{T_m^* - T_e^*}
 \end{equation}
 This forward rate, $f(t, T_e^*, T_m^*)$, once converted to the appropriate simple interest and day-count convention (Actual/365 for BBSY), forms the primary basis for the futures yield $Y_F(t, T_e)$. The zero-coupon rates $r(t, T')$ are typically bootstrapped from observable market instruments like cash BBSW rates, other BAB futures, and AUD Interest Rate Swaps.
 
-A subtle theoretical distinction exists between forward rates and futures rates due to the daily mark-to-market feature of futures contracts. If interest rates are stochastic and correlated with futures prices, a convexity adjustment is necessary. The approximate relationship is:
+A subtle theoretical distinction exists between forward and futures rates due to the daily mark-to-market feature of futures contracts. A convexity adjustment is necessary if interest rates are stochastic and correlated with futures prices. The approximate relationship is:
 \begin{equation} \label{eq:convexity_adjustment}
-    Y_{\text{futures}} \approx Y_{\text{forward}} - \frac{1}{2} \sigma_r^2 T_e^* (T_m^* - T_e^*)
+ Y_{\text{futures}} \approx Y_{\text{forward}} - \frac{1}{2} \sigma_r^2 T_e^* (T_m^* - T_e^*)
 \end{equation}
-where $Y_{\text{forward}}$ is the simply compounded forward rate implied by the yield curve, and $\sigma_r$ is the volatility of the instantaneous short-term interest rate. For short-term interest rate (STIR) futures like 90-Day BABs, this adjustment is generally small and often disregarded in less complex pricing models, leading to the common approximation $Y_F(t, T_e) \approx Y_{\text{forward}}(t; T_e, T_m)$.
+where $Y_{\text{forward}}$ is the compounded forward rate implied by the yield curve, and $\sigma_r$ is the instantaneous short-term interest rate volatility. For short-term interest rate (STIR) futures like 90-Day BABs, this adjustment is generally small and often disregarded in less complex pricing models, leading to the common approximation $Y_F(t, T_e) \approx Y_{\text{forward}}(t; T_e, T_m)$.
 
-The value of an established futures position prior to expiry (at time $t < T_e$), entered at $Y_{F,entry}$, continuously accrues value reflected in daily margin account settlements. The theoretical value of the commitment, separate from accumulated cash P\&L, can be expressed as the discounted expected difference between the original contract yield and the current futures yield for the same expiry:
+The value of an established futures position prior to expiry (at time $t < T_e$), entered at $Y_{F, entry}$, continuously accrues value reflected in daily margin account settlements. The theoretical value of the commitment, separate from accumulated cash P\&L, can be expressed as the discounted expected difference between the original contract yield and the current futures yield for the same expiry:
 For a short position:
 \begin{equation} \label{eq:futures_valuation_t}
-    V_{\text{short}}(t) \approx N_V \cdot (Y_{F,current}(t,T_e) - Y_{F,entry}) \cdot \tau \cdot Z(t, T_e)
+ V_{\text{short}}(t) \approx N_V \cdot (Y_{F,current}(t,T_e) - Y_{F,entry}) \cdot \tau \cdot Z(t, T_e)
 \end{equation}
-This indicates that if current market expectations for the future BBSY (reflected in $Y_{F,current}$) have increased above the yield at which the futures were sold ($Y_{F,entry}$), the short position has accrued a positive unrealized value. This valuation framework underscores the market's continuous reassessment of expected future interest rates, against which the BAB futures contract provides a mechanism for price discovery and risk transfer.
+This indicates that if current market expectations for the future BBSY (reflected in $Y_{F, current}$) have increased above the yield at which the futures were sold ($Y_{F, entry}$), the short position has accrued a positive unrealised value. This valuation framework underscores the market's continuous reassessment of expected future interest rates, against which the BAB futures contract provides a mechanism for price discovery and risk transfer.
 \newpage
 
 \subsection{Interest Rate Swaps}
 
 \subsubsection{Notation}
 \begin{itemize}
-    \item $t$: The current time (valuation date).
-    \item $N_V$: The notional principal amount of the swap, constant for plain vanilla swaps.
-    \item $R_{FIX}$: The annualized fixed interest rate agreed upon at the swap's inception.
-    \item $L(T_{k-1}, T_k)$: The annualized floating market reference rate (e.g., 3-month BBSY) determined (set or fixed) at time $T_{k-1}$ (the reset date for period $k$) and applicable for the interest accrual period $[T_{k-1}, T_k]$.
-    \item $T_0, T_1, \dots, T_M$: The sequence of pre-agreed dates where $T_0$ is the effective (start) date of the swap, $T_M$ is the maturity (termination) date, and $T_1, \dots, T_M$ are the payment dates. For the floating leg, $T_0, T_1, \dots, T_{M-1}$ are also typically the reset dates for the subsequent period's floating rate.
-    \item $\tau_k$: The day-count fraction for the $k^{th}$ interest period, covering the interval $[T_{k-1}, T_k]$. This is calculated based on the applicable day-count convention (e.g., Actual/365). For instance, for quarterly payments, $\tau_k \approx 0.25$.
-    \item $Z(t, T_k)$: The risk-free discount factor at the current time $t$ for a unit of currency payable at a future date $T_k$. These are derived from the prevailing zero-coupon yield curve.
+ \item $t$: The current time (valuation date).
+ \item $N_V$: The notional principal amount of the swap, constant for plain vanilla swaps.
+ \item $R_{FIX}$: The annualised fixed interest rate agreed upon at the swap's inception.
+ \item $L(T_{k-1}, T_k)$: The annualised floating market reference rate (e.g., 3-month BBSY) determined (set or fixed) at time $T_{k-1}$ (the reset date for period $k$) and applicable for the interest accrual period $[T_{k-1}, T_k]$.
+ \item $T_0, T_1, \dots, T_M$: The sequence of pre-agreed dates where $T_0$ is the effective (start) date of the swap, $T_M$ is the maturity (termination) date, and $T_1, \dots, T_M$ are the payment dates. For the floating leg, $T_0, T_1, \dots, T_{M-1}$ are typically the reset dates for the subsequent period's floating rate.
+ \item $\tau_k$: The day-count fraction for the $k^{th}$ interest period, covering the interval $[T_{k-1}, T_k]$. This is calculated based on the applicable day-count convention (e.g., Actual/365). For instance, for quarterly payments, $\tau_k \approx 0.25$.
+ \item $Z(t, T_k)$: The risk-free discount factor at the current time $t$ for a unit of currency payable at a future date $T_k$. These are derived from the prevailing zero-coupon yield curve.
 \end{itemize}
 On each payment date $T_k$ (for $k=1, \dots, M$), the gross cash flows before netting are:
 \begin{itemize}
-    \item Fixed Leg Payment (by the fixed-rate payer):
-        \begin{equation}
-            C_{FIX,k} = N_V \cdot R_{FIX} \cdot \tau_k
-            \label{eq:irs_fixed_payment_final}
-        \end{equation}
-    \item Floating Leg Payment (by the floating-rate payer):
-        \begin{equation}
-            C_{FLOAT,k} = N_V \cdot L(T_{k-1}, T_k) \cdot \tau_k
-            \label{eq:irs_float_payment_final}
-        \end{equation}
+ \item Fixed Leg Payment (by the fixed-rate payer):
+ \begin{equation}
+ C_{FIX,k} = N_V \cdot R_{FIX} \cdot \tau_k
+ \label{eq:irs_fixed_payment_final}
+ \end{equation}
+ \item Floating Leg Payment (by the floating-rate payer):
+ \begin{equation}
+ C_{FLOAT,k} = N_V \cdot L(T_{k-1}, T_k) \cdot \tau_k
+ \label{eq:irs_float_payment_final}
+ \end{equation}
 \end{itemize}
 Market practice typically involves netting these payments on each $T_k$.
 
 \subsubsection{Payoff Computation}
-Consider a counterparty who enters into a payer swap (pays $R_{FIX}$, receives floating rate $L$). For each interest period $k$ (from $T_{k-1}$ to $T_k$), the net cash flow, $\text{NetSettle}_k$, received by this fixed-rate payer at time $T_k$ is:
+Consider a counterparty who enters a payer swap (pays $R_{FIX}$, receives floating rate $L$). For each interest period $k$ (from $T_{k-1}$ to $T_k$), the net cash flow, $\text{NetSettle}_k$, received by this fixed-rate payer at time $T_k$ is:
 \begin{equation}
-    \text{NetSettle}_k = C_{FLOAT,k} - C_{FIX,k} = N_V \cdot (L(T_{k-1}, T_k) - R_{FIX}) \cdot \tau_k
-    \label{eq:irs_net_settlement_rigorous_final}
+ \text{NetSettle}_k = C_{FLOAT,k} - C_{FIX,k} = N_V \cdot (L(T_{k-1}, T_k) - R_{FIX}) \cdot \tau_k
+ \label{eq:irs_net_settlement_rigorous_final}
 \end{equation}
-If $L(T_{k-1}, T_k) > R_{FIX}$, the fixed-rate payer receives a net payment. If $L(T_{k-1}, T_k) < R_{FIX}$, the fixed-rate payer makes a net payment. The economic value of the swap at any time is the sum of the present values of all such remaining expected net settlements.
+If $L(T_{k-1}, T_k) > R_{FIX}$, the fixed-rate payer receives a net payment. If $L(T_{k-1}, T_k) < R_{FIX}$, the fixed-rate payer makes a net payment. The economic value of the swap at any time is the sum of the present values of all such expected net settlements.
 
 \subsubsection{Pricing}
 The "price" of an interest rate swap at its inception ($t=0$) is the specific fixed rate, $R_{FIX}$ (the par swap rate), which ensures the swap has an initial market value of zero to both counterparties. This rate is derived from the no-arbitrage condition that the present value ($PV$) of the fixed leg payments must equal the $PV$ of the expected floating leg payments.
 
 The fixed leg of the swap, comprising payments of $N_V \cdot R_{FIX} \cdot \tau_k$ at each $T_k$, is equivalent to the cash flows from a fixed-coupon bond. Its present value at time $t=0$ is:
 \begin{equation}
-    PV_{FIX}(0) = \sum_{k=1}^{M} (N_V \cdot R_{FIX} \cdot \tau_k) \cdot Z(0, T_k) = N_V \cdot R_{FIX} \cdot \sum_{k=1}^{M} \tau_k Z(0, T_k)
-    \label{eq:pv_fixed_leg_final_v3}
+ PV_{FIX}(0) = \sum_{k=1}^{M} (N_V \cdot R_{FIX} \cdot \tau_k) \cdot Z(0, T_k) = N_V \cdot R_{FIX} \cdot \sum_{k=1}^{M} \tau_k Z(0, T_k)
+ \label{eq:pv_fixed_leg_final_v3}
 \end{equation}
-The term $A(0, T_M) = \sum_{k=1}^{M} \tau_k Z(0, T_k)$ is the present value of an annuity paying 1 unit of currency per annum in installments of $\tau_k$ for $M$ periods, discounted using the zero-coupon yield curve.
+The term $A(0, T_M) = \sum_{k=1}^{M} \tau_k Z(0, T_k)$ is the present value of an annuity paying 1 unit of currency per annum in instalments of $\tau_k$ for $M$ periods, discounted using the zero-coupon yield curve.
 
 The floating leg consists of payments $C_{FLOAT,k} = N_V \cdot L(T_{k-1}, T_k) \cdot \tau_k$. The future rates $L(T_{k-1}, T_k)$ are unknown at $t=0$ (except for the first period if $T_0=0$ and the rate is already set). To value this leg, the unknown future floating rates are replaced by the implied forward rates $F(0; T_{k-1}, T_k)$ derived from the current ($t=0$) zero-coupon yield curve. The present value of these expected floating coupons is:
 \begin{equation}
-    PV_{FLOAT}(0)_{\text{coupons}} = \sum_{k=1}^{M} (N_V \cdot F(0; T_{k-1}, T_k) \cdot \tau_k) \cdot Z(0, T_k)
-    \label{eq:pv_float_leg_forwards_final_v3}
+ PV_{FLOAT}(0)_{\text{coupons}} = \sum_{k=1}^{M} (N_V \cdot F(0; T_{k-1}, T_k) \cdot \tau_k) \cdot Z(0, T_k)
+ \label{eq:pv_float_leg_forwards_final_v3}
 \end{equation}
-A fundamental result in fixed income valuation, based on no-arbitrage, is that a floating-rate note (FRN) that pays the market reference rate $L$ (consistent with the discount curve used for $Z(0,T_k)$) and resets its coupon at each period is valued at its par value ($N_V$) immediately after each coupon payment, and thus also at $t=0$ if the first coupon is set based on current market rates. This implies that if one considers a conceptual final exchange of notional $N_V$ at $T_M$ for the floating leg, its total present value (coupons + principal) at $t=0$ would be $N_V$. Therefore, the present value of *only the stream of floating coupons* is:
+A fundamental result in fixed income valuation, based on no-arbitrage, is that a floating-rate note (FRN) that pays the market reference rate $L$ (consistent with the discount curve used for $Z(0, T_k)$) and resets its coupon at each period is valued at its par value ($N_V$) immediately after each coupon payment, and thus also at $t=0$ if the first coupon is set based on current market rates. Considering a conceptual final exchange of notional $N_V$ at $T_M$ for the floating leg, its total present value (coupons + principal) at $t=0$ would be $N_V$. Therefore, the present value of *only the stream of floating coupons* is:
 \begin{equation}
-    PV_{FLOAT}(0)_{\text{coupons only}} = N_V \cdot (1 - Z(0, T_M))
-    \label{eq:pv_float_leg_coupons_final_v3}
+ PV_{FLOAT}(0)_{\text{coupons only}} = N_V \cdot (1 - Z(0, T_M))
+ \label{eq:pv_float_leg_coupons_final_v3}
 \end{equation}
 This widely accepted valuation for the floating leg of a par swap assumes that notional principals are not explicitly exchanged at maturity under the swap agreement itself, or if they are considered for valuation consistency (viewing each leg as a bond), they offset.
 
 For the swap to have zero initial value, the present values of the two legs must be equal: $PV_{FIX}(0) = PV_{FLOAT}(0)_{\text{coupons only}}$. Substituting from Equations \ref{eq:pv_fixed_leg_final_v3} and \ref{eq:pv_float_leg_coupons_final_v3}:
 \begin{equation}
-    N_V \cdot R_{FIX} \cdot \sum_{k=1}^{M} \tau_k Z(0, T_k) = N_V (1 - Z(0, T_M))
+ N_V \cdot R_{FIX} \cdot \sum_{k=1}^{M} \tau_k Z(0, T_k) = N_V (1 - Z(0, T_M))
 \end{equation}
 Solving for the par swap rate $R_{FIX}$:
 \begin{equation}
-    R_{FIX} = \frac{1 - Z(0, T_M)}{\sum_{k=1}^{M} \tau_k Z(0, T_k)} = \frac{1 - Z(0, T_M)}{A(0, T_M)}
-    \label{eq:par_swap_rate_rigorous_final_v3}
+ R_{FIX} = \frac{1 - Z(0, T_M)}{\sum_{k=1}^{M} \tau_k Z(0, T_k)} = \frac{1 - Z(0, T_M)}{A(0, T_M)}
+ \label{eq:par_swap_rate_rigorous_final_v3}
 \end{equation}
-The discount factors $Z(0, T_k)$ are derived from the current risk-free (or appropriate interbank, e.g., BBSW-based) zero-coupon yield curve. This curve is typically constructed using bootstrapping techniques from a set of liquid market instruments such as cash deposit rates, Bank Bill Futures prices, and existing par interest rate swap quotes for various tenors.
+The discount factors $Z(0, T_k)$ are derived from the current risk-free (or appropriate interbank, e.g., BBSW-based) zero-coupon yield curve. This curve is typically constructed using bootstrapping techniques from liquid market instruments such as cash deposit rates, Bank Bill Futures prices, and existing par interest rate swap quotes for various tenors.
 
 At any subsequent time $t$ during the life of an existing swap (which was initiated with a fixed rate $R_{FIX,orig}$), its market value to the fixed-rate payer is the present value of the remaining expected net cash flows:
 \begin{equation}
-    V_{SWAP, payer}(t) = PV_{FLOAT,remaining}(t) - PV_{FIX,remaining}(t)
-    \label{eq:swap_valuation_t_rigorous_final_v3}
+ V_{SWAP, payer}(t) = PV_{FLOAT,remaining}(t) - PV_{FIX,remaining}(t)
+ \label{eq:swap_valuation_t_rigorous_final_v3}
 \end{equation}
-Here, $PV_{FIX,remaining}(t) = N_V \cdot R_{FIX,orig} \cdot \sum_{j=k}^{M} \tau_j Z(t, T_j)$ (where the sum is over remaining fixed payments from the next payment date $T_k$, and $Z(t, T_j)$ are current discount factors). Similarly, $PV_{FLOAT,remaining}(t)$ is the present value of the remaining expected floating payments, where future unknown floating rates $L(T_{j-1},T_j)$ are substituted with current forward rates $F(t; T_{j-1},T_j)$ derived from the yield curve at time $t$, and then discounted using $Z(t,T_j)$. A common alternative valuation expresses the swap's value by comparing its original fixed rate to the current market swap rate for the remaining tenor:
+Here, $PV_{FIX, remaining}(t) = N_V \cdot R_{FIX,orig} \cdot \sum_{j=k}^{M} \tau_j Z(t, T_j)$ (where the sum is over remaining fixed payments from the next payment date $T_k$, and $Z(t, T_j)$ are current discount factors). Similarly, $PV_{FLOAT, remaining}(t)$ is the present value of the remaining expected floating payments, where future unknown floating rates $L(T_{j-1}, T_j)$ are substituted with current forward rates $F(t; T_{j-1}, T_j)$ derived from the yield curve at time $t$, and then discounted using $Z(t, T_j)$. A common alternative valuation expresses the swap's value by comparing its original fixed rate to the current market swap rate for the remaining tenor:
 \begin{equation}
-    V_{SWAP, payer}(t) \approx N_V \cdot (R_{FIX,current}(t, T_M) - R_{FIX,orig}) \cdot A(t, T_{M,remaining})
-    \label{eq:swap_valuation_vs_current_rate_final_v3}
+ V_{SWAP, payer}(t) \approx N_V \cdot (R_{FIX,current}(t, T_M) - R_{FIX,orig}) \cdot A(t, T_{M,remaining})
+ \label{eq:swap_valuation_vs_current_rate_final_v3}
 \end{equation}
-where $R_{FIX,current}(t, T_M)$ is the prevailing par swap rate at time $t$ for a new swap with the same remaining maturity profile as the existing swap, and $A(t, T_{M,remaining})$ is the present value of a 1-unit per annum annuity factor for the remaining term, based on the current yield curve at time $t$.
+where $R_{FIX, current}(t, T_M)$ is the prevailing par swap rate at time $t$ for a new swap with the same remaining maturity profile as the existing swap, and $A(t, T_{M, remaining})$ is the present value of a 1-unit per annum annuity factor for the remaining term, based on the current yield curve at time $t$.
 
 \newpage
 
@@ -377,15 +377,15 @@ where $R_{FIX,current}(t, T_M)$ is the prevailing par swap rate at time $t$ for 
 
 \subsubsection{Notation}
 \begin{itemize}
-    \item $t$: The current time (valuation date).
-    \item $N_V$: The notional principal amount of the cap, upon which interest differentials are calculated.
-    \item $R_K$: The strike rate (or cap rate) of the cap, an annualized percentage. If the reference rate exceeds $R_K$, the caplet for that period pays out.
-    \item $L(T_{j-1}, T_j)$: The annualized floating market reference rate (e.g., 3-month BBSY) observed at time $T_{j-1}$ (the reset date for period $j$) and applicable for the interest accrual period $[T_{j-1}, T_j]$.
-    \item $T_0, T_1, \dots, T_M$: A sequence of pre-agreed dates. For a cap, $T_0$ is often the start of the first period covered. $T_1, \dots, T_M$ are the payment dates for each caplet (typically the end of each interest period). $T_0, T_1, \dots, T_{M-1}$ are the reset dates for the reference rate $L$ applicable to periods $[T_0,T_1], [T_1,T_2], \dots, [T_{M-1},T_M]$ respectively.
-    \item $\tau_j$: The day-count fraction for the $j^{th}$ interest period, corresponding to the interval $[T_{j-1}, T_j]$.
-    \item $Z(t, T_j)$: The risk-free discount factor at time $t$ for a unit of currency payable at a future date $T_j$.
-    \item $C(t)$: The total premium (price) of the interest rate cap at time $t$.
-    \item $c_j(t)$: The price at time $t$ of an individual caplet covering the $j^{th}$ period $[T_{j-1}, T_j]$ and paying at $T_j$.
+ \item $t$: The current time (valuation date).
+ \item $N_V$: The notional principal amount of the cap, upon which interest differentials are calculated.
+ \item $R_K$: The strike rate (or cap rate) of the cap, an annualised percentage. If the reference rate exceeds $R_K$, the caplet for that period pays out.
+ \item $L(T_{j-1}, T_j)$: The annualised floating market reference rate (e.g., 3-month BBSY) observed at time $T_{j-1}$ (the reset date for period $j$) and applicable for the interest accrual period $[T_{j-1}, T_j]$.
+ \item $T_0, T_1, \dots, T_M$: A sequence of pre-agreed dates. For a cap, $T_0$ is often the start of the first period covered. $T_1, \dots, T_M$ are the payment dates for each caplet (typically the end of each interest period). $T_0, T_1, \dots, T_{M-1}$ are the reset dates for the reference rate $L$ applicable to periods $[T_0,T_1], [T_1,T_2], \dots, [T_{M-1},T_M]$ respectively.
+ \item $\tau_j$: The day-count fraction for the $j^{th}$ interest period, corresponding to the interval $[T_{j-1}, T_j]$.
+ \item $Z(t, T_j)$: The risk-free discount factor at time $t$ for a unit of currency payable at a future date $T_j$.
+ \item $C(t)$: The interest rate cap's total premium (price) at time $t$.
+ \item $c_j(t)$: The price at time $t$ of an individual caplet covering the $j^{th}$ period $[T_{j-1}, T_j]$ and paying at $T_j$.
 \end{itemize}
 
 \subsubsection{Payoff Computation}
@@ -393,8 +393,8 @@ where $R_{FIX,current}(t, T_M)$ is the prevailing par swap rate at time $t$ for 
 For each individual caplet $j$, covering the period $[T_{j-1}, T_j]$ with payment at $T_j$:
 The payoff of the caplet at its payment date $T_j$, from the perspective of the cap buyer, is:
 \begin{equation}
-    \text{Payoff}_{\text{caplet}, j}(T_j) = N_V \cdot \max(0, L(T_{j-1}, T_j) - R_K) \cdot \tau_j
-    \label{eq:caplet_payoff_rigorous}
+ \text{Payoff}_{\text{caplet}, j}(T_j) = N_V \cdot \max(0, L(T_{j-1}, T_j) - R_K) \cdot \tau_j
+ \label{eq:caplet_payoff_rigorous}
 \end{equation}
 This payoff occurs only if the market reference rate $L(T_{j-1}, T_j)$ fixed at the beginning of the period $T_{j-1}$ exceeds the strike rate $R_K$. If $L(T_{j-1}, T_j) \le R_K$, the caplet for that period expires worthless, and its payoff is zero. The total cap consists of a series of such caplets.
 
@@ -402,34 +402,33 @@ This payoff occurs only if the market reference rate $L(T_{j-1}, T_j)$ fixed at 
 \subsubsection{Pricing}
 The price (premium) of an interest rate cap at time $t$ is the sum of the present values of all its constituent caplets:
 \begin{equation}
-    C(t) = \sum_{j=1}^{M} c_j(t)
-    \label{eq:cap_price_sum_caplets}
+ C(t) = \sum_{j=1}^{M} c_j(t)
+ \label{eq:cap_price_sum_caplets}
 \end{equation}
-Each caplet $c_j(t)$ can be priced as a European call option on the forward interest rate $F(t; T_{j-1}, T_j)$, which is the forward rate for the period $[T_{j-1}, T_j]$ as seen from the current valuation time $t$. The most common model for pricing caplets is an adaptation of the Black model (Black, 1976), which is a variant of the Black-Scholes-Merton model for options on forwards or futures.
+Each caplet $c_j(t)$ can be priced as a European call option on the forward interest rate $F(t; T_{j-1}, T_j)$, which is the forward rate for the period $[T_{j-1}, T_j]$ as seen from the current valuation time $t$. The most common model for pricing caplets is an adaptation of the Black model (Black, 1976), a variant of the Black-Scholes-Merton model for options on forwards or futures.
 
 The price of an individual caplet $j$ (covering period $[T_{j-1}, T_j]$, payment at $T_j$) at time $t$ (where $t \le T_{j-1}$) is given by:
 \begin{equation}
-    c_j(t) = N_V \cdot \tau_j \cdot Z(t, T_j) \left[ F(t; T_{j-1}, T_j) \mathcal{N}(d_1) - R_K \mathcal{N}(d_2) \right]
-    \label{eq:caplet_black_model}
+ c_j(t) = N_V \cdot \tau_j \cdot Z(t, T_j) \left[ F(t; T_{j-1}, T_j) \mathcal{N}(d_1) - R_K \mathcal{N}(d_2) \right]
+ \label{eq:caplet_black_model}
 \end{equation}
 where:
 \begin{itemize}
-    \item $F(t; T_{j-1}, T_j)$: The forward interest rate at time $t$ for the period $[T_{j-1}, T_j]$, compounded according to the day-count fraction $\tau_j$. This forward rate is derived from the current zero-coupon yield curve:
-    \begin{equation}
-        F(t; T_{j-1}, T_j) = \frac{1}{\tau_j} \left( \frac{Z(t, T_{j-1})}{Z(t, T_j)} - 1 \right)
-        \label{eq:forward_rate_from_zeros}
-    \end{equation}
-    \item $\sigma_{F,j}$: The annualized volatility of the forward rate $F(t; T_{j-1}, T_j)$ over the period until $T_{j-1}$ (the rate-fixing date for the caplet). This is a key unobservable input that is typically implied from market prices of caps/floors.
-    \item $T_{j-1}^* = T_{j-1} - t$: Time from current valuation $t$ until the fixing of the rate $L(T_{j-1}, T_j)$.
-    \item $\mathcal{N}(\cdot)$: The cumulative standard normal distribution function.
-    \item $d_1$ and $d_2$ are defined as:
-    \begin{align}
-        d_1 &= \frac{\ln(F(t; T_{j-1}, T_j) / R_K) + \frac{1}{2}\sigma_{F,j}^2 T_{j-1}^*}{\sigma_{F,j} \sqrt{T_{j-1}^*}} \label{eq:caplet_d1} \\
-        d_2 &= d_1 - \sigma_{F,j} \sqrt{T_{j-1}^*} \label{eq:caplet_d2}
-    \end{align}
+ \item $F(t; T_{j-1}, T_j)$: The forward interest rate at time $t$ for the period $[T_{j-1}, T_j]$, compounded according to the day-count fraction $\tau_j$. This forward rate is derived from the current zero-coupon yield curve:
+ \begin{equation}
+ F(t; T_{j-1}, T_j) = \frac{1}{\tau_j} \left( \frac{Z(t, T_{j-1})}{Z(t, T_j)} - 1 \right)
+ \label{eq:forward_rate_from_zeros}
+ \end{equation}
+ \item $\sigma_{F,j}$: The annualised volatility of the forward rate $F(t; T_{j-1}, T_j)$ over the period until $T_{j-1}$ (the rate-fixing date for the caplet), is a key unobservable input typically implied from market prices of caps/floors.
+ \item $T_{j-1}^* = T_{j-1} - t$: Time from current valuation $t$ until the fixing of the rate $L(T_{j-1}, T_j)$.
+ \item $\mathcal{N}(\cdot)$: The cumulative standard normal distribution function.
+ \item $d_1$ and $d_2$ are defined as:
+ \begin{align}
+ d_1 &= \frac{\ln(F(t; T_{j-1}, T_j) / R_K) + \frac{1}{2}\sigma_{F,j}^2 T_{j-1}^*}{\sigma_{F,j} \sqrt{T_{j-1}^*}} \label{eq:caplet_d1} \\
+ d_2 &= d_1 - \sigma_{F,j} \sqrt{T_{j-1}^*} \label{eq:caplet_d2}
+ \end{align}
 \end{itemize}
-The term $Z(t, T_j)$ discounts the expected payoff (which occurs at $T_j$) back to the current time $t$. The Black model effectively prices the caplet in a forward measure where the forward rate itself is the asset. The discount factors $Z(t,T_j)$ and the forward rates $F(t; T_{j-1},T_j)$ are derived from the prevailing risk-free (or interbank) zero-coupon yield curve, which is typically bootstrapped from observable market instruments. The volatility $\sigma_{F,j}$ is a crucial input often referred to as "implied volatility" when backed out from market cap prices.
-
+The term $Z(t, T_j)$ discounts the expected payoff (at $T_j$) back to the current time $t$. The Black model effectively prices the caplet in a forward measure where the forward rate is the asset. The discount factors $Z(t, T_j)$ and the forward rates $F(t; T_{j-1}, T_j)$ are derived from the prevailing risk-free (or interbank) zero-coupon yield curve, which is typically bootstrapped from observable market instruments. The volatility $\sigma_{F,j}$ is a crucial input called "implied volatility" when backed out from market cap prices.
 
 
 \newpage
