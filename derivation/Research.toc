@@ -24,54 +24,54 @@
 \contentsline {subsubsection}{\numberline {4.4.2}Payoff Computation}{12}{subsubsection.57}%
 \contentsline {subsubsection}{\numberline {4.4.3}Pricing}{12}{subsubsection.59}%
 \contentsline {section}{\numberline {5}Hedging Deliberations}{14}{section.65}%
-\contentsline {subsection}{\numberline {5.1}Not Hedging}{15}{subsection.66}%
-\contentsline {subsubsection}{\numberline {5.1.1}Mechanics}{15}{subsubsection.67}%
-\contentsline {subsubsection}{\numberline {5.1.2}Size or Number of Contracts}{15}{subsubsection.68}%
-\contentsline {subsubsection}{\numberline {5.1.3}Position and Contract Maturities}{15}{subsubsection.69}%
-\contentsline {subsubsection}{\numberline {5.1.4}Timing and Tenor}{15}{subsubsection.70}%
-\contentsline {subsubsection}{\numberline {5.1.5}Initial and Ongoing Cashflows and Costs}{15}{subsubsection.71}%
-\contentsline {subsubsection}{\numberline {5.1.6}Expected Outcomes or Payoffs}{16}{subsubsection.73}%
-\contentsline {subsubsection}{\numberline {5.1.7}Risks and Downside}{16}{subsubsection.75}%
-\contentsline {subsubsection}{\numberline {5.1.8}Feasibility and Suitability}{17}{subsubsection.76}%
-\contentsline {subsubsection}{\numberline {5.1.9}Conclusion}{18}{subsubsection.77}%
-\contentsline {subsection}{\numberline {5.2}Forwards}{19}{subsection.78}%
-\contentsline {subsubsection}{\numberline {5.2.1}Mechanics}{19}{subsubsection.79}%
-\contentsline {subsubsection}{\numberline {5.2.2}Size or Number of Contracts}{19}{subsubsection.80}%
-\contentsline {subsubsection}{\numberline {5.2.3}Position and Contract Maturities}{19}{subsubsection.81}%
-\contentsline {subsubsection}{\numberline {5.2.4}Timing and Tenor}{19}{subsubsection.82}%
-\contentsline {subsubsection}{\numberline {5.2.5}Initial and Ongoing Cashflows and Costs}{19}{subsubsection.83}%
-\contentsline {subsubsection}{\numberline {5.2.6}Expected Outcomes or Payoffs}{20}{subsubsection.84}%
-\contentsline {subsubsection}{\numberline {5.2.7}Risks and Downside}{20}{subsubsection.86}%
-\contentsline {subsubsection}{\numberline {5.2.8}Feasibility and Suitability}{21}{subsubsection.87}%
-\contentsline {subsubsection}{\numberline {5.2.9}Conclusion}{21}{subsubsection.88}%
-\contentsline {subsection}{\numberline {5.3}Futures}{22}{subsection.89}%
-\contentsline {subsubsection}{\numberline {5.3.1}Mechanics}{22}{subsubsection.90}%
-\contentsline {subsubsection}{\numberline {5.3.2}Size or Number of Contracts}{22}{subsubsection.91}%
-\contentsline {subsubsection}{\numberline {5.3.3}Position and Contract Maturities}{22}{subsubsection.92}%
-\contentsline {subsubsection}{\numberline {5.3.4}Timing and Tenor}{22}{subsubsection.93}%
-\contentsline {subsubsection}{\numberline {5.3.5}Initial and Ongoing Cashflows and Costs}{23}{subsubsection.94}%
-\contentsline {subsubsection}{\numberline {5.3.6}Expected Outcomes or Payoffs}{23}{subsubsection.95}%
-\contentsline {subsubsection}{\numberline {5.3.7}Risks and Downside}{24}{subsubsection.97}%
-\contentsline {subsubsection}{\numberline {5.3.8}Feasibility and Suitability}{24}{subsubsection.98}%
-\contentsline {subsubsection}{\numberline {5.3.9}Conclusion}{24}{subsubsection.99}%
-\contentsline {subsection}{\numberline {5.4}Swaps}{25}{subsection.100}%
-\contentsline {subsubsection}{\numberline {5.4.1}Mechanics}{25}{subsubsection.101}%
-\contentsline {subsubsection}{\numberline {5.4.2}Size or Number of Contracts}{25}{subsubsection.102}%
-\contentsline {subsubsection}{\numberline {5.4.3}Position and Contract Maturities}{25}{subsubsection.103}%
-\contentsline {subsubsection}{\numberline {5.4.4}Timing and Tenor}{25}{subsubsection.104}%
-\contentsline {subsubsection}{\numberline {5.4.5}Initial and Ongoing Cashflows and Costs}{26}{subsubsection.105}%
-\contentsline {subsubsection}{\numberline {5.4.6}Expected Outcomes or Payoffs}{26}{subsubsection.106}%
-\contentsline {subsubsection}{\numberline {5.4.7}Risks and Downside}{27}{subsubsection.108}%
-\contentsline {subsubsection}{\numberline {5.4.8}Feasibility and Suitability}{27}{subsubsection.109}%
-\contentsline {subsubsection}{\numberline {5.4.9}Conclusion}{27}{subsubsection.110}%
-\contentsline {subsection}{\numberline {5.5}Options}{28}{subsection.111}%
-\contentsline {subsubsection}{\numberline {5.5.1}Mechanics}{28}{subsubsection.112}%
-\contentsline {subsubsection}{\numberline {5.5.2}Size or Number of Contracts}{28}{subsubsection.113}%
-\contentsline {subsubsection}{\numberline {5.5.3}Position and Contract Maturities}{28}{subsubsection.114}%
-\contentsline {subsubsection}{\numberline {5.5.4}Timing and Tenor}{28}{subsubsection.115}%
-\contentsline {subsubsection}{\numberline {5.5.5}Initial and Ongoing Cashflows and Costs}{29}{subsubsection.116}%
-\contentsline {subsubsection}{\numberline {5.5.6}Expected Outcomes or Payoffs}{29}{subsubsection.117}%
-\contentsline {subsubsection}{\numberline {5.5.7}Risks and Downside}{29}{subsubsection.119}%
-\contentsline {subsubsection}{\numberline {5.5.8}Feasibility and Suitability}{30}{subsubsection.120}%
-\contentsline {subsubsection}{\numberline {5.5.9}Conclusion}{30}{subsubsection.121}%
-\contentsline {section}{\numberline {6}Hedging Rationale}{31}{section.122}%
+\contentsline {subsection}{\numberline {5.1}Not Hedging}{14}{subsection.66}%
+\contentsline {subsubsection}{\numberline {5.1.1}Mechanics}{14}{subsubsection.67}%
+\contentsline {subsubsection}{\numberline {5.1.2}Size or Number of Contracts}{14}{subsubsection.68}%
+\contentsline {subsubsection}{\numberline {5.1.3}Position and Contract Maturities}{14}{subsubsection.69}%
+\contentsline {subsubsection}{\numberline {5.1.4}Timing and Tenor}{14}{subsubsection.70}%
+\contentsline {subsubsection}{\numberline {5.1.5}Initial and Ongoing Cashflows and Costs}{14}{subsubsection.71}%
+\contentsline {subsubsection}{\numberline {5.1.6}Expected Outcomes or Payoffs}{15}{subsubsection.73}%
+\contentsline {subsubsection}{\numberline {5.1.7}Risks and Downside}{15}{subsubsection.75}%
+\contentsline {subsubsection}{\numberline {5.1.8}Feasibility and Suitability}{16}{subsubsection.76}%
+\contentsline {subsubsection}{\numberline {5.1.9}Conclusion}{17}{subsubsection.77}%
+\contentsline {subsection}{\numberline {5.2}Forwards}{18}{subsection.78}%
+\contentsline {subsubsection}{\numberline {5.2.1}Mechanics}{18}{subsubsection.79}%
+\contentsline {subsubsection}{\numberline {5.2.2}Size or Number of Contracts}{18}{subsubsection.80}%
+\contentsline {subsubsection}{\numberline {5.2.3}Position and Contract Maturities}{18}{subsubsection.81}%
+\contentsline {subsubsection}{\numberline {5.2.4}Timing and Tenor}{18}{subsubsection.82}%
+\contentsline {subsubsection}{\numberline {5.2.5}Initial and Ongoing Cashflows and Costs}{18}{subsubsection.83}%
+\contentsline {subsubsection}{\numberline {5.2.6}Expected Outcomes or Payoffs}{19}{subsubsection.84}%
+\contentsline {subsubsection}{\numberline {5.2.7}Risks and Downside}{19}{subsubsection.86}%
+\contentsline {subsubsection}{\numberline {5.2.8}Feasibility and Suitability}{20}{subsubsection.87}%
+\contentsline {subsubsection}{\numberline {5.2.9}Conclusion}{20}{subsubsection.88}%
+\contentsline {subsection}{\numberline {5.3}Futures}{21}{subsection.89}%
+\contentsline {subsubsection}{\numberline {5.3.1}Mechanics}{21}{subsubsection.90}%
+\contentsline {subsubsection}{\numberline {5.3.2}Size or Number of Contracts}{21}{subsubsection.91}%
+\contentsline {subsubsection}{\numberline {5.3.3}Position and Contract Maturities}{21}{subsubsection.92}%
+\contentsline {subsubsection}{\numberline {5.3.4}Timing and Tenor}{21}{subsubsection.93}%
+\contentsline {subsubsection}{\numberline {5.3.5}Initial and Ongoing Cashflows and Costs}{22}{subsubsection.94}%
+\contentsline {subsubsection}{\numberline {5.3.6}Expected Outcomes or Payoffs}{22}{subsubsection.95}%
+\contentsline {subsubsection}{\numberline {5.3.7}Risks and Downside}{23}{subsubsection.97}%
+\contentsline {subsubsection}{\numberline {5.3.8}Feasibility and Suitability}{23}{subsubsection.98}%
+\contentsline {subsubsection}{\numberline {5.3.9}Conclusion}{23}{subsubsection.99}%
+\contentsline {subsection}{\numberline {5.4}Swaps}{24}{subsection.100}%
+\contentsline {subsubsection}{\numberline {5.4.1}Mechanics}{24}{subsubsection.101}%
+\contentsline {subsubsection}{\numberline {5.4.2}Size or Number of Contracts}{24}{subsubsection.102}%
+\contentsline {subsubsection}{\numberline {5.4.3}Position and Contract Maturities}{24}{subsubsection.103}%
+\contentsline {subsubsection}{\numberline {5.4.4}Timing and Tenor}{24}{subsubsection.104}%
+\contentsline {subsubsection}{\numberline {5.4.5}Initial and Ongoing Cashflows and Costs}{25}{subsubsection.105}%
+\contentsline {subsubsection}{\numberline {5.4.6}Expected Outcomes or Payoffs}{25}{subsubsection.106}%
+\contentsline {subsubsection}{\numberline {5.4.7}Risks and Downside}{26}{subsubsection.108}%
+\contentsline {subsubsection}{\numberline {5.4.8}Feasibility and Suitability}{26}{subsubsection.109}%
+\contentsline {subsubsection}{\numberline {5.4.9}Conclusion}{26}{subsubsection.110}%
+\contentsline {subsection}{\numberline {5.5}Options}{27}{subsection.111}%
+\contentsline {subsubsection}{\numberline {5.5.1}Mechanics}{27}{subsubsection.112}%
+\contentsline {subsubsection}{\numberline {5.5.2}Size or Number of Contracts}{27}{subsubsection.113}%
+\contentsline {subsubsection}{\numberline {5.5.3}Position and Contract Maturities}{27}{subsubsection.114}%
+\contentsline {subsubsection}{\numberline {5.5.4}Timing and Tenor}{27}{subsubsection.115}%
+\contentsline {subsubsection}{\numberline {5.5.5}Initial and Ongoing Cashflows and Costs}{27}{subsubsection.116}%
+\contentsline {subsubsection}{\numberline {5.5.6}Expected Outcomes or Payoffs}{28}{subsubsection.117}%
+\contentsline {subsubsection}{\numberline {5.5.7}Risks and Downside}{28}{subsubsection.119}%
+\contentsline {subsubsection}{\numberline {5.5.8}Feasibility and Suitability}{29}{subsubsection.120}%
+\contentsline {subsubsection}{\numberline {5.5.9}Conclusion}{29}{subsubsection.121}%
+\contentsline {section}{\numberline {6}Hedging Rationale}{30}{section.122}%
