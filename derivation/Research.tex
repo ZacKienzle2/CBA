@@ -659,9 +659,7 @@ Interest rate swaps are highly feasible for PPT, as they are standard, customisa
 \subsubsection{Conclusion}
 Interest rate swaps offer Prime Property Trust a robust and highly customisable solution for converting its floating-rate interest exposure on 3-month BBSY to fixed payments. This strategy addresses ensuring budget certainty, managing the Interest Coverage Ratio, and providing long-term interest rate protection matched to debt tenors, particularly for the new PCT and SS facilities. The primary cost is the potential opportunity cost in a falling-rate environment. Given PPT's financial context and risk management needs, the benefits of predictable financing costs through swaps outweigh the inherent risks, making them a highly suitable hedging instrument.
 
-BLOOMBERG DATA
-
-
+% BLOOMBERG DATA
 
 \newpage
 
@@ -669,6 +667,37 @@ BLOOMBERG DATA
 
 \subsubsection{Mechanics}
 An Interest Rate Cap, an Over-The-Counter (OTC) derivative, functions as a sequence of European call options (caplets) on a specified interest rate, providing indemnification to the buyer should the reference rate surpass a predetermined strike rate ($R_K$) during contractual agreed periods. The premium paid by the cap buyer compensates the seller for undertaking the obligation of potential future payments, the magnitude of which is determined by the cap's strike, tenor, the prevailing forward yield curve, and, crucially, the implied volatility of future interest rates (Black, 1976; Merton, 1973). While designed to protect borrowers, the imposition and structure of interest rate caps can have complex, sometimes unintended, macroeconomic consequences, including impacts on credit supply and pricing transparency, as documented in analyses of their use as policy tools (World Bank, 2018). The payout for each caplet, should the reference rate $L(T_{j-1}, T_j)$ exceed $R_K$ over an interest period $\tau_j$ for a notional $N_V$, is $N_V \cdot \max(0, L(T_{j-1}, T_j) - R_K) \cdot \tau_j$.
+
+% \begin{tikzpicture}[
+%     font=\sffamily\small, % Standard sans-serif font
+%     capletstyle/.style={rectangle, draw, fill=blue!15, minimum height=0.6cm, minimum width=1.5cm, text centered, font=\tiny, rounded corners=1pt},
+%     timelinestyle/.style={-Latex, thick},
+%     bracestyle/.style={decorate, decoration={brace, amplitude=6pt, mirror, raise=4mm}},
+%     bracetextstyle/.style={midway, below=6mm, align=center, text width=5cm, font=\scriptsize\bfseries}
+% ]
+
+%     % Timeline
+%     \draw[timelinestyle] (0,0) -- (9.5,0) node[right, font=\tiny] {Time (Quarters)};
+
+%     % Caplets and Time Markers
+%     \foreach \x [count=\q from 1] in {1, 2.75, 4.5, 6.25} {
+%         % Caplet Box
+%         \node[capletstyle] (cap\q) at (\x, 0.8) {Caplet Q\q};
+%         % Time Marker (T_q-1)
+%         \draw (\x-0.75, -0.05) -- (\x-0.75, 0.05) node[below=2pt, font=\tiny] {$T_{\q-1}$};
+%         % Dotted line from caplet to a point before its time marker
+%         \draw[dotted, gray!70] (cap\q.south) -- (\x-0.375, 0); % Centered on its "period"
+%     }
+%     % Ellipsis for continuation
+%     \node[font=\small] at (8, 0.8) {\dots};
+%     % Final Time Marker (conceptual end)
+%      \draw (9, -0.05) -- (9, 0.05); % Tick for the very end
+
+%     % Overall Cap Agreement Brace and Text
+%     \draw[bracestyle] (0.25,-0.2) -- (9.25,-0.2) % Adjusted brace to span the visual elements
+%         node[bracetextstyle] {Single Cap Agreement \\ (e.g., 3-Year Tenor) \\ One Upfront Premium};
+
+% \end{tikzpicture}
 
 \subsubsection{Size or Number of Contracts}
 The primary dimension of an interest rate cap is its notional principal, which is tailored to the hedger's specific underlying debt amount. Understanding the option's sensitivities, or "Greeks," is critical for assessing its cost and hedge effectiveness. Delta ($\Delta$) quantifies the cap's price change relative to movements in the underlying interest rate, indicating initial hedge responsiveness. Gamma ($\Gamma$) measures the rate of change of Delta, highlighting how this responsiveness adjusts as rates fluctuate, being the highest for at-the-money options. Vega ($\nu$) captures sensitivity to implied volatility, a key component of the premium, reflecting the market's expectation of future rate uncertainty. Theta ($\Theta$) represents the erosion of the cap's value as time to expiry decreases, a direct cost of holding the option. Effective risk management using options necessitates carefully monitoring and interpreting the chosen instruments through the ''greeks'' framework (\cite{ws}).
@@ -700,10 +729,6 @@ Interest rate caps are standard, customisable OTC products readily available fro
 
 \subsubsection{Conclusion}
 Purchasing an interest rate cap offers Prime Property Trust a precise and strategically advantageous mechanism to mitigate exposure to rising 3-month BBSY rates. This instrument provides a ceiling on benchmark interest costs, directly supporting budget stability and management of the critical ICR covenant while allowing participation in favourable rate movements, net of the premium. The primary trade-off is the upfront premium against the value of asymmetric protection and covenant compliance. The high degree of customisation, coupled with the absence of ongoing margin calls, renders caps highly suitable for PPT's specific debt profile and risk management objectives, with the strike rate selection being a key determinant of cost and protection.
-
-\newpage
-
-\section{Hedging Rationale}
 
 \newpage
 

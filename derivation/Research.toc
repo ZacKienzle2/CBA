@@ -77,4 +77,3 @@
 \contentsline {subsubsection}{\numberline {5.5.7}Risks and Downside}{31}{subsubsection.128}%
 \contentsline {subsubsection}{\numberline {5.5.8}Feasibility and Suitability}{32}{subsubsection.129}%
 \contentsline {subsubsection}{\numberline {5.5.9}Conclusion}{32}{subsubsection.130}%
-\contentsline {section}{\numberline {6}Hedging Rationale}{33}{section.131}%
