@@ -1,17 +1,17 @@
 # Fdb version 3
-["biber Research"] 1747373328 "Research.bcf" "Research.bbl" "Research" 1747373471
-  "Research.bcf" 1747373471 128699 2447c7582d283dc3d30727e12255a6bb "pdflatex"
+["biber Research"] 1747395738 "Research.bcf" "Research.bbl" "Research" 1747395786
+  "Research.bcf" 1747395785 128699 2447c7582d283dc3d30727e12255a6bb "pdflatex"
   "references.bib" 1747372115 63599 b968976a33e65456eb36a48fa779e0cc ""
   (generated)
   "Research.bbl"
   "Research.blg"
-["pdflatex"] 1747373448 "/Users/zackienzle/CBA/derivation/Research.tex" "Research.pdf" "Research" 1747373471
-  "/Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png" 1747314535 2015965 34f0dd8fc2073084985fa0546aa0fe98 ""
-  "/Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png" 1747314548 1737541 b8d2d26f785d51e8102188376fdc0c04 ""
-  "/Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png" 1747314528 1867022 129f4b755425e0b7d58a4b8f30facff4 ""
-  "/Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png" 1747314542 1792673 4b5480ca3c0197c9c7735f82ab759022 ""
-  "/Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png" 1747314522 1261481 a770a128cfc8acb17fb365921c7bf73d ""
-  "/Users/zackienzle/CBA/derivation/Research.tex" 1747373448 78331 c7c6b8a2cc7dbd06dc3378d0e3d18a4b ""
+["pdflatex"] 1747395762 "/Users/zackienzle/CBA/derivation/Research.tex" "Research.pdf" "Research" 1747395786
+  "/Users/zackienzle/CBA/code/plots/Cap_Hedging_Outcomes.png" 1747395702 2015965 34f0dd8fc2073084985fa0546aa0fe98 ""
+  "/Users/zackienzle/CBA/code/plots/FRA_Hedging_Outcomes.png" 1747395716 1738491 fa5d9f109c1442980de0aa73bc701d68 ""
+  "/Users/zackienzle/CBA/code/plots/Futures_Hedging_Outcomes.png" 1747395696 1871649 f4b59f82d1b54eee914868268b4d9f8b ""
+  "/Users/zackienzle/CBA/code/plots/Swap_Hedging_Outcomes.png" 1747395709 1776710 e80ba72ac8a91957c8873fbc5fef1410 ""
+  "/Users/zackienzle/CBA/code/plots/Unhedged_Parameter_Sensitivity.png" 1747395688 1264864 e83351414feb670214ff3bf7620b235a ""
+  "/Users/zackienzle/CBA/derivation/Research.tex" 1747395689 78349 e85ecfa34601968a03cbc5f54da85ecb ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -381,14 +381,14 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1673166148 2826432 4875d37a157a46c6b2a2554bd28444cb ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "Preamble.tex" 1747371556 28722 627e97747bedc59c736d19930fdd283d ""
-  "Research.aux" 1747373471 24665 76a756e3c9ad3940ca5922d2ef925bf8 "pdflatex"
-  "Research.bbl" 1747373330 123067 749e7f04e66464e4a9f4c12f97a2eadc "biber Research"
+  "Research.aux" 1747395785 24665 76a756e3c9ad3940ca5922d2ef925bf8 "pdflatex"
+  "Research.bbl" 1747395739 123067 749e7f04e66464e4a9f4c12f97a2eadc "biber Research"
   "Research.loa" 0 -1 0 "pdflatex"
   "Research.lot" 0 -1 0 "pdflatex"
-  "Research.out" 1747373471 15653 1679f4d09a4f03200bfbfe791a62e4aa "pdflatex"
-  "Research.run.xml" 1747373471 2455 968a24cc8c0df49860673e2085711b32 "pdflatex"
-  "Research.tex" 1747373448 78331 c7c6b8a2cc7dbd06dc3378d0e3d18a4b ""
-  "Research.toc" 1747373471 7322 f4fd905640303b6e28d626500fa5d202 "pdflatex"
+  "Research.out" 1747395785 15653 1679f4d09a4f03200bfbfe791a62e4aa "pdflatex"
+  "Research.run.xml" 1747395785 2455 968a24cc8c0df49860673e2085711b32 "pdflatex"
+  "Research.tex" 1747395689 78349 e85ecfa34601968a03cbc5f54da85ecb ""
+  "Research.toc" 1747395785 7322 f4fd905640303b6e28d626500fa5d202 "pdflatex"
   (generated)
   "Research.aux"
   "Research.bcf"
