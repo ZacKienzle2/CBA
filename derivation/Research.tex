@@ -194,7 +194,14 @@ For structural interpretation, VAR residuals $\epsilon_t$, typically contemporan
 
 \newpage
 
-% \subsection{Stochastic Differential Equations (SDEs)}
+\subsection{Stochastic Differential Equations (SDEs)}
+
+\subsubsection{Geometric Brownian Motioon (GBM)}
+
+\newpage
+
+\subsubsection{Chan-Karolyi-Longstaff-Sanders process (CKLS)}
+
 
 \newpage
 
@@ -729,6 +736,283 @@ Interest rate caps are standard, customisable OTC products readily available fro
 
 \subsubsection{Conclusion}
 Purchasing an interest rate cap offers Prime Property Trust a precise and strategically advantageous mechanism to mitigate exposure to rising 3-month BBSY rates. This instrument provides a ceiling on benchmark interest costs, directly supporting budget stability and management of the critical ICR covenant while allowing participation in favourable rate movements, net of the premium. The primary trade-off is the upfront premium against the value of asymmetric protection and covenant compliance. The high degree of customisation, coupled with the absence of ongoing margin calls, renders caps highly suitable for PPT's specific debt profile and risk management objectives, with the strike rate selection being a key determinant of cost and protection.
+
+\newpage
+
+\section{Hedging Rationale }
+sdfsdfsdfsd
+
+\newpage
+
+\section{Q\&A Stress-testing}
+\begin{quote}
+    Walk me through the mechanics of a cap. How does it work? What are the cashflows? What are the risks? What are the costs?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    Explain to me the difference between a cap and a collar. What are the risks? What are the costs? How do they work?
+\end{quote}
+
+An interest rate cap, involves an upfront premium payment by the buyer (PPT) to receive payments from the seller if a specified reference interest rate (like 3-month BBSY) rises above a pre-agreed strike rate (the cap rate); this protects against rising rates while allowing participation in falling rates, with the main cost being the initial premium and risks including the premium as a sunk cost and counterparty credit risk. In contrast, an interest rate collar, combines buying an interest rate cap with simultaneously selling an interest rate floor; this creates a band for the interest rate, protecting the borrower if rates exceed the cap strike but also obligating them if rates fall below the floor strike (meaning they don't benefit from rates falling below the floor). The cost of a collar can be lower than a standalone cap, potentially even zero if the premium from selling the floor offsets the cap premium, but the key risk is forfeiting the benefit of interest rates falling below the floor's strike rate, unlike a cap which allows full participation in downside rate movements (net of premium). 
+
+\newpage
+
+\begin{quote}
+    Explain your use of CKLS forecasting. What are the underlying assumptions, motivations for its implementation and the limitations of the model? What are the benefits over a conventional model? How does it work?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    How does your proposed hedging rationale align with current market conditions and the strategic requirements of Prime Property Trust? What are the key considerations in your analysis?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    Explain to me the difference between a cap and a collar. What are the risks? What are the costs? How do they work?
+\end{quote}
+
+% Macroeconomic Outlook & Market Views
+\begin{quote}
+    Your presentation suggests a high probability of RBA rate cuts. Given the current date of May 20, 2025, what if the RBA decision later this month is to hold or even hike? How would that impact your strategy for PPT?
+\end{quote}
+
+\begin{quote}
+    You cite several fundamental indicators for rate cuts (BayFarmCapital_Heat.pdf, Slide 3 ). Could you elaborate on the specific lags between these indicators changing and the RBA typically acting?
+\end{quote}
+
+\begin{quote}
+    The sentiment analysis (BayFarmCapital_Heat.pdf, Slide 3 ) indicates 70\% of market participants expect rate cuts. What is the source of this data, and how robust is this as an indicator compared to, say, pricing in the futures market or bond yields?
+\end{quote}
+
+\begin{quote}
+    You mention PC2 of AUD Bond Yields trending down (BayFarmCapital_Heat.pdf, Slide 3 ). Can you explain what PC2 represents in layman's terms and why its inversion has historically preceded RBA rate cuts?
+\end{quote}
+
+\begin{quote}
+    How do the longer-term macroeconomic factors like "War and tariff uncertainty" and a "Labour Government Ruling" (BayFarmCapital_Heat.pdf, Slide 4 ) quantitatively feed into your VECM or CKLS forecasts (BayFarmCapital_Heat.pdf, Slide 4 )? Or are these qualitative overlays?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    How significant is the Fed's policy for the RBA's decisions, especially if domestic conditions in Australia diverge from those in the US?
+\end{quote}
+
+The US Federal Reserve's policy, as indicated by its March dot plot forecasting two rate cuts in 2025, is significant for the RBA's decisions primarily by influencing global monetary policy expectations and potentially "reducing global policy divergence," which can "lessen pressure on the RBA to hold rates." Global interest rate differentials affect capital flows and exchange rates, which the RBA considers as part of its broader economic assessment. However, while the Fed's actions provide an important international context and can influence market sentiment and the relative ease of RBA policy implementation, the RBA's primary mandate remains domestic economic conditions, specifically Australian inflation and employment. Therefore, if domestic conditions in Australia were to significantly diverge from those in the US (e.g., Australian inflation remaining stubbornly high while US inflation falls), the RBA would be expected to prioritize its local mandate, potentially leading to a decoupling of policy paths, though the Fed's stance can influence the global economic landscape in which the RBA operates.  
+
+\newpage
+
+% Understanding of Client (PPT) & Case Problem (CBA x UNIT Case Competition 2025 Case Brief.pdf)
+\begin{quote}
+    The case brief (CBA x UNIT Case Competition 2025 Case Brief.pdf, p. 8 ) states PPT's Treasury team is concerned about their "ability to meet budgeted cost obligations over the next year." How precisely does your proposed cap strategy provide them with budget certainty for interest costs?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    PPT has two new facilities: PCT (\$100m at BBSY+1.20\% ) and SS (\$200m at BBSY+1.50\% ). Does your hedging strategy differentiate between these two facilities, or do you propose a single blended approach? Why?
+\end{quote}
+
+Our proposed interest rate cap strategy directly addresses the Treasury team's concern about meeting budgeted cost obligations by providing clear certainty on the maximum interest costs PPT will face over the next year. Here's how: the cap establishes a pre-agreed ceiling—the strike rate—on the 3-month BBSY, which is the floating benchmark for PPT's new loan facilities. If the actual BBSY attempts to rise above this strike rate on any quarterly reset date, the cap activates, and PPT receives a payment from the cap seller that effectively compensates for the higher interest cost on its loans for that period. This ensures that the benchmark component of PPT's interest expense will not exceed the cap's strike rate. The cost of this protection, the cap premium, is paid upfront and is a known, fixed amount that can be amortized and incorporated directly into the budget as a predictable "insurance" cost. Since the loan spreads of 1.20\% for PCT and 1.50\% for SS are also fixed, the combination of the capped benchmark rate, the fixed loan spread, and the budgetable premium allows the Treasury team to calculate and budget for the maximum possible interest payment for each quarterly period throughout the next year, thereby achieving the desired cost certainty
+
+\newpage
+
+\begin{quote}
+    The PCT facility will be refinanced at the end of its 3-year tenor (CBA x UNIT Case Competition 2025 Case Brief.pdf, p. 9 ). How does your current hedging proposal account for this refinancing risk?
+\end{quote}
+
+Our current hedging proposal, which includes a 3-year interest rate cap specifically for the initial \$100 million PCT facility, accounts for the refinancing risk at the end of its 3-year tenor primarily by seeking to ensure PPT approaches this refinancing point in a stronger financial position. The 3-year cap is designed to protect PPT against adverse movements in the 3-month BBSY during the life of the current facility, aiding in budget certainty and, critically, in maintaining covenant compliance. By mitigating interest rate risk over these initial three years, the strategy helps preserve PPT’s financial stability and creditworthiness, which are beneficial when negotiating terms for the subsequent refinancing. The cap itself will expire concurrently with the original 3-year facility tenor  and therefore does not directly hedge the interest rates or credit spreads that will apply to the new refinanced debt beyond year 3. However, our overall financial outlook and long-term strategy do consider this event; for instance, our financial model for PPT assumes the PCT facility is refinanced to a 4\% fixed-rate loan after 3 years, and our broader strategic recommendations include eventually sourcing longer-tenor fixed-rate debt to build resilience against fluctuations.
+
+\newpage
+
+\begin{quote}
+    The Sterling Square (SS) project commences construction on Day 1 and is only operational from FY27 (CBA x UNIT Case Competition 2025 Case Brief.pdf, p. 9 ). How does this impact PPT's ICR during the construction phase, and how does your strategy mitigate this specific risk?
+\end{quote}
+
+\newpage
+
+% Risk Identification & Analysis for PPT
+\begin{quote}
+    Your presentation (BayFarmCapital_Heat.pdf, Slide 5 ) identifies "Interest rate fluctuations," "Inability to source immediate funding," and "Failure to meet covenants" as key risks. Beyond interest rate caps, what other recommendations do you have for PPT to manage its funding and covenant risks?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The FY25 EBITDA is \$8.412m (CBA x UNIT Case Competition 2025 Case Brief.pdf, p. 10 ; BayFarmCapital_Heat.pdf, Slide 6 ). With \$300m new debt, how did you arrive at the pro-forma ICR of 0.54x mentioned in Research.pdf (p. 19 ) and the FY26 ICR of 0.55x in your presentation (BayFarmCapital_Heat.pdf, Slide 6 )? Please walk through the interest expense calculation.
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The "Unhedged Interest Rate Sensitivity" graph (Research.pdf, p. 18 ; BayFarmCapital_Heat.pdf, Slide 6 ) shows an ICR breach at a BBSY of 0.20\%. Can you explain the significance of this point?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The case requires PPT to maintain an ICR greater than 1.75x at all times (CBA x UNIT Case Competition 2025 Case Brief.pdf, p. 9 ). What are the typical consequences of a covenant breach beyond funding being withdrawn?
+\end{quote}
+
+\newpage
+
+% Proposed Hedging Strategy (Interest Rate Caps)
+\begin{quote}
+    You recommend interest rate caps (BayFarmCapital_Heat.pdf, Slide 2 ). Why is retaining upside potential (BayFarmCapital_Heat.pdf, Slide 7 ) so critical for PPT that it outweighs the certainty of a fixed rate from a swap, especially given their dire ICR situation?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The evaluation table (BayFarmCapital_Heat.pdf, Slide 7 ) gives "Interest Rate Caps" high marks. Could you elaborate on the "Key Costs and Risks" for caps, specifically "premiums vary with $r_K$ and $\sigma_{BBSY}$"? How did you determine an appropriate $r_K$ (strike rate)?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    Your recommended solution (BayFarmCapital_Heat.pdf, Slide 8 ) proposes an out-of-the-money option for the cap. How far out-of-the-money, and what was the trade-off analysis (cost vs. protection level) you performed?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The "Hedging Mechanics" (BayFarmCapital_Heat.pdf, Slide 9 ) show an example cap agreement with an upfront premium. How is this premium financed by PPT, and what is its immediate impact on their cash flow and ICR?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The average premium is stated as "around 0.2M per year at first, dropping to 0.17M after 3 years" (BayFarmCapital_Heat.pdf, Slide 9 ). Why does the premium drop? Is this for a new 1-year cap purchased each year, or for a longer-dated cap?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    You recommend the interest rate cap is set 25bp above the current rate (BayFarmCapital_Heat.pdf, Slide 9 ). What is the "current rate" benchmark you are using for this, and how often should this strike be re-evaluated?
+\end{quote}
+
+\newpage
+
+% Alternative Hedging Instruments
+\begin{quote}
+    The Research.pdf (p. 17-29 ) provides a detailed analysis of not hedging, FRAs, Futures, and Swaps. Could you specifically address why an Interest Rate Swap, which offers perfect cost certainty for the benchmark rate, was not chosen, given PPT's primary concern for budget stability (CBA x UNIT Case Competition 2025 Case Brief.pdf, p.8 )?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    Your evaluation table (BayFarmCapital_Heat.pdf, Slide 7 ) highlights "Roll Risk" for BAB Futures and "Liquidity constraints" for FRAs for multi-year tenors. How significant are these issues compared to the upfront cost of a multi-year cap?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    If implied volatility ($\sigma_{BBSY}$) was significantly higher than current levels, making caps very expensive, what would be your alternative hedging recommendation?
+\end{quote}
+
+\newpage
+
+% Valuation & Financial Modelling
+\begin{quote}
+    The Research.pdf (p. 8-16 ) details the valuation of FRAs, BAB Futures, Swaps, and Caps. Can you elaborate on how you used the Black model (Research.pdf, p. 15-16 ) to price the recommended cap for PPT? What were your key inputs for forward rates and volatility?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The CKLS forecasting is mentioned (Research.pdf, p. 34 ; BayFarmCapital_Heat.pdf, Slide 8 ). How does this model's output (e.g., simulated paths of interest rates) feed into your cap pricing or selection of strike?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The VECM analysis (Research.pdf, p. 3-4 ; BayFarmCapital_Heat.pdf, Slide 4, Appendix ) identifies long-run equilibria. How did this inform your view on where interest rates (specifically BBSY) are heading and thus your hedging decision?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The appendices in BayFarmCapital_Heat.pdf show various financial analyses (e.g., PCA of bond yields , GBM forecasting ). Could you pick one and explain how it directly supported your final recommendation for PPT?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    What are the primary sensitivities in your cap premium calculation? If your volatility assumption was off by X\%, how much would the premium change?
+\end{quote}
+
+\newpage
+
+% Financial Impact Analysis
+\begin{quote}
+    The "Financial position after Hedging" (BayFarmCapital_Heat.pdf, Slide 10 ) shows required cash injections. You mention equity raising as a way to source these funds . What are the pros and cons for PPT, and did you consider debt funding or asset sales as alternatives for these injections?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    In the Bear case (+25bp) on Slide 10 (BayFarmCapital_Heat.pdf ), the cash injection in 2026 is \$19.08M. How is this figure calculated, and does the cap fully protect against any further rate rises beyond this +25bp scenario in terms of additional injections needed for that year?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The assumption is made that "PCT is refinanced to a 4\% fixed-rate loan after 3 years" (BayFarmCapital_Heat.pdf, Slide 10 ). What if PPT cannot secure fixed-rate funding at 4\%? How does that affect your long-term strategy?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    Your long-term strategy (BayFarmCapital_Heat.pdf, Slide 10 ) suggests phasing out interest rate caps as fixed-rate loans are secured. What is the timeline for this, and what are the risks during this transition?
+\end{quote}
+
+\newpage
+
+% Implementation Details
+\begin{quote}
+    For the \$300 million notional, would you recommend a single cap, or a series of shorter-dated caps (a strip of caplets)? What are the pros and cons, especially regarding cost and flexibility? (BayFarmCapital_Heat.pdf, Slide 8 )
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    How would PPT go about executing this cap? Would they approach CBA or multiple banks for quotes?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The presentation mentions "Continuous Monitoring" of the cap strike (BayFarmCapital_Heat.pdf, Slide 9 ). If the macroeconomic outlook changes significantly, can an existing cap be restructured or sold? What are the implications?
+\end{quote}
+
+\newpage
+
+% Coherence and Research
+\begin{quote}
+    The "Research.pdf" is quite detailed on various econometric models and derivative valuations. How did the findings from this research document directly shape the recommendations in the "BayFarmCapital_Heat.pdf" presentation? Can you point to specific instances?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    There's a lot of information in the appendices of your presentation (BayFarmCapital_Heat.pdf, Slides 11-45 ). Could you highlight the two most critical pieces of analysis from the appendix that directly support your choice of an interest rate cap with an out-of-the-money strike?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    The case brief (CBA x UNIT Case Competition 2025 Case Brief.pdf, p. 6 ) emphasizes "Originality and creativity". How does your proposed solution demonstrate this beyond a standard hedging recommendation?
+\end{quote}
+
+\newpage
+
+\begin{quote}
+    What was the biggest challenge your team faced in analyzing this case and arriving at your recommendation, and how did you overcome it?
+\end{quote}
 
 \newpage
 
