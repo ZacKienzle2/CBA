@@ -186,12 +186,6 @@ where $\mathbf{Y}_t$ is a $kp \times 1$ stack of $Y_t, \dots, Y_{t-p+1}$, $\math
 
 For structural interpretation, VAR residuals $\epsilon_t$, typically contemporaneously correlated (non-diagonal $\Sigma_\epsilon$), are orthogonalized into structural shocks $u_t$. The Cholesky decomposition of $\hat{\Sigma}_\epsilon = \hat{P}\hat{P}'$ (with $\hat{P}$ lower triangular) yields $u_t = \hat{P}^{-1}\epsilon_t$. Structural IRFs are then $\Theta_s = \Phi_s \hat{P}$ (\cite{s}; \cite{l}). This identification is ordering-dependent. In a VECM, these IRFs show dynamic adjustment towards the equilibria defined by $\beta$ at speeds governed by $\alpha$.
 
-\subsubsection{Algorithmic Implementation}
-
-\newpage
-
-\subsubsection{Code Base Outputs}
-
 \newpage
 
 \subsection{Stochastic Differential Equations (SDEs)}
@@ -201,11 +195,6 @@ For structural interpretation, VAR residuals $\epsilon_t$, typically contemporan
 \newpage
 
 \subsubsection{Chan-Karolyi-Longstaff-Sanders process (CKLS)}
-
-
-\newpage
-
-\subsection{Macroeconomics}
 
 \newpage
 
@@ -458,6 +447,7 @@ The payoff of the caplet at its payment date $T_j$, from the perspective of the 
 \end{equation}
 This payoff occurs only if the market reference rate $L(T_{j-1}, T_j)$ fixed at the beginning of the period $T_{j-1}$ exceeds the strike rate $R_K$. If $L(T_{j-1}, T_j) \le R_K$, the caplet for that period expires worthless, and its payoff is zero. The total cap consists of a series of such caplets.
 
+\newpage
 
 \subsubsection{Pricing}
 The price (premium) of an interest rate cap at time $t$ is the sum of the present values of all its constituent caplets:
@@ -490,6 +480,49 @@ where:
 \end{itemize}
 The term $Z(t, T_j)$ discounts the expected payoff (at $T_j$) back to the current time $t$. The Black model effectively prices the caplet in a forward measure where the forward rate is the asset. The discount factors $Z(t, T_j)$ and the forward rates $F(t; T_{j-1}, T_j)$ are derived from the prevailing risk-free (or interbank) zero-coupon yield curve, which is typically bootstrapped from observable market instruments. The volatility $\sigma_{F,j}$ is a crucial input called "implied volatility" when backed out from market cap prices.
 
+\newpage
+
+\subsubsection{Greeks}
+The ``Greeks'' quantify the sensitivity of an interest rate caplet's price, $c_j(t)$ (defined in \eqref{eq:caplet_black_model}), to changes in various underlying parameters.
+
+\textbf{Delta ($\Delta_j$)}: Measures sensitivity to a change in the forward interest rate $F(t; T_{j-1}, T_j)$.
+\begin{equation}
+    \Delta_j = \frac{\partial c_j(t)}{\partial F(t; T_{j-1}, T_j)} = N_V \tau_j Z(t, T_j) \mathcal{N}(d_1)
+    \label{eq:caplet_delta_revised}
+\end{equation}
+\textit{Reasoning}: Positive; the caplet's value increases if its underlying forward rate $F(t; T_{j-1}, T_j)$ increases.
+
+\textbf{Gamma ($\Gamma_j$)}: Measures the rate of change of Delta with respect to the forward rate $F(t; T_{j-1}, T_j)$.
+\begin{equation}
+    \Gamma_j = \frac{\partial^2 c_j(t)}{\partial F(t; T_{j-1}, T_j)^2} = N_V \tau_j Z(t, T_j) \frac{\phi(d_1)}{F(t; T_{j-1}, T_j) \sigma_{F,j} \sqrt{T_{j-1}^*}}
+    \label{eq:caplet_gamma_revised}
+\end{equation}
+where $\phi(\cdot)$ is the standard normal probability density function, and $d_1$ is defined in \eqref{eq:caplet_d1}.
+\textit{Reasoning}: Positive; indicates how much Delta changes for a unit change in $F(t; T_{j-1}, T_j)$.
+
+\textbf{Vega ($\nu_j$)}: Measures sensitivity to a change in the volatility $\sigma_{F,j}$ of the forward rate.
+\begin{equation}
+    \nu_j = \frac{\partial c_j(t)}{\partial \sigma_{F,j}} = N_V \tau_j Z(t, T_j) F(t; T_{j-1}, T_j) \phi(d_1) \sqrt{T_{j-1}^*}
+    \label{eq:caplet_vega_revised}
+\end{equation}
+\textit{Reasoning}: Positive; higher volatility increases the chance of the caplet finishing in-the-money, thus increasing its value.
+
+\textbf{Theta ($\Theta_j$)}: Measures sensitivity to the passage of time $t$ (as $T_{j-1}^* = T_{j-1}-t$ decreases). A principal component of $\frac{\partial c_j(t)}{\partial t}$ is:
+\begin{equation}
+    \Theta_j \approx -N_V \tau_j Z(t, T_j) \frac{F(t; T_{j-1}, T_j) \phi(d_1)\sigma_{F,j}}{2\sqrt{T_{j-1}^*}}
+    \label{eq:caplet_theta_revised}
+\end{equation}
+\textit{Reasoning}: Generally negative; represents time decay, so the caplet's value typically erodes as its rate-fixing date $T_{j-1}$ approaches.
+
+\textbf{Rho ($\rho_j$)}: Measures sensitivity to a change in the risk-free interest rate $r$ (which underpins the discount factor $Z(t,T_j)$ and influences the forward rate $F(t; T_{j-1}, T_j)$). A key component is:
+\begin{equation}
+    \rho_j \approx N_V \tau_j (T_j-t) Z(t, T_j) R_K \mathcal{N}(d_2)
+    \label{eq:caplet_rho_revised}
+\end{equation}
+where $d_2$ is defined in \eqref{eq:caplet_d2}.
+\textit{Reasoning}: Generally positive for a caplet; higher rates tend to increase $F(t; T_{j-1}, T_j)$ and decrease the present value of $R_K$, both effects directionally positive for a call's value.
+
+The Greeks for an entire interest rate cap $C(t)$ are the sum of these corresponding Greeks for each of its $M$ constituent caplets: e.g., $\Delta_{\text{cap}}(t) = \sum_{j=1}^{M} \Delta_j(t)$.
 
 \newpage
 
@@ -837,7 +870,7 @@ Our current hedging proposal, which includes a 3-year interest rate cap specific
 
 % Risk Identification & Analysis for PPT
 \begin{quote}
-    Your presentation (BayFarmCapital_Heat.pdf, Slide 5 ) identifies "Interest rate fluctuations," "Inability to source immediate funding," and "Failure to meet covenants" as key risks. Beyond interest rate caps, what other recommendations do you have for PPT to manage its funding and covenant risks?
+    Your presentation identifies "Interest rate fluctuations," "Inability to source immediate funding," and "Failure to meet covenants" as key risks. Beyond interest rate caps, what other recommendations do you have for PPT to manage its funding and covenant risks?
 \end{quote}
 
 \newpage
@@ -871,11 +904,30 @@ Our current hedging proposal, which includes a 3-year interest rate cap specific
     The evaluation table (BayFarmCapital_Heat.pdf, Slide 7 ) gives "Interest Rate Caps" high marks. Could you elaborate on the "Key Costs and Risks" for caps, specifically "premiums vary with $r_K$ and $\sigma_{BBSY}$"? How did you determine an appropriate $r_K$ (strike rate)?
 \end{quote}
 
+The key costs associated with interest rate caps are the upfront premium, which is non-refundable, and the risk of theta (time) decay. Crucially, this premium varies directly with market conditions
+
 \newpage
 
 \begin{quote}
-    Your recommended solution (BayFarmCapital_Heat.pdf, Slide 8 ) proposes an out-of-the-money option for the cap. How far out-of-the-money, and what was the trade-off analysis (cost vs. protection level) you performed?
+    Your recommended solution proposes an out-of-the-money option for the cap. How far out-of-the-money, and what was the trade-off analysis (cost vs. protection level) you performed?
 \end{quote}
+
+The primary upfront cost of an interest rate cap is its premium. The Black '76 model offers a precise mathematical framework for understanding how this premium, for each constituent caplet, is determined and how it varies with key parameters, notably the strike rate ($R_K$) and the volatility of the underlying forward interest rate ($\sigma_j$, which is derived from market observations of benchmark volatilities like $\sigma_{\text{BBSY}}$).
+
+The value of a single caplet ($C_j$) under the Black '76 model is given by,
+
+$$C_j = P(0, T_j) N_V \tau_j \left[ F_j(0)N(d_1) - R_K N(d_2) \right],$$
+
+where $d_1 = \frac{\ln(F_j(0)/R_K) + \frac{1}{2}\sigma_j^2 T_{j-1}}{\sigma_j \sqrt{T_{j-1}}}$ and $d_2 = d_1 - \sigma_j \sqrt{T_{j-1}}$. 
+
+The terms $P(0,T_j)$, $N_V$, $\tau_j$, $F_j(0)$, $T_{j-1}$, and $N(\cdot)$ represent the discount factor, notional principal, tenor fraction, forward rate, time to option expiry, and cumulative normal distribution function, respectively.
+
+The model explicitly shows how the caplet premium varies with the strike rate $R_K$. The sensitivity, or partial derivative, of the caplet premium with respect to the strike rate is $\frac{\partial C_j}{\partial R_K} = -P(0, T_j) N_V \tau_j N(d_2)$. Since all terms on the right-hand side are positive, this derivative is negative. This mathematically confirms that increasing the strike rate ($R_K$) makes the caplet further out-of-the-money (or less in-the-money), reducing its payout probability and consequently decreasing the premium $C_j$. Conversely, decreasing $R_K$ increases the premium.
+
+The volatility of the underlying forward rate, $\sigma_j$ (intrinsically linked to $\sigma_{\text{BBSY}}$), is a critical input in $d_1$ and $d_2$. The sensitivity of the caplet premium to this volatility (Vega) is $\frac{\partial C_j}{\partial \sigma_j} = P(0, T_j) N_V \tau_j F_j(0) \phi(d_1) \sqrt{T_{j-1}}$, where $\phi(\cdot)$ is the standard normal probability density function. This derivative is positive. Therefore, an increase in the volatility $\sigma_j$ (reflecting higher $\sigma_{\text{BBSY}}$) leads to an increase in the caplet premium $C_j$, because higher volatility increases the chance of larger movements in the forward rate, making it more probable that the rate will exceed the strike. Other risks for caps include theta decay (time decay of premium), also quantifiable via option models.
+
+The determination of an appropriate strike rate $R_K$ for Prime Property Trust (PPT) was guided by the trade-offs evident from these Black '76 pricing dynamics, aiming to balance effective risk mitigation with cost. A lower $R_K$ offers greater protection but, as shown by $\frac{\partial C_j}{\partial R_K} < 0$, results in a substantially higher premium. A higher $R_K$ (further out-of-the-money) yields a lower premium but protects only against larger rate increases. For PPT, an out-of-the-money (OTM) strike rate of 4.00\% was selected when the reference 3-Month BBSY was approximately 3.75\%. The Black '76 model would quantify the premium for this 4.00\% strike, demonstrating its relative affordability. This OTM level was chosen to provide meaningful protection against adverse rate movements that could threaten budget stability and the Interest Coverage Ratio (ICR) covenant, while ensuring the upfront premium was a manageable "insurance" expenditure. The Black '76 framework thus provides the quantitative basis for this cost-benefit analysis.
+
 
 \newpage
 
@@ -886,7 +938,7 @@ Our current hedging proposal, which includes a 3-year interest rate cap specific
 \newpage
 
 \begin{quote}
-    The average premium is stated as "around 0.2M per year at first, dropping to 0.17M after 3 years" (BayFarmCapital_Heat.pdf, Slide 9 ). Why does the premium drop? Is this for a new 1-year cap purchased each year, or for a longer-dated cap?
+    The average premium is stated as "around 0.2M per year at first, dropping to 0.17M after 3 years". Why does the premium drop? Is this for a new 1-year cap purchased each year, or for a longer-dated cap?
 \end{quote}
 
 \newpage
