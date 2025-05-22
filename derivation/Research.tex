@@ -796,6 +796,10 @@ An interest rate cap, involves an upfront premium payment by the buyer (PPT) to 
     Explain your use of CKLS forecasting. What are the underlying assumptions, motivations for its implementation and the limitations of the model? What are the benefits over a conventional model? How does it work?
 \end{quote}
 
+Our utilization of the Chan-Karolyi-Longstaff-Sanders (CKLS) forecasting process involved modeling the interest rate, $X_t$, via a stochastic differential equation (SDE) framework. This SDE is characterized by mean reversion and level-dependent volatility, defined by the parameters $\alpha=0.082, \beta=-0.094, \sigma=0.289, \gamma=0.497$, and an initial rate of $3.799\%$. The model generated simulated paths for $X_t$ and its conditional expectation $\mathrm{E}[X_t | X_0]$, providing a probabilistic interest rate forecast. Our primary motivation was to gain a richer understanding of potential rate dynamics beyond deterministic point estimates, which directly informed our hedging strategy by aiding the out-of-the-money strike selection for the cap—balancing protection against adverse scenarios (visualized in path dispersion) with premium cost—and by serving as an input for the cap premium calculation, likely for the volatility structure or forward rate distributions within the Black '76 pricing model. Key benefits of the CKLS framework over more conventional models include its explicit incorporation of mean reversion and, through $\gamma \approx 0.5$, its ability to model level-dependent volatility (varying approximately with $r_t^{0.5}$), offering a more realistic depiction of interest rate behavior.
+
+The CKLS model generally assumes interest rates follow a continuous, mean-reverting process with potentially level-dependent volatility, driven by a single stochastic factor, often denoted $dW_t$; however, the precise theoretical assumptions underpinning our specific SDE implementation are not fully detailed in the provided research materials due to a blank relevant section. Limitations of this approach include its single-factor nature, which might not capture all term structure complexities, and significant parameter risk associated with the estimation and stability of $\alpha, \beta, \sigma, \gamma$, for which the derivation methodology is unspecified. Model misspecification risk regarding the true Australian BBSY dynamics is also pertinent. Notably, the unconditional long-run mean simply calculated as $-\alpha/\beta$ from the given parameters appears inconsistent with the visually depicted conditional expectation $\mathrm{E}[X_t]$ path, suggesting a specific model formulation or interpretation by our team that requires further elucidation beyond the available documentation.
+
 \newpage
 
 \begin{quote}
@@ -932,7 +936,7 @@ The determination of an appropriate strike rate $R_K$ for Prime Property Trust (
 \newpage
 
 \begin{quote}
-    The "Hedging Mechanics" (BayFarmCapital_Heat.pdf, Slide 9 ) show an example cap agreement with an upfront premium. How is this premium financed by PPT, and what is its immediate impact on their cash flow and ICR?
+    The "Hedging Mechanics" show an example cap agreement with an upfront premium. How is this premium financed by PPT, and what is its immediate impact on their cash flow and ICR?
 \end{quote}
 
 \newpage
@@ -941,23 +945,29 @@ The determination of an appropriate strike rate $R_K$ for Prime Property Trust (
     The average premium is stated as "around 0.2M per year at first, dropping to 0.17M after 3 years". Why does the premium drop? Is this for a new 1-year cap purchased each year, or for a longer-dated cap?
 \end{quote}
 
+The statement regarding the average premium being "around 0.2M per year at first, dropping to 0.17M after 3 years"  refers to the annualized cost profile of a longer-dated cap strategy designed to align with the tenors of Prime Property Trust's (PPT's) debt facilities (3 years for PCT, 5 years for SS ), rather than a series of new 1-year caps purchased each year. Typically, for a multi-year cap structure, a single upfront premium is paid for the entire package of caplets covering the full term. The drop in the average annual premium cost after three years is primarily attributable to a reduction in the total notional amount being hedged by the cap program; the \$100 million PCT facility has a 3-year tenor and is assumed to be refinanced (potentially to a fixed rate) at that point, meaning its corresponding 3-year cap would expire. Thus, the "0.17M after 3 years" likely reflects the annualized premium cost associated with the remaining cap on the \$200 million SS facility for its years 4 and 5. Additionally, the specific pricing of individual caplets within the longer-term SS cap, which "utilises forward rates for valuation" via the Black '76 model, could contribute to this profile; if forward rates are lower or the volatility term structure implies lower costs for the later-dated caplets (years 4 and 5), their contribution to the annualized average would also be smaller compared to the earlier years when a larger total notional is hedged.
+
 \newpage
 
 \begin{quote}
-    You recommend the interest rate cap is set 25bp above the current rate (BayFarmCapital_Heat.pdf, Slide 9 ). What is the "current rate" benchmark you are using for this, and how often should this strike be re-evaluated?
+    You recommend the interest rate cap is set 25bp above the current rate. What is the "current rate" benchmark you are using for this, and how often should this strike be re-evaluated?
 \end{quote}
+
+The "current rate" benchmark used for our recommendation that the interest rate cap be set 25 basis points (bp) above it is the 3-month Bank Bill Swap Rate (BBSY), which was stated as 3.75\% at the time of our analysis. This leads to our proposed initial out-of-the-money strike rate of 4.00\% for the cap (3.75\%+0.25\%=4.00\%). Regarding the re-evaluation of this strike, our recommendation is for continuous monitoring; as explicitly mentioned, "As macroeconomic events unfold, the best cap strike should be re-evaluated continuously". This ongoing re-evaluation should consider changes in the interest rate forecast and market volatility, as these factors directly impact both the level of protection needed and the cost of the cap premiums.
 
 \newpage
 
 % Alternative Hedging Instruments
 \begin{quote}
-    The Research.pdf (p. 17-29 ) provides a detailed analysis of not hedging, FRAs, Futures, and Swaps. Could you specifically address why an Interest Rate Swap, which offers perfect cost certainty for the benchmark rate, was not chosen, given PPT's primary concern for budget stability (CBA x UNIT Case Competition 2025 Case Brief.pdf, p.8 )?
+    The  provided detailed analysis of not hedging, FRAs, Futures, and Swaps. Could you specifically address why an Interest Rate Swap, which offers perfect cost certainty for the benchmark rate, was not chosen, given PPT's primary concern for budget stability?
 \end{quote}
+
+While an Interest Rate Swap would indeed provide Prime Property Trust (PPT) with complete certainty on its benchmark interest expense, directly addressing the primary concern for budget stability, our recommendation for an Interest Rate Cap was made because it effectively balances this crucial need with the equally important strategic objective for a REIT to retain "Upside Potential" if interest rates fall. The cap structure achieves a significant degree of budget stability by establishing a known maximum for the benchmark interest rate at the chosen strike (4.00\%) and involves a fixed, upfront premium that is a "budgetable insurance cost", ensuring PPT's worst-case interest expense is defined. However, unlike a swap which offers no participation in falling rates, the cap allows PPT to benefit from any decrease in the 3-month BBSY below the strike rate, less the amortized premium. This asymmetric payoff profile is particularly advantageous given our macroeconomic outlook which suggests a possibility of RBA rate cuts, allowing PPT to "capitalise on market opportunities"  and potentially enhance investor returns, a key consideration for a Real Estate Investment Trust. Therefore, the cap was chosen as the preferred instrument because it meets the critical requirement for budget predictability against adverse rate movements while also preserving the valuable opportunity to benefit from favorable rate decreases.
 
 \newpage
 
 \begin{quote}
-    Your evaluation table (BayFarmCapital_Heat.pdf, Slide 7 ) highlights "Roll Risk" for BAB Futures and "Liquidity constraints" for FRAs for multi-year tenors. How significant are these issues compared to the upfront cost of a multi-year cap?
+    Your evaluation table highlights "Roll Risk" for BAB Futures and "Liquidity constraints" for FRAs for multi-year tenors. How significant are these issues compared to the upfront cost of a multi-year cap?
 \end{quote}
 
 \newpage
@@ -966,30 +976,40 @@ The determination of an appropriate strike rate $R_K$ for Prime Property Trust (
     If implied volatility ($\sigma_{BBSY}$) was significantly higher than current levels, making caps very expensive, what would be your alternative hedging recommendation?
 \end{quote}
 
+If implied volatility ($\sigma_{BBSY}$) were significantly higher than current levels, making interest rate caps prohibitively expensive, our alternative hedging recommendation for Prime Property Trust (PPT) would shift towards using Interest Rate Swaps. The primary reason for this alternative is that swaps provide excellent "Cost Certainty" and a strong positive "ICR \& Budget Impact" by converting PPT's floating-rate BBSY exposure to a fixed interest rate for a chosen tenor, directly addressing the Treasury team's desire to "stabilise" budgeted cost obligations and manage the critical 1.75x ICR covenant. Unlike caps, standard at-market interest rate swaps typically involve no upfront premium, which would be a significant advantage if cap premiums become excessively high due to increased volatility. The main trade-off with a swap is that PPT would forgo the "Upside Potential" if interest rates were to fall below the agreed fixed swap rate, as a swap provides a symmetric hedge outcome. However, if the cost of retaining this upside via an expensive cap becomes too burdensome, the certainty and zero-premium nature of a swap would likely become the more prudent strategy to ensure financial stability and covenant compliance. As a secondary alternative, an Interest Rate Collar (buying a cap and selling a floor) could also be considered to reduce the net premium outlay compared to a standalone cap, though this would also limit benefits from rates falling below the floor strike.
+
 \newpage
 
 % Valuation & Financial Modelling
 \begin{quote}
-    The Research.pdf (p. 8-16 ) details the valuation of FRAs, BAB Futures, Swaps, and Caps. Can you elaborate on how you used the Black model (Research.pdf, p. 15-16 ) to price the recommended cap for PPT? What were your key inputs for forward rates and volatility?
+    The provided documentation details the valuation of FRAs, BAB Futures, Swaps, and Caps. Can you elaborate on how you used the Black model (Research.pdf, p. 15-16 ) to price the recommended cap for PPT? What were your key inputs for forward rates and volatility?
 \end{quote}
+
+
 
 \newpage
 
 \begin{quote}
-    The CKLS forecasting is mentioned (Research.pdf, p. 34 ; BayFarmCapital_Heat.pdf, Slide 8 ). How does this model's output (e.g., simulated paths of interest rates) feed into your cap pricing or selection of strike?
+    The CKLS forecasting is mentioned. How does this model's output (e.g., simulated paths of interest rates) feed into your cap pricing or selection of strike?
 \end{quote}
+
+
 
 \newpage
 
 \begin{quote}
-    The VECM analysis (Research.pdf, p. 3-4 ; BayFarmCapital_Heat.pdf, Slide 4, Appendix ) identifies long-run equilibria. How did this inform your view on where interest rates (specifically BBSY) are heading and thus your hedging decision?
+    The VECM analysis identifies long-run equilibria. How did this inform your view on where interest rates (specifically BBSY) are heading and thus your hedging decision?
 \end{quote}
+
+The Vector Error Correction Model (VECM) analysis, by identifying "evident long-run equilibria and dynamic relationships between CPI, IOCR and BBSW", played a key role in shaping our view on the likely trajectory of the 3-month Bank Bill Swap Rate (BBSY) and consequently informed our hedging recommendation. VECM is utilized when variables like BBSY, inflation (CPI), and the RBA cash rate (IOCR) are individually non-stationary but share a common trend or equilibrium they revert to in the long term. The identified long-run equilibrium from our VECM provides a theoretically grounded anchor for BBSY, suggesting that if current rates deviate significantly from this level (as influenced by CPI and IOCR), they would tend to adjust back towards it over time. This understanding fed into our quantitative forecasting, with our "VECM modelling predict[ing] trending 3-month BBSW rates within [3.74, 3.85]\% over NTM (Next Twelve Months)". This forecasted range, informed by the long-run equilibria, being relatively contained and generally below the proposed 4.00\% out-of-the-money (OTM) strike for the interest rate cap, supported our hedging decision in several ways: it suggested that sustained, extreme rate hikes were not the central expectation based on these equilibrium dynamics, making a less expensive OTM cap a cost-efficient strategy. The OTM cap would provide crucial protection against deviations or shocks that might push BBSY temporarily above this equilibrium-informed range, aligning with the need to manage budget stability and covenant compliance, without incurring the higher premium of an at-the-money cap that would hedge against movements within or closer to the VECM's forecasted trajectory.
 
 \newpage
 
 \begin{quote}
-    The appendices in BayFarmCapital_Heat.pdf show various financial analyses (e.g., PCA of bond yields , GBM forecasting ). Could you pick one and explain how it directly supported your final recommendation for PPT?
+    The appendices show various financial analyses (e.g., PCA of bond yields , GBM forecasting ). Could you pick one and explain how it directly supported your final recommendation for PPT?
 \end{quote}
+
+Judges, one critical piece of analysis from our appendix that provides robust, evidence-based support for our recommendation of an out-of-the-money interest rate cap for Prime Property Trust is the Principal Component Analysis (PCA) conducted on Australian Government Bond Yields. This analysis, reveals that the first principal component (PC1) overwhelmingly explains the variance in AUD bond yield movements, accounting for approximately 98.6\% of historical changes. PC1 predominantly represents parallel shifts in the yield curve, meaning changes in the overall level of interest rates are the most significant driver of interest rate risk. Understanding this directly supports our choice of an interest rate cap, as this instrument is designed to protect against precisely such upward movements in the general level of interest rates. Furthermore, the selection of an out-of-the-money strike for the cap is a strategic decision informed by this understanding; it allows PPT to hedge against the most dominant risk factor—significant increases in the overall interest rate level (i.e., large positive movements in PC1)—in a cost-effective manner by forgoing protection against minor fluctuations, thereby aligning the hedging strategy with both the identified risk structure and prudent cost management.
 
 \newpage
 
@@ -997,37 +1017,49 @@ The determination of an appropriate strike rate $R_K$ for Prime Property Trust (
     What are the primary sensitivities in your cap premium calculation? If your volatility assumption was off by X\%, how much would the premium change?
 \end{quote}
 
+The primary sensitivities in an interest rate cap premium calculation, as detailed in the Black '76 model framework, are changes in the underlying forward interest rates (measured by Delta ), the implied volatility of these forward rates (Vega), the passage of time leading to time decay (Theta), and movements in the risk-free discount rates (Rho); additionally, the selected strike rate ($r_K$) is a fundamental parameter that significantly influences the premium. If your volatility assumption across all caplets was collectively different by X percentage points (e.g., if X were 0.5, meaning the actual average volatility input was 0.5\% or 50 basis points absolutely higher or lower than the "true" market volatility), the total cap premium would change by approximately X multiplied by the "Total Vega (per 1\% vol change)". Given your portfolio's Total Vega is \$147,811.57 for such a 1 percentage point absolute change in volatility, a deviation of X percentage points in the volatility assumption would therefore lead to an approximate total premium change of $\$147,811.57\cdot X$.
+
 \newpage
 
 % Financial Impact Analysis
 \begin{quote}
-    The "Financial position after Hedging" (BayFarmCapital_Heat.pdf, Slide 10 ) shows required cash injections. You mention equity raising as a way to source these funds . What are the pros and cons for PPT, and did you consider debt funding or asset sales as alternatives for these injections?
+    The "Financial position after Hedging" shows required cash injections. You mention equity raising as a way to source these funds . What are the pros and cons for PPT, and did you consider debt funding or asset sales as alternatives for these injections?
 \end{quote}
+
+Yes, equity raising is mentioned as a way for Prime Property Trust (PPT) to source the funds for required cash injections, primarily to ensure the 1.75x Interest Coverage Ratio (ICR) covenant is met. The main pro of equity raising is that it directly infuses cash to bolster the ICR and is a strategy sometimes used by REITs in similar situations. However, a significant con identified is the risk of shareholder dilution, which can lower earnings per share and potentially harm PPT's credit profile and reputation, thereby negatively impacting future access to capital. Asset sales (liquidation) were also considered as an alternative funding method to meet these demands. While selling assets can generate immediate cash, a notable downside is the adverse impact such sales can have on ongoing operational cash flows. The provided documents do not explicitly detail raising further debt as a primary solution for funding these specific cash injections designed to rectify covenant shortfalls; this is likely because incurring additional debt would typically exacerbate ICR pressures unless obtained under exceptionally favorable or specific subordinated terms, which are not discussed in this context.
 
 \newpage
 
 \begin{quote}
-    In the Bear case (+25bp) on Slide 10 (BayFarmCapital_Heat.pdf ), the cash injection in 2026 is \$19.08M. How is this figure calculated, and does the cap fully protect against any further rate rises beyond this +25bp scenario in terms of additional injections needed for that year?
+    In the Bear case (+25bp) on Slide 10, the cash injection in 2026 is \$19.08M. How is this figure calculated, and does the cap fully protect against any further rate rises beyond this +25bp scenario in terms of additional injections needed for that year?
 \end{quote}
+
+% The \$19.08 million cash injection for 2026 in the Bear case (+25bp scenario), is calculated as the annualized sum required for Prime Property Trust (PPT) to meet its 1.75x Interest Coverage Ratio (ICR) covenant. This calculation would involve taking PPT's forecasted FY26 EBITDA (given as \$8.003 million for FY26 in the appendix ), determining the total annual interest expense under the "+25bp" scenario considering the effect of the 4.00\% interest rate cap, and then calculating the cash injection (CI) needed via a formula such as CI = (1.75 * Total Annual Interest Expense) - EBITDA. For instance, if the FY26 base BBSY is 3.49\%, a +25bp increase results in a BBSY of 3.74\%; since this is below the 4.00\% cap strike, the cap would not pay out, and the interest expense would be approximately \$15.42 million (\$100m \times (3.74\%+1.20\%) + \$200m \times (3.74\%+1.50\%)), leading to a CI of roughly (1.75×\$15.42M)−\$8.003M≈\$18.98M, with the precise \$19.08M figure potentially resulting from specific model rounding or slightly different base inputs in the presentation. Importantly, the cap does fully protect against further rate rises beyond this +25bp scenario in terms of additional cash injections needed for that year due to BBSY increases; the note on Slide 10 explicitly states that for this Bear case, "any further interest rate hikes will not change these figures". This is because if BBSY were to rise above the cap's 4.00\% strike rate, PPT's effective benchmark interest rate for its debt would be capped at 4.00\%, thereby fixing the maximum interest expense related to BBSY fluctuations and consequently fixing the maximum cash injection required to maintain the 1.75x ICR for any higher BBSY levels.
 
 \newpage
 
 \begin{quote}
-    The assumption is made that "PCT is refinanced to a 4\% fixed-rate loan after 3 years" (BayFarmCapital_Heat.pdf, Slide 10 ). What if PPT cannot secure fixed-rate funding at 4\%? How does that affect your long-term strategy?
+    The assumption is made that "PCT is refinanced to a 4\% fixed-rate loan after 3 years". What if PPT cannot secure fixed-rate funding at 4\%? How does that affect your long-term strategy?
 \end{quote}
+
+If Prime Property Trust (PPT) cannot secure fixed-rate funding for the Price Corporate Tower (PCT) at the assumed 4\% after 3 years, the long-term strategy would need to adapt significantly. The PCT facility would likely either continue on a floating-rate basis or be refinanced at a potentially less favorable fixed rate, which would prolong its exposure to interest rate volatility and make the goal of achieving predictable cash flows more difficult for this portion of the debt. Consequently, the intention to phase out interest rate caps for PCT after the initial 3-year term would be impeded, necessitating a new hedging strategy for this ongoing floating-rate exposure, with the cost of any new caps or other derivatives being subject to market conditions prevailing at that future time. This situation would reinforce the importance of other strategic elements, such as potentially raising equity to ensure continued covenant compliance, while the core objective to "Source high tenor fixed-rate debt agreements"  would remain, though its successful execution for PCT would be delayed, possibly requiring a reassessment of acceptable fixed interest rate levels or a more prolonged reliance on hedging instruments.
 
 \newpage
 
 \begin{quote}
-    Your long-term strategy (BayFarmCapital_Heat.pdf, Slide 10 ) suggests phasing out interest rate caps as fixed-rate loans are secured. What is the timeline for this, and what are the risks during this transition?
+    Your long-term strategy suggests phasing out interest rate caps as fixed-rate loans are secured. What is the timeline for this, and what are the risks during this transition?
 \end{quote}
+
+The timeline for phasing out interest rate caps is staged and directly linked to Prime Property Trust's (PPT) ability to secure fixed-rate financing for its new facilities. For the Price Corporate Tower (PCT), the transition is planned after its initial 3-year tenor, coinciding with its assumed refinancing to a 4\% fixed-rate loan; at this point, the corresponding 3-year cap would be phased out. For the Sterling Square (SS) facility, which has a 5-year floating-rate term and is assumed to remain on these terms thereafter, the phasing out of caps is contingent upon PPT successfully sourcing suitable high-tenor fixed-rate debt agreements in the future, as per the long-term strategy to achieve predictable cash flows. Key risks during this transition include: the possibility that the assumed 4\% fixed-rate refinancing for PCT after 3 years may not be achievable, potentially exposing PPT to less favorable rates or the need for further hedging at then-current market costs; uncertainty regarding the timing, availability, and terms of securing fixed-rate debt for the SS facility beyond its initial 5-year period, which if delayed or unfavorable, would necessitate ongoing hedging against interest rate exposure; and the general market risk that prevailing interest rates and credit spreads at the time of seeking fixed-rate funding could be higher than anticipated, impacting the overall cost of debt.
 
 \newpage
 
 % Implementation Details
 \begin{quote}
-    For the \$300 million notional, would you recommend a single cap, or a series of shorter-dated caps (a strip of caplets)? What are the pros and cons, especially regarding cost and flexibility? (BayFarmCapital_Heat.pdf, Slide 8 )
+    For the \$300 million notional, would you recommend a single cap, or a series of shorter-dated caps (a strip of caplets)? What are the pros and cons, especially regarding cost and flexibility?
 \end{quote}
+
+For the \$300 million total notional, a more prudent approach, aligning with Prime Property Trust's (PPT) objectives of budget certainty and covenant protection, would be to enter into separate, single cap agreements structured to match the respective tenors of the underlying loan facilities (e.g., a 3-year cap for the \$100m PCT facility and a 5-year cap for the \$200m SS facility), rather than managing a constantly rolling series of very short-dated caps or individual caplets. The primary pros of this approach are significant: it provides cost certainty with a known, single upfront premium for each comprehensive cap, ensuring the "insurance" cost is budgetable; it offers administrative simplicity compared to frequently transacting shorter-dated instruments; and it ensures comprehensive protection is in place for the desired multi-year hedging horizon from day one, precisely matching the debt obligations. The main cons include a higher absolute upfront premium compared to a single short-dated caplet and reduced flexibility to adjust the strategy mid-term without potential unwind costs if market views change significantly. Conversely, a strategy of buying a series of shorter-dated caps offers lower initial cash outlay and more frequent opportunities to reassess, but it sacrifices long-term hedging cost certainty, introduces roll risk (the risk that future caps may be more expensive), and increases administrative burden, which seems less aligned with PPT's expressed need for stability.
 
 \newpage
 
@@ -1035,36 +1067,40 @@ The determination of an appropriate strike rate $R_K$ for Prime Property Trust (
     How would PPT go about executing this cap? Would they approach CBA or multiple banks for quotes?
 \end{quote}
 
+To execute the recommended interest rate cap, an Over-The-Counter (OTC) derivative, Prime Property Trust (PPT) would need to transact with a financial institution. Given that Bay Farm Capital, the authors of this proposal, operate within Commonwealth Bank of Australia's (CBA) Global Markets team and are advising PPT on managing their financial market risks, PPT would logically approach CBA to discuss the execution of this cap. The specific question of whether PPT would also approach multiple other banks for competitive quotes is explicitly listed as a Q\&A point in the presentation materials, indicating it's a relevant consideration for PPT's execution strategy, though their definitive approach beyond engaging with their advising bank (CBA) is not detailed in the provided documents.
+
 \newpage
 
 \begin{quote}
-    The presentation mentions "Continuous Monitoring" of the cap strike (BayFarmCapital_Heat.pdf, Slide 9 ). If the macroeconomic outlook changes significantly, can an existing cap be restructured or sold? What are the implications?
+    The presentation mentions "Continuous Monitoring" of the cap strike. If the macroeconomic outlook changes significantly, can an existing cap be restructured or sold? What are the implications?
 \end{quote}
+
+
 
 \newpage
 
 % Coherence and Research
 \begin{quote}
-    The "Research.pdf" is quite detailed on various econometric models and derivative valuations. How did the findings from this research document directly shape the recommendations in the "BayFarmCapital_Heat.pdf" presentation? Can you point to specific instances?
+    The "Research.pdf" is quite detailed on various econometric models and derivative valuations. How did the findings from this research document directly shape the recommendations in the presentation? Can you point to specific instances?
 \end{quote}
+
+
 
 \newpage
 
 \begin{quote}
-    There's a lot of information in the appendices of your presentation (BayFarmCapital_Heat.pdf, Slides 11-45 ). Could you highlight the two most critical pieces of analysis from the appendix that directly support your choice of an interest rate cap with an out-of-the-money strike?
+    There's a lot of information in the appendices of your presentation. Could you highlight the two most critical pieces of analysis from the appendix that directly support your choice of an interest rate cap with an out-of-the-money strike?
 \end{quote}
+
+Two particularly critical pieces of analysis from the appendices directly support the choice of an interest rate cap with an out-of-the-money strike. Firstly, the "Interest Rate Cap Strategy Payoff Profile"  is crucial as it illustrates the fundamental mechanics: Graph A depicts the caplet payoff only commencing if the 3-Month BBSY exceeds the 4.00\% OTM strike, alongside the defined premium cost, while Graph B shows how this structure caps PPT's borrowing costs specifically during significant rate increases. Secondly, the "Visualisation of Monthly Caplet Premiums"  provides direct quantitative support for the OTM strategy's cost-effectiveness by showing the comparatively low premium in basis points for individual caplets at the 4.00\% strike; this aligns with the assertion that the premium for an OTM option is "quite low"  and represents a manageable "insurance" cost  against substantial adverse rate movements
 
 \newpage
 
 \begin{quote}
-    The case brief (CBA x UNIT Case Competition 2025 Case Brief.pdf, p. 6 ) emphasizes "Originality and creativity". How does your proposed solution demonstrate this beyond a standard hedging recommendation?
+    The case brief emphasizes "Originality and creativity". How does your proposed solution demonstrate this beyond a standard hedging recommendation?
 \end{quote}
 
-\newpage
-
-\begin{quote}
-    What was the biggest challenge your team faced in analyzing this case and arriving at your recommendation, and how did you overcome it?
-\end{quote}
+Our team's proposal demonstrates originality and creativity, as emphasized in the case brief, by moving beyond a standard hedging recommendation through its deeply integrated analytical framework, the strategic tailoring of the solution to Prime Property Trust's (PPT) specific financial exigencies, and its forward-looking, dynamic risk management approach, all evidenced in our presentation. We innovate by employing sophisticated "Interest Rate Forecasting" that utilizes Vector Error Correction Models (VECM) for Impulse Response Function (IRF) analysis to estimate the impact of inflation and cash rates on broader interest rates, and by leveraging CKLS interest rate models to generate robust estimations of future BBSY rates, which directly inform our Black-Scholes based premium computations for the proposed caps. This quantitative foundation supports a highly customized out-of-the-money (4.00\% strike) interest rate cap, precisely structured with tenors that match PPT's PCT (3-year) and SS (5-year) debt facilities, thereby carefully balancing "protection and cost". Critically, our solution creatively frames this hedging instrument not just as a tool for managing interest rate volatility, but as a pivotal mechanism for "Meeting Covenant Obligations", directly addressing PPT's urgent ICR challenges and securing its long-term funding capabilities. Furthermore, the inclusion of a "Longer-term Macroeconomic Timeline" considering geopolitical and domestic factors, coupled with a strategy for "Continuous Monitoring" of the cap strike, embeds our specific hedging tactic within a comprehensive and adaptive risk management framework, elevating the proposal from a static recommendation to a dynamic, well-evidenced strategic solution.
 
 \newpage
 
